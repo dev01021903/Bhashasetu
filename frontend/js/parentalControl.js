@@ -842,6 +842,11 @@
       parentBtn.addEventListener('click', () => openParentArea());
     }
 
+    const navParentLink = document.getElementById('navParentAreaLink');
+    if (navParentLink) {
+      navParentLink.addEventListener('click', () => openParentArea());
+    }
+
     // Sync Community guard on load
     syncCommunitySectionState();
   });
