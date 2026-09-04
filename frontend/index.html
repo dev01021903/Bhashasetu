@@ -394,37 +394,24 @@
                   <h4>🌟 Word Explorer (Interactive Flashcards)</h4>
                   <p>Tap any card to hear the native pronunciation and discover the word bridge:</p>
                 </div>
-                <div class="flashcard-grid">
-                  <button class="flashcard-btn" data-word="Tree" data-hin="पेड़" data-san="ᱫᱟᱨᱮ (Dare)" data-mun="दारे (Dare)">
-                    <span class="fc-emoji">🌳</span>
-                    <span class="fc-eng">Tree</span>
-                    <span class="fc-hin">पेड़</span>
-                    <span class="fc-native">ᱫᱟᱨᱮ (Dare)</span>
-                    <span class="fc-sound">🔊</span>
-                  </button>
-                  <button class="flashcard-btn" data-word="Water" data-hin="पानी" data-san="ᱫᱟᱜ (Daak)" data-mun="दाः (Da)">
-                    <span class="fc-emoji">💧</span>
-                    <span class="fc-eng">Water</span>
-                    <span class="fc-hin">पानी</span>
-                    <span class="fc-native">ᱫᱟᱜ (Daak)</span>
-                    <span class="fc-sound">🔊</span>
-                  </button>
-                  <button class="flashcard-btn" data-word="Sun" data-hin="सूरज" data-san="ᱥᱤᱧ (Singi)" data-mun="सिंगी (Singi)">
-                    <span class="fc-emoji">☀️</span>
-                    <span class="fc-eng">Sun</span>
-                    <span class="fc-hin">सूरज</span>
-                    <span class="fc-native">ᱥᱤᱧ (Singi)</span>
-                    <span class="fc-sound">🔊</span>
-                  </button>
-                  <button class="flashcard-btn" data-word="Book" data-hin="किताब" data-san="ᱯᱩᱛᱷᱤ (Puthi)" data-mun="पुथी (Puthi)">
-                    <span class="fc-emoji">📖</span>
-                    <span class="fc-eng">Book</span>
-                    <span class="fc-hin">किताब</span>
-                    <span class="fc-native">ᱯᱩᱛᱷᱤ (Puthi)</span>
-                    <span class="fc-sound">🔊</span>
+                <!-- Word Explorer Live Search & Shuffle Controls -->
+                <div class="word-explorer-controls" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 14px; align-items: center; justify-content: space-between;">
+                  <div class="search-wrap" style="flex: 1; min-width: 220px;">
+                    <input type="text" id="wordExplorerSearchInput" placeholder="🔍 Search words in English, Hindi, Santhali..." style="width: 100%; padding: 8px 16px; border-radius: 999px; border: 2px solid var(--ink-dark); font-size: 0.9rem; font-weight: 600; outline: none; background: #FFF;" />
+                  </div>
+                  <button class="btn btn-secondary btn-sm" id="refreshFlashcardsBtn" title="Load new random cards">
+                    <span>🎲</span> Shuffle Cards
                   </button>
                 </div>
-                <div class="activity-cta">
+                <!-- Category Filter Chips -->
+                <div class="category-chip-bar" id="wordCategoryBar" style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px;">
+                  <!-- Populated dynamically by app.js -->
+                </div>
+                <!-- Flashcards Grid -->
+                <div class="flashcard-grid" id="flashcardGrid">
+                  <!-- Populated dynamically by app.js -->
+                </div>
+                <div class="activity-cta" style="margin-top: 18px;">
                   <button class="btn btn-primary btn-sm" id="btnPlayVocabGame">
                     <span>🎮</span> Play Vocabulary Match Game
                   </button>
@@ -959,6 +946,8 @@
   <canvas id="confettiCanvas" class="confetti-canvas"></canvas>
 
   <!-- Client-Side App Logic -->
+  <script src="js/config.js"></script>
+  <script src="js/wordApi.js"></script>
   <script src="js/app.js"></script>
   <script src="js/about-section.js"></script>
   <script src="js/services-section.js"></script>

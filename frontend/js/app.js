@@ -12,7 +12,10 @@ const state = {
   activeStoryIndex: 0,
   storyCurrentPage: 0,
   isReadingAloud: false,
-  vocabGameScore: 0
+  vocabGameScore: 0,
+  selectedCategory: 'All',
+  searchQuery: '',
+  wordsList: []
 };
 
 // DOM Helper
@@ -175,6 +178,42 @@ function speakText(text, lang = 'hi-IN') {
   if (voice) utterance.voice = voice;
 
   window.speechSynthesis.speak(utterance);
+}
+
+/* ==========================================================================
+   Word Audio Player (Audio URL / Native Fallback)
+   ========================================================================== */
+function playWordAudio(word, targetField = 'local') {
+  if (!word) return;
+
+  // 1. If pre-recorded audio URL exists, play real audio
+  if (word.audio_url && typeof word.audio_url === 'string' && word.audio_url.trim()) {
+    try {
+      const audio = new Audio(word.audio_url.trim());
+      audio.play().catch(e => {
+        console.warn('Audio playback error:', e);
+        fallbackAudio(word, targetField);
+      });
+      return;
+    } catch (e) {
+      console.warn('Audio element error:', e);
+    }
+  }
+
+  fallbackAudio(word, targetField);
+}
+
+function fallbackAudio(word, targetField = 'local') {
+  if (targetField === 'hindi' && word.hindi_word) {
+    speakText(word.hindi_word, 'hi-IN');
+  } else if (targetField === 'english' && word.english_word) {
+    speakText(word.english_word, 'en-IN');
+  } else {
+    // For tribal/vernacular words without audio_url:
+    // Do not use synthetic speech disguised as tribal pronunciation.
+    toast('Native audio will be added soon! 🌱');
+    playSparkleSound();
+  }
 }
 
 /* ==========================================================================
@@ -414,6 +453,150 @@ function cycleGreeting() {
 /* ==========================================================================
    Language Lab & Math Magic Interactivity
    ========================================================================== */
+let searchDebounceTimer = null;
+
+async function loadCategories() {
+  const bar = $('wordCategoryBar');
+  if (!bar) return;
+
+  try {
+    if (window.WordAPI && window.WordAPI.getCategories) {
+      const res = await window.WordAPI.getCategories();
+      const categories = (res && res.categories) ? res.categories : [];
+      renderCategoryChips(categories);
+      return;
+    }
+  } catch (err) {
+    console.warn('WordAPI getCategories fallback:', err);
+  }
+
+  // Safe fallback categories
+  renderCategoryChips(['General', 'Nature', 'Greetings', 'Animals', 'Food', 'Family']);
+}
+
+function renderCategoryChips(categories) {
+  const bar = $('wordCategoryBar');
+  if (!bar) return;
+
+  const allCats = ['All', ...categories];
+  bar.innerHTML = allCats.map(cat => `
+    <button class="story-pill ${state.selectedCategory === cat ? 'active' : ''}" data-category="${cat}">
+      ${cat === 'All' ? '🌟 All Words' : cat}
+    </button>
+  `).join('');
+
+  bar.querySelectorAll('.story-pill').forEach(pill => {
+    pill.addEventListener('click', () => {
+      bar.querySelectorAll('.story-pill').forEach(p => p.classList.remove('active'));
+      pill.classList.add('active');
+      state.selectedCategory = pill.dataset.category;
+      playPopSound();
+      loadFlashcards(state.selectedCategory, state.activeLanguage);
+    });
+  });
+}
+
+async function loadFlashcards(category = state.selectedCategory, language = state.activeLanguage, isShuffle = false) {
+  const grid = $('flashcardGrid');
+  if (!grid) return;
+
+  grid.innerHTML = `
+    <div style="grid-column: 1 / -1; text-align: center; padding: 24px; color: var(--ink-light); font-weight: 600;">
+      ⏳ Loading words...
+    </div>
+  `;
+
+  try {
+    if (window.WordAPI) {
+      const catParam = (category && category !== 'All') ? category : '';
+      let data;
+
+      if (state.searchQuery && state.searchQuery.trim()) {
+        data = await window.WordAPI.searchWords(state.searchQuery.trim(), catParam, language, 8);
+      } else {
+        data = await window.WordAPI.getRandomWords(catParam, language, 6);
+      }
+
+      const words = (data && data.words) ? data.words : [];
+      state.wordsList = words;
+      renderFlashcardGrid(words);
+      return;
+    }
+  } catch (err) {
+    console.warn('WordAPI loadFlashcards error, using fallback:', err);
+  }
+
+  renderFallbackFlashcards();
+}
+
+function renderFlashcardGrid(words) {
+  const grid = $('flashcardGrid');
+  if (!grid) return;
+
+  if (!words || words.length === 0) {
+    grid.innerHTML = `
+      <div style="grid-column: 1 / -1; text-align: center; padding: 28px; color: var(--ink-light); font-weight: 700;">
+        🌱 No words found. Try another category or search query!
+      </div>
+    `;
+    return;
+  }
+
+  grid.innerHTML = '';
+  words.forEach(w => {
+    const btn = document.createElement('button');
+    btn.className = 'flashcard-btn';
+    btn.innerHTML = `
+      <span class="fc-sound" title="Listen">🔊</span>
+      <span class="fc-emoji">${w.emoji || '🌟'}</span>
+      <span class="fc-eng">${w.english_word || ''}</span>
+      <span class="fc-hin">${w.hindi_word || ''}</span>
+      <span class="fc-native">${w.local_word || ''}</span>
+    `;
+
+    btn.addEventListener('click', () => {
+      btn.style.transform = 'scale(0.95)';
+      setTimeout(() => btn.style.transform = '', 150);
+      playWordAudio(w, 'local');
+      toast(`🌟 ${w.english_word || ''} = ${w.hindi_word || ''} / ${w.local_word || ''}`);
+    });
+
+    grid.appendChild(btn);
+  });
+}
+
+function renderFallbackFlashcards() {
+  const fallbacks = [
+    { id: '1', emoji: '🌳', english_word: 'Tree', hindi_word: 'पेड़', local_word: 'ᱫᱟᱨᱮ (Dare)' },
+    { id: '2', emoji: '💧', english_word: 'Water', hindi_word: 'पानी', local_word: 'ᱫᱟᱜ (Daak)' },
+    { id: '3', emoji: '☀️', english_word: 'Sun', hindi_word: 'सूरज', local_word: 'ᱥᱤᱧ (Singi)' },
+    { id: '4', emoji: '📖', english_word: 'Book', hindi_word: 'किताब', local_word: 'ᱯᱩᱛᱷᱤ (Puthi)' }
+  ];
+  renderFlashcardGrid(fallbacks);
+}
+
+function initWordExplorerControls() {
+  const searchInput = $('wordExplorerSearchInput');
+  const refreshBtn = $('refreshFlashcardsBtn');
+
+  if (searchInput) {
+    searchInput.addEventListener('input', (e) => {
+      clearTimeout(searchDebounceTimer);
+      searchDebounceTimer = setTimeout(() => {
+        state.searchQuery = e.target.value.trim();
+        loadFlashcards(state.selectedCategory, state.activeLanguage);
+      }, 300);
+    });
+  }
+
+  if (refreshBtn) {
+    refreshBtn.addEventListener('click', () => {
+      playPopSound();
+      loadFlashcards(state.selectedCategory, state.activeLanguage, true);
+    });
+  }
+}
+
 function initLearningModules() {
   // Tabs
   const tabLang = $('tabLangLab');
@@ -438,21 +621,6 @@ function initLearningModules() {
       playPopSound();
     });
   }
-
-  // Flashcards
-  document.querySelectorAll('.flashcard-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const eng = btn.dataset.word;
-      const hin = btn.dataset.hin;
-      const san = btn.dataset.san;
-      btn.style.transform = 'scale(0.95)';
-      setTimeout(() => btn.style.transform = '', 150);
-
-      speakText(san || hin);
-      playSparkleSound();
-      toast(`🌟 ${eng} = ${hin} / ${san}`);
-    });
-  });
 
   // Math Blocks
   document.querySelectorAll('.math-block').forEach(btn => {
@@ -484,7 +652,7 @@ function initLearningModules() {
 /* ==========================================================================
    Vocabulary Match Mini-Game
    ========================================================================== */
-const vocabGameQuestions = [
+const fallbackGameQuestions = [
   {
     target: 'Water (पानी)',
     correct: 'ᱫᱟᱜ (Daak)',
@@ -512,20 +680,63 @@ const vocabGameQuestions = [
   }
 ];
 
+let dynamicGameQuestions = [];
 let vocabCurrentQuestion = 0;
 
-function openVocabGame() {
+async function openVocabGame() {
   vocabCurrentQuestion = 0;
   state.vocabGameScore = 0;
-  loadVocabQuestion();
   const modal = $('vocabGameModal');
   if (modal) modal.classList.add('show');
   playSparkleSound();
+
+  const grid = $('vocabOptionsGrid');
+  if (grid) {
+    grid.innerHTML = '<div style="padding: 20px; color: var(--ink-light); font-weight: 600;">⏳ Preparing game words...</div>';
+  }
+
+  try {
+    if (window.WordAPI && window.WordAPI.getRandomWords) {
+      const res = await window.WordAPI.getRandomWords("", state.activeLanguage, 12);
+      const words = (res && res.words && res.words.length >= 4) ? res.words : null;
+      if (words) {
+        dynamicGameQuestions = [];
+        const numQ = Math.min(5, words.length);
+        for (let i = 0; i < numQ; i++) {
+          const target = words[i];
+          const others = words.filter(w => w.id !== target.id);
+          const shuffledOthers = others.sort(() => Math.random() - 0.5).slice(0, 3);
+          const optionsList = [target, ...shuffledOthers].sort(() => Math.random() - 0.5);
+
+          dynamicGameQuestions.push({
+            targetWord: `${target.english_word} (${target.hindi_word})`,
+            correctId: target.id,
+            correctLocal: target.local_word,
+            options: optionsList.map(opt => ({
+              id: opt.id,
+              label: `${opt.emoji ? opt.emoji + ' ' : ''}${opt.local_word}`
+            }))
+          });
+        }
+      } else {
+        dynamicGameQuestions = fallbackGameQuestions;
+      }
+    } else {
+      dynamicGameQuestions = fallbackGameQuestions;
+    }
+  } catch (err) {
+    console.warn('Failed to load dynamic game questions:', err);
+    dynamicGameQuestions = fallbackGameQuestions;
+  }
+
+  loadVocabQuestion();
 }
 
 function loadVocabQuestion() {
-  const q = vocabGameQuestions[vocabCurrentQuestion % vocabGameQuestions.length];
-  if ($('gameTargetWord')) $('gameTargetWord').textContent = q.target;
+  const questions = (dynamicGameQuestions && dynamicGameQuestions.length > 0) ? dynamicGameQuestions : fallbackGameQuestions;
+  const q = questions[vocabCurrentQuestion % questions.length];
+
+  if ($('gameTargetWord')) $('gameTargetWord').textContent = q.targetWord || q.target;
   if ($('gameScore')) $('gameScore').textContent = state.vocabGameScore;
   if ($('gameFeedbackText')) $('gameFeedbackText').textContent = 'Tap the correct matching option!';
 
@@ -533,22 +744,25 @@ function loadVocabQuestion() {
   if (!grid) return;
   grid.innerHTML = '';
 
-  // Shuffle options
-  const shuffled = [...q.options].sort(() => Math.random() - 0.5);
-  shuffled.forEach(opt => {
+  const options = q.options || [];
+  options.forEach(opt => {
     const b = document.createElement('button');
     b.className = 'vocab-game-opt';
-    b.textContent = opt;
-    b.addEventListener('click', () => handleVocabAnswer(opt, q.correct, b));
+    const optLabel = typeof opt === 'string' ? opt : opt.label;
+    const optId = typeof opt === 'string' ? opt : opt.id;
+    const isCorrect = q.correctId ? (optId === q.correctId) : (optLabel === q.correct || opt === q.correct);
+
+    b.textContent = optLabel;
+    b.addEventListener('click', () => handleVocabAnswer(isCorrect, b, q));
     grid.appendChild(b);
   });
 }
 
-function handleVocabAnswer(selected, correct, element) {
+function handleVocabAnswer(isCorrect, element, questionObj) {
   const allBtns = document.querySelectorAll('.vocab-game-opt');
   allBtns.forEach(b => b.disabled = true);
 
-  if (selected === correct) {
+  if (isCorrect) {
     element.classList.add('correct');
     state.vocabGameScore++;
     if ($('gameScore')) $('gameScore').textContent = state.vocabGameScore;
@@ -561,16 +775,23 @@ function handleVocabAnswer(selected, correct, element) {
   } else {
     element.classList.add('wrong');
     allBtns.forEach(b => {
-      if (b.textContent === correct) b.classList.add('correct');
+      if (questionObj.correctLocal && b.textContent.includes(questionObj.correctLocal)) {
+        b.classList.add('correct');
+      } else if (questionObj.correct && b.textContent === questionObj.correct) {
+        b.classList.add('correct');
+      }
     });
     if ($('gameFeedbackText')) $('gameFeedbackText').textContent = 'Oops! Keep practicing!';
     playTone(280, 'sawtooth', 0.2);
   }
 
+  const questions = (dynamicGameQuestions && dynamicGameQuestions.length > 0) ? dynamicGameQuestions : fallbackGameQuestions;
+  const totalQuestions = questions.length;
+
   setTimeout(() => {
     vocabCurrentQuestion++;
-    if (vocabCurrentQuestion >= vocabGameQuestions.length) {
-      toast(`🏆 Great effort! You scored ${state.vocabGameScore}/${vocabGameQuestions.length}!`);
+    if (vocabCurrentQuestion >= totalQuestions) {
+      toast(`🏆 Great effort! You scored ${state.vocabGameScore}/${totalQuestions}!`);
       fireConfetti();
       setTimeout(() => {
         const modal = $('vocabGameModal');
@@ -921,34 +1142,46 @@ async function performStudioTranslation() {
     return;
   }
 
-  const targetName = tgtLang.value;
+  const targetName = tgtLang ? tgtLang.value : state.activeLanguage;
+  const sourceVal = srcLang ? srcLang.value : 'hin';
+
   if (resLabel) resLabel.textContent = `In ${targetName} ⏳`;
   outputArea.textContent = 'अनुवाद हो रहा है... ✨';
   playPopSound();
 
+  // Determine fromLanguage: "english" | "hindi" | "local"
+  let fromLang = "hindi";
+  if (sourceVal === 'eng') {
+    fromLang = "english";
+  } else if (sourceVal === 'hin') {
+    fromLang = "hindi";
+  } else {
+    // auto detect - check if characters are mainly english ASCII
+    fromLang = /^[a-zA-Z0-9\s.,!?'"-]+$/.test(text) ? "english" : "hindi";
+  }
+
+  // Determine toLanguage: "english" | "hindi" | "local"
+  let toLang = "local";
+  if (targetName.toLowerCase() === 'hindi') toLang = "hindi";
+  else if (targetName.toLowerCase() === 'english') toLang = "english";
+  else toLang = "local";
+
   try {
-    const response = await fetch('/api/translate', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        text: text,
-        target_language: targetName.toLowerCase(),
-        source_language: srcLang ? srcLang.value : 'auto'
-      })
-    });
+    if (window.WordAPI && window.WordAPI.translateWord) {
+      const data = await window.WordAPI.translateWord(text, fromLang, toLang);
+      if (data && data.found && data.translation) {
+        const out = data.translation;
+        const w = data.word || {};
 
-    if (response.ok) {
-      const data = await response.json();
-      const output = data.native_script || data.translated_text || data.devanagari;
-      const phonetic = data.phonetic || data.transliteration;
-      const dev = data.devanagari;
-
-      if (output) {
-        if (phonetic && phonetic !== output) {
-          outputArea.innerHTML = `<span style="font-size: 1.25em; font-weight: 800; color: var(--ink-dark);">${output}</span><br><small style="font-size: 0.9em; color: var(--accent-purple); font-weight: 600;">(उच्चारण: ${phonetic}${dev && dev !== output ? ' | देवनागरी: ' + dev : ''})</small>`;
-        } else {
-          outputArea.textContent = output;
-        }
+        outputArea.innerHTML = `
+          <div class="translated-result-card" style="display: flex; flex-direction: column; align-items: center; gap: 6px;">
+            <span style="font-size: 2.2rem; line-height: 1;">${w.emoji || '✨'}</span>
+            <span style="font-size: 1.35em; font-weight: 800; color: var(--ink-dark);">${out}</span>
+            <div style="font-size: 0.85em; color: var(--accent-purple); font-weight: 700; background: rgba(126, 87, 194, 0.1); padding: 4px 12px; border-radius: 999px;">
+              ${w.english_word ? 'English: ' + w.english_word : ''} ${w.hindi_word ? '• Hindi: ' + w.hindi_word : ''} ${w.language ? '• ' + w.language : ''}
+            </div>
+          </div>
+        `;
 
         if (resLabel) resLabel.textContent = `In ${targetName} ✨`;
         toast(`Wonderful! Here is your ${targetName} translation.`);
@@ -957,15 +1190,34 @@ async function performStudioTranslation() {
       }
     }
   } catch (err) {
+    if (err && err.status === 404) {
+      outputArea.innerHTML = `
+        <div style="color: var(--ink-light); padding: 12px; font-weight: 600; font-size: 0.95rem; line-height: 1.5;">
+          🌱 We are still learning this word. Try another one or ask a teacher to contribute it!
+        </div>
+      `;
+      if (resLabel) resLabel.textContent = `In ${targetName}`;
+      return;
+    }
     console.warn('Backend translation studio error, checking phrasebook:', err);
   }
 
   // Phrasebook fallback
   const langMap = phrasebook[targetName] || {};
-  const fallback = langMap[text] || langMap[text.toLowerCase()] || `${text} (${targetName})`;
-  outputArea.textContent = fallback;
-  if (resLabel) resLabel.textContent = `In ${targetName} ✨`;
-  playSparkleSound();
+  const fallback = langMap[text] || langMap[text.toLowerCase()];
+
+  if (fallback) {
+    outputArea.textContent = fallback;
+    if (resLabel) resLabel.textContent = `In ${targetName} ✨`;
+    playSparkleSound();
+  } else {
+    outputArea.innerHTML = `
+      <div style="color: var(--ink-light); padding: 12px; font-weight: 600; font-size: 0.95rem; line-height: 1.5;">
+        🌱 We are still learning this word. Try another one or ask a teacher to contribute it!
+      </div>
+    `;
+    if (resLabel) resLabel.textContent = `In ${targetName}`;
+  }
 }
 
 /* ==========================================================================
@@ -1025,6 +1277,9 @@ document.addEventListener('DOMContentLoaded', () => {
       updateHeroGreeting();
       playPopSound();
       toast(`Mother tongue switched to: ${state.activeLanguage} 🗣️`);
+
+      // Reload Word Explorer flashcards
+      loadFlashcards(state.selectedCategory, state.activeLanguage);
 
       // Sync target language in translation studio
       const tgt = $('targetLanguage');
@@ -1086,6 +1341,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Initialize Modules
   initLearningModules();
+  loadCategories();
+  loadFlashcards('All', state.activeLanguage);
+  initWordExplorerControls();
   initStoryCorner();
   initCollaborationZone();
   initTranslatorStudio();
