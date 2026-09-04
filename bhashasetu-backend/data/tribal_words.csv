@@ -1,0 +1,112 @@
+id,language,local_word,hindi_word,english_word,category,emoji,audio_url,image_url,difficulty
+1,Santali,ᱡᱚᱦᱟᱨ (Johar),नमस्ते,Hello,Greetings,👋,,assets/words/hello.png,easy
+2,Santali,ᱫᱟᱜ (Da'),पानी,Water,Daily Life,💧,,assets/words/water.png,easy
+3,Santali,ᱫᱟᱨᱮ (Dare),पेड़,Tree,Nature,🌳,,assets/words/tree.png,easy
+4,Santali,ᱥᱮᱛᱟ (Seta),कुत्ता,Dog,Animals,🐶,,assets/words/dog.png,easy
+5,Santali,ᱵᱤᱞᱟᱹᱭ (Bilai),बिल्ली,Cat,Animals,🐱,,assets/words/cat.png,easy
+6,Santali,ᱜᱟᱹᱭ (Gai),गाय,Cow,Animals,🐮,,assets/words/cow.png,easy
+7,Santali,ᱪᱮᱬᱮ (Chene),चिड़िया,Bird,Animals,🐦,,assets/words/bird.png,easy
+8,Santali,ᱦᱟᱹᱠᱩ (Haku),मछली,Fish,Animals,🐟,,assets/words/fish.png,easy
+9,Santali,ᱛᱟᱹᱨᱩᱵ (Tarub),बाघ,Tiger,Animals,🐯,,assets/words/tiger.png,medium
+10,Santali,ᱦᱟᱹᱛᱤ (Hati),हाथी,Elephant,Animals,🐘,,assets/words/elephant.png,easy
+11,Santali,ᱵᱟᱦᱟ (Baha),फूल,Flower,Nature,🌸,,assets/words/flower.png,easy
+12,Santali,ᱵᱤᱨ (Bir),जंगल,Forest,Nature,🌲,,assets/words/forest.png,medium
+13,Santali,ᱜᱟᱰᱟ (Gada),नदी,River,Nature,🌊,,assets/words/river.png,easy
+14,Santali,ᱵᱩᱨᱩ (Buru),पहाड़,Mountain,Nature,⛰️,,assets/words/mountain.png,medium
+15,Santali,ᱥᱤᱧ (Sinj / Ber),सूरज,Sun,Nature,☀️,,assets/words/sun.png,easy
+16,Santali,ᱧᱤᱫᱟᱹ (Nida),रात,Night,Nature,🌙,,assets/words/night.png,easy
+17,Santali,ᱢᱟᱦᱟ (Maha),दिन,Day,Daily Life,📅,,assets/words/day.png,easy
+18,Santali,ᱯᱩᱛᱷᱤ (Puthi),किताब,Book,School,📖,,assets/words/book.png,easy
+19,Santali,ᱠᱚᱞᱚᱢ (Kolom),कलम,Pen,School,🖊️,,assets/words/pen.png,easy
+20,Santali,ᱤᱛᱩᱱ ᱟᱥᱲᱟ (Itun Asra),स्कूल,School,School,🏫,,assets/words/school.png,medium
+21,Santali,ᱫᱟᱠᱟ (Daka),चावल / भात,Rice,Food,🍚,,assets/words/rice.png,easy
+22,Santali,ᱡᱚᱢ (Jom),खाना,Eat,Actions,🍽️,,assets/words/eat.png,easy
+23,Santali,ᱧᱩ (Nju),पीना,Drink,Actions,🥤,,assets/words/drink.png,easy
+24,Santali,ᱮᱱᱮᱡ (Enej),खेलना,Play,Actions,⚽,,assets/words/play.png,easy
+25,Santali,ᱯᱟᱲᱦᱟᱣ (Parhaw),पढ़ना,Read,Actions,📚,,assets/words/read.png,easy
+26,Santali,ᱚᱞ (Ol),लिखना,Write,Actions,✍️,,assets/words/write.png,easy
+27,Santali,ᱢᱤᱫ (Mid),एक,One,Numbers,1️⃣,,assets/words/one.png,easy
+28,Santali,ᱵᱟᱨ (Bar),दो,Two,Numbers,2️⃣,,assets/words/two.png,easy
+29,Santali,ᱯᱮ (Pe),तीन,Three,Numbers,3️⃣,,assets/words/three.png,easy
+30,Santali,ᱯᱩᱱ (Pun),चार,Four,Numbers,4️⃣,,assets/words/four.png,easy
+31,Santali,ᱢᱚᱬᱮ (More),पाँच,Five,Numbers,5️⃣,,assets/words/five.png,easy
+32,Santali,ᱟᱯᱟᱛ (Apat / Baba),पिता,Father,Family,👨,,assets/words/father.png,easy
+33,Santali,ᱮᱸᱜᱟᱛ (Engat / Ayo),माता,Mother,Family,👩,,assets/words/mother.png,easy
+34,Santali,ᱵᱚᱭᱦᱟ (Boyha),भाई,Brother,Family,👦,,assets/words/brother.png,easy
+35,Santali,ᱢᱤᱥᱤ (Misi),बहन,Sister,Family,👧,,assets/words/sister.png,easy
+36,Santali,ᱜᱟᱛᱮ (Gate),दोस्त,Friend,Family,🤝,,assets/words/friend.png,easy
+37,Santali,ᱥᱟᱨᱦᱟᱣ (Sarhaw),धन्यवाद,Thank you,Greetings,🙏,,assets/words/thankyou.png,easy
+38,Nagpuri,जोहार (Johar / God Lagila),नमस्ते,Hello,Greetings,👋,,assets/words/hello.png,easy
+39,Nagpuri,पानी (Pani),पानी,Water,Daily Life,💧,,assets/words/water.png,easy
+40,Nagpuri,गाछ / रुख (Gaachh),पेड़,Tree,Nature,🌳,,assets/words/tree.png,easy
+41,Nagpuri,कुकुर (Kukur),कुत्ता,Dog,Animals,🐶,,assets/words/dog.png,easy
+42,Nagpuri,बिलाई (Bilai),बिल्ली,Cat,Animals,🐱,,assets/words/cat.png,easy
+43,Nagpuri,गाय (Gai),गाय,Cow,Animals,🐮,,assets/words/cow.png,easy
+44,Nagpuri,चिरई (Chirai),चिड़िया,Bird,Animals,🐦,,assets/words/bird.png,easy
+45,Nagpuri,माछरी (Machhri),मछली,Fish,Animals,🐟,,assets/words/fish.png,easy
+46,Nagpuri,बाघ (Bagh),बाघ,Tiger,Animals,🐯,,assets/words/tiger.png,medium
+47,Nagpuri,हाथी (Hathi),हाथी,Elephant,Animals,🐘,,assets/words/elephant.png,easy
+48,Nagpuri,फूल (Phool),फूल,Flower,Nature,🌸,,assets/words/flower.png,easy
+49,Nagpuri,बोन / जंगल (Bon),जंगल,Forest,Nature,🌲,,assets/words/forest.png,medium
+50,Nagpuri,नदी / गड़ा (Nadi),नदी,River,Nature,🌊,,assets/words/river.png,easy
+51,Nagpuri,पहाड़ / बुरु (Pahar),पहाड़,Mountain,Nature,⛰️,,assets/words/mountain.png,medium
+52,Nagpuri,सुरुज / बेर (Suruj),सूरज,Sun,Nature,☀️,,assets/words/sun.png,easy
+53,Nagpuri,रात (Raat),रात,Night,Nature,🌙,,assets/words/night.png,easy
+54,Nagpuri,दिन (Din),दिन,Day,Daily Life,📅,,assets/words/day.png,easy
+55,Nagpuri,पोथी / किताब (Pothi),किताब,Book,School,📖,,assets/words/book.png,easy
+56,Nagpuri,कलम (Kalam),कलम,Pen,School,🖊️,,assets/words/pen.png,easy
+57,Nagpuri,इस्कूल (School),स्कूल,School,School,🏫,,assets/words/school.png,medium
+58,Nagpuri,भात (Bhat),चावल / भात,Rice,Food,🍚,,assets/words/rice.png,easy
+59,Nagpuri,खाएक (Khaek),खाना,Eat,Actions,🍽️,,assets/words/eat.png,easy
+60,Nagpuri,पीएक (Piek),पीना,Drink,Actions,🥤,,assets/words/drink.png,easy
+61,Nagpuri,खेलेक (Kholek),खेलना,Play,Actions,⚽,,assets/words/play.png,easy
+62,Nagpuri,पढ़े़क (Padhek),पढ़ना,Read,Actions,📚,,assets/words/read.png,easy
+63,Nagpuri,लिखेक (Likhek),लिखना,Write,Actions,✍️,,assets/words/write.png,easy
+64,Nagpuri,एक (Ek),एक,One,Numbers,1️⃣,,assets/words/one.png,easy
+65,Nagpuri,दुई (Dui),दो,Two,Numbers,2️⃣,,assets/words/two.png,easy
+66,Nagpuri,तीन (Teen),तीन,Three,Numbers,3️⃣,,assets/words/three.png,easy
+67,Nagpuri,चार (Chaar),चार,Four,Numbers,4️⃣,,assets/words/four.png,easy
+68,Nagpuri,पाँच (Paanch),पाँच,Five,Numbers,5️⃣,,assets/words/five.png,easy
+69,Nagpuri,अब्बा / बाप (Abba / Baap),पिता,Father,Family,👨,,assets/words/father.png,easy
+70,Nagpuri,माई / आयो (Maai),माता,Mother,Family,👩,,assets/words/mother.png,easy
+71,Nagpuri,भाई (Bhai),भाई,Brother,Family,👦,,assets/words/brother.png,easy
+72,Nagpuri,बहिन (Bahin),बहन,Sister,Family,👧,,assets/words/sister.png,easy
+73,Nagpuri,संगी (Sangi),दोस्त,Friend,Family,🤝,,assets/words/friend.png,easy
+74,Nagpuri,धन्यवाद / जोहार (Dhanyabad),धन्यवाद,Thank you,Greetings,🙏,,assets/words/thankyou.png,easy
+75,Khortha,गोड़ लागो ही / जोहार (God Lago Hi),नमस्ते,Hello,Greetings,👋,,assets/words/hello.png,easy
+76,Khortha,पानी (Pani),पानी,Water,Daily Life,💧,,assets/words/water.png,easy
+77,Khortha,गाछ (Gachh),पेड़,Tree,Nature,🌳,,assets/words/tree.png,easy
+78,Khortha,कुकुर (Kukur),कुत्ता,Dog,Animals,🐶,,assets/words/dog.png,easy
+79,Khortha,बिलाई (Bilai),बिल्ली,Cat,Animals,🐱,,assets/words/cat.png,easy
+80,Khortha,गाय (Gai),गाय,Cow,Animals,🐮,,assets/words/cow.png,easy
+81,Khortha,चिरई (Chirai),चिड़िया,Bird,Animals,🐦,,assets/words/bird.png,easy
+82,Khortha,माछ (Machh),मछली,Fish,Animals,🐟,,assets/words/fish.png,easy
+83,Khortha,बाघ (Bagh),बाघ,Tiger,Animals,🐯,,assets/words/tiger.png,medium
+84,Khortha,हाथी (Hathi),हाथी,Elephant,Animals,🐘,,assets/words/elephant.png,easy
+85,Khortha,फूल (Phool),फूल,Flower,Nature,🌸,,assets/words/flower.png,easy
+86,Khortha,बोन (Bon),जंगल,Forest,Nature,🌲,,assets/words/forest.png,medium
+87,Khortha,नदी / गड़ा (Gada),नदी,River,Nature,🌊,,assets/words/river.png,easy
+88,Khortha,पहाड़ / ढोंगी (Pahar),पहाड़,Mountain,Nature,⛰️,,assets/words/mountain.png,medium
+89,Khortha,बेरो / सुरुज (Bero),सूरज,Sun,Nature,☀️,,assets/words/sun.png,easy
+90,Khortha,राइत (Rait),रात,Night,Nature,🌙,,assets/words/night.png,easy
+91,Khortha,दिन (Din),दिन,Day,Daily Life,📅,,assets/words/day.png,easy
+92,Khortha,पोथी / किताब (Pothi),किताब,Book,School,📖,,assets/words/book.png,easy
+93,Khortha,कलम (Kalam),कलम,Pen,School,🖊️,,assets/words/pen.png,easy
+94,Khortha,इस्कूल (School),स्कूल,School,School,🏫,,assets/words/school.png,medium
+95,Khortha,भात (Bhat),चावल / भात,Rice,Food,🍚,,assets/words/rice.png,easy
+96,Khortha,खायेक (Khayek),खाना,Eat,Actions,🍽️,,assets/words/eat.png,easy
+97,Khortha,पीयेक (Piyek),पीना,Drink,Actions,🥤,,assets/words/drink.png,easy
+98,Khortha,खेलेक (Khelek),खेलना,Play,Actions,⚽,,assets/words/play.png,easy
+99,Khortha,पढ़े़क (Padhek),पढ़ना,Read,Actions,📚,,assets/words/read.png,easy
+100,Khortha,लिखेक (Likhek),लिखना,Write,Actions,✍️,,assets/words/write.png,easy
+101,Khortha,एक (Ek),एक,One,Numbers,1️⃣,,assets/words/one.png,easy
+102,Khortha,दुई (Dui),दो,Two,Numbers,2️⃣,,assets/words/two.png,easy
+103,Khortha,तीन (Teen),तीन,Three,Numbers,3️⃣,,assets/words/three.png,easy
+104,Khortha,चार (Chaar),चार,Four,Numbers,4️⃣,,assets/words/four.png,easy
+105,Khortha,पाँच (Paanch),पाँच,Five,Numbers,5️⃣,,assets/words/five.png,easy
+106,Khortha,बाप (Baap),पिता,Father,Family,👨,,assets/words/father.png,easy
+107,Khortha,माय (Maay),माता,Mother,Family,👩,,assets/words/mother.png,easy
+108,Khortha,भाई (Bhai),भाई,Brother,Family,👦,,assets/words/brother.png,easy
+109,Khortha,बहिन (Bahin),बहन,Sister,Family,👧,,assets/words/sister.png,easy
+110,Khortha,संगी (Sangi),दोस्त,Friend,Family,🤝,,assets/words/friend.png,easy
+111,Khortha,धनबाद / जोहार (Dhanbaad),धन्यवाद,Thank you,Greetings,🙏,,assets/words/thankyou.png,easy
