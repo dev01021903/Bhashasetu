@@ -128,10 +128,10 @@
         </label>
         <div class="relative">
           <select id="langSelect" onchange="onLanguageChange(this.value)" class="w-full bg-white border-2 border-amber-300 text-slate-800 font-bold rounded-xl px-3 py-2.5 text-sm focus:outline-none focus:ring-4 focus:ring-amber-200/70 appearance-none cursor-pointer">
-            <option value="hi" selected>🇮🇳 हिन्दी (Hindi) — नमस्ते</option>
-            <option value="sat">🌾 ᱥᱟᱱᱛᱟᱲᱤ (Santhali) — ᱡᱚᱦᱟᱨ</option>
-            <option value="ta">🪔 தமிழ் (Tamil) — வணக்கம்</option>
-            <option value="bn">🎨 বাংলা (Bengali) — নমস্কার</option>
+            <option value="sat" selected>🌾 ᱥᱟᱱᱛᱟᱲᱤ (Santhali) — ᱡᱚᱦᱟᱨ</option>
+            <option value="nag">🌿 नागपुरी (Nagpuri) — जोहार</option>
+            <option value="khor">🌾 खोरठा (Khortha) — गोड़ लागो</option>
+            <option value="hi">🇮🇳 हिन्दी (Hindi) — नमस्ते</option>
             <option value="en">🌟 English — Hello Friend</option>
           </select>
           <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-3 text-amber-700 font-bold text-xs">
@@ -163,7 +163,7 @@
               type="text" 
               id="studentNameInput"
               required 
-              placeholder="e.g. Aarav, Ananya, Leo..." 
+              placeholder="e.g. Aarav, Birsa, Pooja..." 
               value="Aarav"
               class="w-full pl-11 pr-4 py-3 bg-slate-50 border-2 border-slate-200 focus:border-sky-400 focus:bg-white text-slate-800 rounded-2xl font-semibold text-sm outline-none transition-all focus:ring-4 focus:ring-sky-100"
             />
@@ -179,7 +179,7 @@
             <span class="absolute inset-y-0 left-0 flex items-center pl-3.5 text-xl">⭐</span>
             <input 
               type="password" 
-              id="passwordInput"
+              id="passwordInput" 
               required 
               placeholder="Enter password..." 
               value="stars123"
@@ -199,22 +199,6 @@
           <div class="flex justify-between items-center mt-1">
             <span id="peekHint" class="text-[11px] text-slate-400 font-medium">Gajju is covering his eyes!</span>
             <a href="#" onclick="alert('Ask your teacher or parents to help with your secret word! 👨‍🏫'); return false;" class="text-[11px] text-sky-600 hover:underline font-bold">Need help?</a>
-          </div>
-        </div>
-
-        <!-- Grade Badge Selector -->
-        <div>
-          <span class="block text-xs font-bold text-slate-600 uppercase tracking-wider mb-1.5">Your Grade 🎒:</span>
-          <div class="grid grid-cols-3 gap-2">
-            <button type="button" onclick="selectGrade(this, 'Pre-K')" class="grade-btn py-1.5 px-2 rounded-xl text-xs font-bold border-2 border-amber-300 bg-amber-50 text-amber-800 hover:bg-amber-100 transition-all active:scale-95">
-              🧸 Pre-K
-            </button>
-            <button type="button" onclick="selectGrade(this, 'Grade 1-3')" class="grade-btn py-1.5 px-2 rounded-xl text-xs font-bold border-2 border-sky-400 bg-sky-500 text-white shadow-sm transition-all active:scale-95">
-              🚀 Grades 1-3
-            </button>
-            <button type="button" onclick="selectGrade(this, 'Grade 4-5')" class="grade-btn py-1.5 px-2 rounded-xl text-xs font-bold border-2 border-emerald-300 bg-emerald-50 text-emerald-800 hover:bg-emerald-100 transition-all active:scale-95">
-              🏆 Grades 4-5
-            </button>
           </div>
         </div>
 
@@ -307,25 +291,25 @@
   <script>
     // Language greetings dataset
     const languageGreetings = {
-      hi: {
-        heading: "नमस्ते नन्हे दोस्त!",
-        subtext: "अपनी मातृभाषा में सीखने की जादुई दुनिया में स्वागत है!",
-        speak: "नमस्ते नन्हे दोस्त! चलो मिलकर आज कुछ नया सीखें!"
-      },
       sat: {
         heading: "ᱡᱚᱦᱟᱨ ᱜᱤᱫᱽᱨᱟᱹ!",
         subtext: "ᱟᱞᱮ ᱥᱟᱶ ᱟᱯᱱᱟᱨ ᱯᱟᱹᱨᱥᱤ ᱛᱮ ᱥᱮᱪᱮᱫᱚᱜ ᱢᱮ!",
         speak: "Johar gidra! Ale saw apnar parsi te sechedog me!"
       },
-      ta: {
-        heading: "வணக்கம் நண்பா!",
-        subtext: "தாய்மொழியில் மகிழ்ச்சியாகக் கற்க வாருங்கள்!",
-        speak: "வணக்கம் குழந்தைகளே! வாருங்கள் ஒன்றாகக் கற்போம்!"
+      nag: {
+        heading: "जोहार नन्हे संगी!",
+        subtext: "आपण मातृभाषा नागपुरी में पढ़े और सीखे के दुनिया में स्वागत है!",
+        speak: "जोहार नन्हे संगी! चल हमरे मन आज नया कहानी और शब्द सीखब!"
       },
-      bn: {
-        heading: "নমস্কার ছোট্ট বন্ধুরা!",
-        subtext: "মাতৃভাষায় আনন্দে শেখার সেতুতে তোমাদের স্বাগত!",
-        speak: "নমস্কার ছোট্ট বন্ধুরা! এসো একসাথে শিখি!"
+      khor: {
+        heading: "गोड़ लागो ही नन्हा बाबू!",
+        subtext: "अपन खोरठा भाखा में खुशी से पढ़े और सीखे ले आबा!",
+        speak: "गोड़ लागो ही नन्हा बाबू! चल मिल के आज नया बात और पाठ सीखब!"
+      },
+      hi: {
+        heading: "नमस्ते नन्हे दोस्त!",
+        subtext: "अपनी मातृभाषा में सीखने की जादुई दुनिया में स्वागत है!",
+        speak: "नमस्ते नन्हे दोस्त! चलो मिलकर आज कुछ नया सीखें!"
       },
       en: {
         heading: "Welcome Little Star!",

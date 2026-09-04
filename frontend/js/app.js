@@ -195,6 +195,34 @@ const mascotGreetings = {
       speakText: 'Tehenj do midtang nawa kahni bon parhawa!'
     }
   ],
+  Nagpuri: [
+    {
+      vernacular: '“जोहार नन्हे संगी! आपण मातृभाषा नागपुरी में पढ़े और सीखे के दुनिया में स्वागत है!”',
+      pronunciation: '(Johar nanhe sangi! Aapan matribhasha Nagpuri mein padhe aur seekhe ke duniya mein swagat hai!)',
+      translation: '“Welcome little friends! Welcome to the world of learning in your mother tongue Nagpuri!”',
+      speakText: 'जोहार नन्हे संगी! आपण मातृभाषा नागपुरी में पढ़े और सीखे के दुनिया में स्वागत है!'
+    },
+    {
+      vernacular: '“चल हमरे मन आज नया कहानी और शब्द सीखब!”',
+      pronunciation: '(Chal hamre man aaj naya kahani aur shabd seekhab!)',
+      translation: '“Let us learn new stories and words together today!”',
+      speakText: 'चल हमरे मन आज नया कहानी और शब्द सीखब!'
+    }
+  ],
+  Khortha: [
+    {
+      vernacular: '“गोड़ लागो ही नन्हा बाबू! अपन खोरठा भाखा में खुशी से पढ़े और सीखे ले आबा!”',
+      pronunciation: '(God lago hi nanha babu! Apan Khortha bhakha mein khushi se padhe aur seekhe le aaba!)',
+      translation: '“Greetings dear children! Welcome to learn and explore in your mother tongue Khortha!”',
+      speakText: 'गोड़ लागो ही नन्हा बाबू! अपन खोरठा भाखा में खुशी से पढ़े और सीखे ले आबा!'
+    },
+    {
+      vernacular: '“चल मिल के आज नया बात और पाठ सीखब!”',
+      pronunciation: '(Chal mil ke aaj naya baat aur paath seekhab!)',
+      translation: '“Let us come together today to learn new phrases and lessons!”',
+      speakText: 'चल मिल के आज नया बात और पाठ सीखब!'
+    }
+  ],
   Hindi: [
     {
       vernacular: '“नमस्ते बच्चों! अपनी मातृभाषा में सीखने की जादुई दुनिया में स्वागत है!”',
@@ -207,46 +235,6 @@ const mascotGreetings = {
       pronunciation: '(Aaj hum milkar naye shabd aur mazedar kahaniyan seekhenge!)',
       translation: '“Today we will learn new words and delightful stories together!”',
       speakText: 'आज हम मिलकर नए शब्द और मजेदार कहानियाँ सीखेंगे!'
-    }
-  ],
-  Mundari: [
-    {
-      vernacular: '“जोहार होनको! अबुआः पारसी ते सेचेदपे!”',
-      pronunciation: '(Johar honko! Abua parsi te sechedpe!)',
-      translation: '“Welcome children! Let us learn in our mother tongue!”',
-      speakText: 'Johar honko! Abua parsi te sechedpe!'
-    }
-  ],
-  Ho: [
-    {
-      vernacular: '“𑢪𑣉𑢦𑢬𑣂 𑢹𑣉𑢳𑢪! 𑢁𑢬 𑢳𑢱𑢷𑢳 𑢮𑢱𑢯𑢱𑢡!”',
-      pronunciation: '(Johar honko! Anga nutum jumbua!)',
-      translation: '“Greetings dear friends! Let us learn and grow together!”',
-      speakText: 'Johar honko! Anga nutum jumbua!'
-    }
-  ],
-  Kurukh: [
-    {
-      vernacular: '“गोड़े कुक्को! एंहे नामे कुकु, बग्गे गही संगे संगे सीखके!”',
-      pronunciation: '(Gode kukko! Enhe naame Kuku, bagge gahi sange sange seekhke!)',
-      translation: '“Hello children! I am Kuku, let’s learn happily together!”',
-      speakText: 'Gode kukko! Enhe naame Kuku, bagge gahi sange sange seekhke!'
-    }
-  ],
-  Bengali: [
-    {
-      vernacular: '“নমস্কার ছোট্ট বন্ধুরা! মাতৃভাষায় আনন্দে শেখার সেতুতে তোমাদের স্বাগত!”',
-      pronunciation: '(Nomoshkar chhoto bondhura! Matribhashay anonde shekhar setute tomader shagoto!)',
-      translation: '“Hello little friends! Welcome to the bridge of joyful learning in mother tongue!”',
-      speakText: 'নমস্কার ছোট্ট বন্ধুরা! মাতৃভাষায় আনন্দে শেখার সেতুতে তোমাদের স্বাগত!'
-    }
-  ],
-  Tamil: [
-    {
-      vernacular: '“வணக்கம் குழந்தைகளே! தாய்மொழியில் மகிழ்ச்சியாகக் கற்க வாருங்கள்!”',
-      pronunciation: '(Vanakkam kulandhaigale! Thaaimozhiyil magizhchiyaga karka vaarungal!)',
-      translation: '“Greetings dear children! Welcome to learn with joy in your mother tongue!”',
-      speakText: 'வணக்கம் குழந்தைகளே! தாய்மொழியில் மகிழ்ச்சியாகக் கற்க வாருங்கள்!'
     }
   ],
   English: [
@@ -279,46 +267,41 @@ const phrasebook = {
     'my name': 'Injań ñutum (ᱤᱧᱟᱜ ᱧᱩᱛᱩᱢ)',
     'नमस्ते दोस्त! चलो मिलकर नया पाठ पढ़ें!': 'ᱡᱚᱦᱟᱨ ᱜᱟᱛᱮ! ᱫᱮᱞᱟ ᱢᱤᱫ ᱥᱟᱶᱛᱮ ᱱᱟᱣᱟ ᱯᱟᱲᱦᱟᱣ ᱵᱚᱱ ᱯᱟᱲᱦᱟᱣᱟ! (Johar gate! Dela mid sawte nawa parhaw bon parhawa!)'
   },
-  Mundari: {
-    'नमस्ते': 'Johar (जोहार)',
+  Nagpuri: {
+    'नमस्ते': 'Johar (जोहार / गोड़ लागिला)',
     'hello': 'Johar (जोहार)',
-    'पानी': 'Da\' (दाः)',
-    'water': 'Da\' (दाः)',
-    'पेड़': 'Dare (दारे)',
-    'tree': 'Dare (दारे)',
-    'धन्यवाद': 'Johar / Dhanyabad',
-    'नमस्ते दोस्त! चलो मिलकर नया पाठ पढ़ें!': 'जोहार जोड़ी! अबुआः संगे नवां पाठे सेचेदपे! (Johar jori! Abua sange nawa pathe sechedpe!)'
+    'hi': 'Johar (जोहार)',
+    'पानी': 'Pani (पानी / पानि)',
+    'water': 'Pani (पानी)',
+    'पेड़': 'Gaachh / Gachh (गाछ / रुख)',
+    'tree': 'Gaachh (गाछ)',
+    'सूरज': 'Suruj / Ber (सुरुज / बेर)',
+    'sun': 'Suruj (सुरुज)',
+    'किताब': 'Pothi (पोथी / किताब)',
+    'book': 'Pothi (पोथी)',
+    'धन्यवाद': 'Dhanyabad / Johar (धन्यवाद)',
+    'thank you': 'Dhanyabad (धन्यवाद)',
+    'मेरा नाम': 'Mora naam (मोरा नाम)',
+    'my name': 'Mora naam (मोरा नाम)',
+    'नमस्ते दोस्त! चलो मिलकर नया पाठ पढ़ें!': 'जोहार संगी! चल हमरे मन संगे नवा पाठ पढ़ब! (Johar sangi! Chal hamre man sange nawa paath padhab!)'
   },
-  Ho: {
-    'नमस्ते': 'Johar (𑢪𑣉𑢦𑢬𑣂)',
-    'hello': 'Johar (𑢪𑣉𑢦𑢬𑣂)',
-    'पानी': 'Da\' (𑢵𑢁)',
-    'water': 'Da\' (𑢵𑢁)',
-    'पेड़': 'Dare (𑢵𑢁𑢱𑢳)',
-    'धन्यवाद': 'Johar (𑢪𑣉𑢦𑢬𑣂)'
-  },
-  Kurukh: {
-    'नमस्ते': 'Johar / Godey (गोड़े)',
-    'hello': 'Johar / Godey (गोड़े)',
-    'पानी': 'Daa (दाअ)',
-    'water': 'Daa (दाअ)',
-    'धन्यवाद': 'Dhanyabad / Johar'
-  },
-  Bengali: {
-    'नमस्ते': 'Nomoshkar (নমস্কার)',
-    'hello': 'Nomoshkar (নমস্কার)',
-    'पानी': 'Jol (জল)',
-    'water': 'Jol (জল)',
-    'धन्यवाद': 'Dhonnobad (ধন্যবাদ)',
-    'नमस्ते दोस्त! चलो मिलकर नया पाठ पढ़ें!': 'নমস্কার বন্ধু! চলো একসাথে নতুন পাঠ শিখি! (Nomoshkar bondhu! Cholo ekshathe notun path shikhi!)'
-  },
-  Tamil: {
-    'नमस्ते': 'Vanakkam (வணக்கம்)',
-    'hello': 'Vanakkam (வணக்கம்)',
-    'पानी': 'Thanneer (தண்ணீர்)',
-    'water': 'Thanneer (தண்ணீர்)',
-    'धन्यवाद': 'Nandri (நன்றி)',
-    'नमस्ते दोस्त! चलो मिलकर नया पाठ पढ़ें!': 'வணக்கம் நண்பா! ஒன்றாக புதிய பாடம் படிப்போம்! (Vanakkam nanba! Ondraga pudhiya paadam padippom!)'
+  Khortha: {
+    'नमस्ते': 'God lago hi / Johar (गोड़ लागो ही / जोहार)',
+    'hello': 'God lago hi (गोड़ लागो ही)',
+    'hi': 'God lago hi (गोड़ लागो ही)',
+    'पानी': 'Pani (पानी)',
+    'water': 'Pani (पानी)',
+    'पेड़': 'Gachh (गाछ / पेड़)',
+    'tree': 'Gachh (गाछ)',
+    'सूरज': 'Bero / Suruj (बेरो / सुरुज)',
+    'sun': 'Bero (बेरो)',
+    'किताब': 'Kitab / Pothi (किताब / पोथी)',
+    'book': 'Kitab (किताब)',
+    'धन्यवाद': 'Dhanbaad / Johar (धनबाद)',
+    'thank you': 'Dhanbaad (धनबाद)',
+    'मेरा नाम': 'Hamar naam (हमार नाम)',
+    'my name': 'Hamar naam (हमार नाम)',
+    'नमस्ते दोस्त! चलो मिलकर नया पाठ पढ़ें!': 'गोड़ लागो ही संगी! चल मिल के नवा पाठ पढ़ब! (God lago hi sangi! Chal mil ke nawa paath padhab!)'
   }
 };
 
@@ -426,34 +409,7 @@ function cycleGreeting() {
   toast(`Switched greeting in ${state.activeLanguage}! ✨`);
 }
 
-/* ==========================================================================
-   Grade Pathway Tracker
-   ========================================================================== */
-function initPathwayTracker() {
-  const cards = document.querySelectorAll('.pathway-card');
-  cards.forEach(card => {
-    card.addEventListener('click', () => {
-      cards.forEach(c => {
-        c.classList.remove('active');
-        c.setAttribute('aria-pressed', 'false');
-        const pill = c.querySelector('.pathway-status-pill');
-        if (pill) pill.textContent = 'Explore Pathway ➜';
-      });
 
-      card.classList.add('active');
-      card.setAttribute('aria-pressed', 'true');
-      state.activeGrade = card.dataset.grade;
-      const activePill = card.querySelector('.pathway-status-pill');
-      if (activePill) activePill.textContent = 'Active Pathway ✓';
-
-      playPopSound();
-      playSparkleSound();
-
-      const gradeName = card.querySelector('.pathway-title').textContent;
-      toast(`🎯 Selected Grade Pathway: ${gradeName}!`);
-    });
-  });
-}
 
 /* ==========================================================================
    Language Lab & Math Magic Interactivity
@@ -1129,7 +1085,6 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Initialize Modules
-  initPathwayTracker();
   initLearningModules();
   initStoryCorner();
   initCollaborationZone();

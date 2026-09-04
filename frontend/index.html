@@ -37,7 +37,6 @@
 
       <nav id="navigation" aria-label="Primary Navigation">
         <a class="nav-link active" href="#home"><span>🏠</span> Home</a>
-        <a class="nav-link" href="#pathways"><span>🎯</span> Grade Tracks</a>
         <a class="nav-link" href="#learning-modules"><span>🔬</span> Learning Zones</a>
         <a class="nav-link" href="#story-corner"><span>📖</span> Story Corner</a>
         <a class="nav-link" href="#collaboration"><span>💬</span> Peer Connect</a>
@@ -51,17 +50,9 @@
           <label for="globalLangSelect" class="sr-only">Choose Mother Tongue</label>
           <select id="globalLangSelect" class="global-lang-select">
             <option value="Santhali" selected>ᱥᱟᱱᱛᱟᱲᱤ (Santhali)</option>
-            <option value="Hindi">हिन्दी (Hindi)</option>
-            <option value="Mundari">मुंडारी (Mundari)</option>
-            <option value="Ho">𑢹𑣉 (Ho)</option>
-            <option value="Kurukh">कुड़ुख़ (Kurukh)</option>
-            <option value="Kharia">खड़िया (Kharia)</option>
-            <option value="Khortha">खोरठा (Khortha)</option>
             <option value="Nagpuri">नागपुरी (Nagpuri)</option>
-            <option value="Panchpargania">पंचपरगनिया (Panchpargania)</option>
-            <option value="Kurmali">कुड़मालि (Kurmali)</option>
-            <option value="Bengali">বাংলা (Bengali)</option>
-            <option value="Tamil">தமிழ் (Tamil)</option>
+            <option value="Khortha">खोरठा (Khortha)</option>
+            <option value="Hindi">हिन्दी (Hindi)</option>
             <option value="English">English</option>
           </select>
         </div>
@@ -147,7 +138,7 @@
           </div>
 
           <div class="hero-cta-group">
-            <a href="#pathways" class="btn btn-primary btn-bounce" id="startLearningBtn">
+            <a href="#learning-modules" class="btn btn-primary btn-bounce" id="startLearningBtn">
               <span>🚀</span> Start Learning
             </a>
             <a href="#translator" class="btn btn-secondary">
@@ -162,8 +153,8 @@
             <div class="highlight-item">
               <span class="highlight-icon">🗣️</span>
               <div>
-                <strong>9+ Tribal Languages</strong>
-                <small>Santhali, Mundari, Ho & more</small>
+                <strong>Supported Languages</strong>
+                <small>Santhali, Nagpuri & Khortha</small>
               </div>
             </div>
             <div class="highlight-item">
@@ -185,93 +176,7 @@
       </div>
     </section>
 
-    <!-- 3. Curriculum Pathway (Grade Selection) -->
-    <section class="section section-pathway" id="pathways">
-      <div class="container">
-        <div class="section-header text-center">
-          <span class="section-badge">🎯 Learning Journey</span>
-          <h2 class="section-title">Select Your Grade Pathway</h2>
-          <p class="section-subtitle">Pick your learning level to unlock fun interactive games, colorful vocabulary, and stories tailored for you.</p>
-        </div>
-
-        <!-- Panoramic Visual Banner -->
-        <div class="pathway-banner-card">
-          <!-- Uploaded Image: Curriculum Pathways Banner -->
-          <img 
-            src="assets/curriculum_pathways.jpg" 
-            alt="Curriculum pathways showing Kindergarten & Pre-K, Grades 1-2-3, and Grades 4-5" 
-            class="pathway-banner-img"
-            loading="lazy"
-          />
-          <div class="pathway-banner-overlay">
-            <span>✨ Tap any pathway below to explore interactive lessons!</span>
-          </div>
-        </div>
-
-        <!-- Three Large Interactive Clickable Pathway Cards -->
-        <div class="pathway-grid">
-          <!-- Card 1: Kindergarten & Pre-K -->
-          <article class="pathway-card card-yellow" data-grade="pre-k" tabindex="0" role="button" aria-pressed="false">
-            <div class="pathway-card-header">
-              <span class="pathway-sticker">🧸</span>
-              <span class="pathway-age-pill">Ages 3–5</span>
-            </div>
-            <h3 class="pathway-title">Kindergarten & Pre-K</h3>
-            <p class="pathway-desc">First steps in learning! Discover letters, colorful crayons, musical animals, and basic numbers.</p>
-            <ul class="pathway-topics">
-              <li>🎵 Mother-Tongue Rhymes</li>
-              <li>🎨 Color & Shape Discovery</li>
-              <li>🚂 ABC & 1-2-3 Counting Train</li>
-              <li>🐘 Animal Voices & Sounds</li>
-            </ul>
-            <div class="pathway-card-footer">
-              <span class="pathway-status-pill">Explore Pathway ➜</span>
-            </div>
-          </article>
-
-          <!-- Card 2: Grades 1, 2, 3 (Default Active) -->
-          <article class="pathway-card card-blue active" data-grade="primary" tabindex="0" role="button" aria-pressed="true">
-            <div class="pathway-badge-featured">⭐ Most Popular</div>
-            <div class="pathway-card-header">
-              <span class="pathway-sticker">🚀</span>
-              <span class="pathway-age-pill">Ages 6–8</span>
-            </div>
-            <h3 class="pathway-title">Grades 1, 2 & 3</h3>
-            <p class="pathway-desc">Word builders & young explorers! Connect everyday phrases, tell time, and master math magic.</p>
-            <ul class="pathway-topics">
-              <li>💬 Daily Conversational Words</li>
-              <li>⏰ Clock & Calendar Fun</li>
-              <li>🧮 Math Magic & Number Quests</li>
-              <li>🌳 Nature & Forest Folktales</li>
-            </ul>
-            <div class="pathway-card-footer">
-              <span class="pathway-status-pill">Active Pathway ✓</span>
-            </div>
-          </article>
-
-          <!-- Card 3: Grades 4, 5 -->
-          <article class="pathway-card card-green" data-grade="upper-primary" tabindex="0" role="button" aria-pressed="false">
-            <div class="pathway-card-header">
-              <span class="pathway-sticker">🏆</span>
-              <span class="pathway-age-pill">Ages 9–11</span>
-            </div>
-            <h3 class="pathway-title">Grades 4 & 5</h3>
-            <p class="pathway-desc">Deep bilingual comprehension! Read regional stories, discover science in mother tongue, and collaborate.</p>
-            <ul class="pathway-topics">
-              <li>📖 Full Vernacular Stories & Scripts</li>
-              <li>🔬 Science & Environment In Mother Tongue</li>
-              <li>🧩 Advanced Word Puzzles</li>
-              <li>🤝 Cross-State Peer Learning</li>
-            </ul>
-            <div class="pathway-card-footer">
-              <span class="pathway-status-pill">Explore Pathway ➜</span>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- 4. Interactive Learning Modules: Two-Column Grid -->
+    <!-- 3. Interactive Learning Modules: Two-Column Grid -->
     <section class="section section-modules" id="learning-modules">
       <div class="container">
         <div class="section-header text-center">
@@ -407,8 +312,8 @@
                 </p>
                 <div class="story-meta">
                   <span>⏱️ 4 min read</span>
-                  <span>👶 Grade 1–3</span>
-                  <span>🗣️ 9 Languages Available</span>
+                  <span>👶 Ages 5–10</span>
+                  <span>🗣️ Santhali • Nagpuri • Khortha</span>
                 </div>
                 <div class="story-actions">
                   <button class="btn btn-primary btn-bounce" id="btnReadNow">
@@ -472,39 +377,11 @@
                 <small class="bubble-sub">"Hello! What new word did you learn today?"</small>
                 <button class="bubble-speak-btn" data-text="नमस्ते! आज तुमने कौन सा नया शब्द सीखा?" data-lang="hi-IN" title="Listen in Hindi">🔊</button>
               </div>
-            </div>
-
-            <div class="peer-bubble bubble-bengali" data-lang="Bengali" style="--delay: 1s;">
-              <div class="bubble-avatar">👧🏻</div>
-              <div class="bubble-content">
-                <div class="bubble-header-row">
-                  <strong>Ananya (West Bengal)</strong>
-                  <span class="bubble-flag">বাংলা</span>
-                </div>
-                <p class="bubble-msg">"নমস্কার! চলো একসাথে অংক খেলা খেলি!"</p>
-                <small class="bubble-sub">"Hello! Let's play the math game together!"</small>
-                <button class="bubble-speak-btn" data-text="নমস্কার! চলো একসাথে অংক খেলা খেলি!" data-lang="bn-IN" title="Listen in Bengali">🔊</button>
-              </div>
-            </div>
-
-            <div class="peer-bubble bubble-tamil" data-lang="Tamil" style="--delay: 2s;">
-              <div class="bubble-avatar">👧🏾</div>
-              <div class="bubble-content">
-                <div class="bubble-header-row">
-                  <strong>Priya (Tamil Nadu)</strong>
-                  <span class="bubble-flag">தமிழ்</span>
-                </div>
-                <p class="bubble-msg">"வணக்கம்! எனக்கு இந்தப் புதிய கதை மிகவும் பிடித்திருக்கிறது!"</p>
-                <small class="bubble-sub">"Vanakkam! I really loved this new story!"</small>
-                <button class="bubble-speak-btn" data-text="வணக்கம்! எனக்கு இந்தப் புதிய கதை மிகவும் பிடித்திருக்கிறது!" data-lang="ta-IN" title="Listen in Tamil">🔊</button>
-              </div>
-            </div>
-
-            <div class="peer-bubble bubble-santhali" data-lang="Santhali" style="--delay: 1.5s;">
+            <div class="peer-bubble bubble-santhali" data-lang="Santhali" style="--delay: 0.5s;">
               <div class="bubble-avatar">👦🏾</div>
               <div class="bubble-content">
                 <div class="bubble-header-row">
-                  <strong>Birsa (Mayurbhanj)</strong>
+                  <strong>Birsa (Jharkhand)</strong>
                   <span class="bubble-flag">ᱥᱟᱱᱛᱟᱲᱤ</span>
                 </div>
                 <p class="bubble-msg">"ᱡᱚᱦᱟᱨ! ᱤᱧ ᱱᱟᱣᱟ ᱥᱟᱱᱛᱟᱲᱤ ᱟᱹᱲᱟᱹᱧ ᱪᱮᱫ ᱠᱮᱫᱟ!"</p>
@@ -513,16 +390,42 @@
               </div>
             </div>
 
-            <div class="peer-bubble bubble-english" data-lang="English" style="--delay: 2.5s;">
-              <div class="bubble-avatar">🧒🏼</div>
+            <div class="peer-bubble bubble-nagpuri" data-lang="Nagpuri" style="--delay: 1s;">
+              <div class="bubble-avatar">👦🏽</div>
               <div class="bubble-content">
                 <div class="bubble-header-row">
-                  <strong>Leo (Kerala)</strong>
-                  <span class="bubble-flag">English</span>
+                  <strong>Sumit (Ranchi)</strong>
+                  <span class="bubble-flag">नागपुरी</span>
                 </div>
-                <p class="bubble-msg">"The AI Tutor translated your messages instantly to my screen!"</p>
-                <small class="bubble-sub">Real-time peer translation active</small>
-                <button class="bubble-speak-btn" data-text="The AI Tutor translated your messages instantly to my screen!" data-lang="en-IN" title="Listen in English">🔊</button>
+                <p class="bubble-msg">"जोहार संगी! आज हमरे मन नवा पाठ पढ़ब!"</p>
+                <small class="bubble-sub">"Johar sangi! Today we will learn a new lesson!"</small>
+                <button class="bubble-speak-btn" data-text="जोहार संगी! आज हमरे मन नवा पाठ पढ़ब!" data-lang="hi-IN" title="Listen in Nagpuri">🔊</button>
+              </div>
+            </div>
+
+            <div class="peer-bubble bubble-khortha" data-lang="Khortha" style="--delay: 1.5s;">
+              <div class="bubble-avatar">👧🏽</div>
+              <div class="bubble-content">
+                <div class="bubble-header-row">
+                  <strong>Pooja (Bokaro)</strong>
+                  <span class="bubble-flag">खोरठा</span>
+                </div>
+                <p class="bubble-msg">"गोड़ लागो ही संगी! चल मिल के खेलब!"</p>
+                <small class="bubble-sub">"God lago hi sangi! Let's play together!"</small>
+                <button class="bubble-speak-btn" data-text="गोड़ लागो ही संगी! चल मिल के खेलब!" data-lang="hi-IN" title="Listen in Khortha">🔊</button>
+              </div>
+            </div>
+
+            <div class="peer-bubble bubble-hindi" data-lang="Hindi" style="--delay: 2s;">
+              <div class="bubble-avatar">🧒🏽</div>
+              <div class="bubble-content">
+                <div class="bubble-header-row">
+                  <strong>Rahul (Dhanbad)</strong>
+                  <span class="bubble-flag">हिन्दी</span>
+                </div>
+                <p class="bubble-msg">"नमस्ते! आज तुमने कौन सा नया शब्द सीखा?"</p>
+                <small class="bubble-sub">"Hello! What new word did you learn today?"</small>
+                <button class="bubble-speak-btn" data-text="नमस्ते! आज तुमने कौन सा नया शब्द सीखा?" data-lang="hi-IN" title="Listen in Hindi">🔊</button>
               </div>
             </div>
           </div>
@@ -542,10 +445,11 @@
                 <div class="sim-field">
                   <label for="simSenderLang">You speak:</label>
                   <select id="simSenderLang">
-                    <option value="hin">Hindi (हिन्दी)</option>
+                    <option value="hin" selected>Hindi (हिन्दी)</option>
                     <option value="eng">English</option>
-                    <option value="bengali">Bengali (বাংলা)</option>
-                    <option value="tamil">Tamil (தமிழ்)</option>
+                    <option value="Santhali">Santhali (ᱥᱟᱱᱛᱟᱲᱤ)</option>
+                    <option value="Nagpuri">Nagpuri (नागपुरी)</option>
+                    <option value="Khortha">Khortha (खोरठा)</option>
                   </select>
                 </div>
                 <div class="sim-arrow">➜</div>
@@ -553,12 +457,10 @@
                   <label for="simPeerLang">Your friend speaks:</label>
                   <select id="simPeerLang">
                     <option value="Santhali" selected>Santhali (ᱥᱟᱱᱛᱟᱲᱤ)</option>
-                    <option value="Mundari">Mundari (मुंडारी)</option>
-                    <option value="Ho">Ho (𑢹𑣉)</option>
-                    <option value="Kurukh">Kurukh (कुड़ुख़)</option>
-                    <option value="Bengali">Bengali (বাংলা)</option>
-                    <option value="Tamil">Tamil (தமிழ்)</option>
+                    <option value="Nagpuri">Nagpuri (नागपुरी)</option>
+                    <option value="Khortha">Khortha (खोरठा)</option>
                     <option value="Hindi">Hindi (हिन्दी)</option>
+                    <option value="English">English</option>
                   </select>
                 </div>
               </div>
@@ -637,14 +539,10 @@
               <label for="targetLanguage">Translate To Mother Tongue:</label>
               <select id="targetLanguage" class="styled-select">
                 <option value="Santhali" selected>Santhali (ᱥᱟᱱᱛᱟᱲᱤ)</option>
-                <option value="Mundari">Mundari (मुंडारी)</option>
-                <option value="Ho">Ho (𑢹𑣉)</option>
-                <option value="Kurukh">Kurukh (कुड़ुख़)</option>
-                <option value="Kharia">Kharia (खड़िया)</option>
+                <option value="Nagpuri">Nagpuri (नागपुरी)</option>
                 <option value="Khortha">Khortha (खोरठा)</option>
-                <option value="Nagpuri">नागपुरी (नागपुरी)</option>
-                <option value="Panchpargania">Panchpargania (पंचपरगनिया)</option>
-                <option value="Kurmali">Kurmali (कुड़मालि)</option>
+                <option value="Hindi">Hindi (हिन्दी)</option>
+                <option value="English">English (अंग्रेज़ी)</option>
               </select>
             </div>
           </div>
@@ -791,12 +689,13 @@
       </div>
 
       <div class="footer-links-column">
-        <h4>Learning Tracks</h4>
+        <h4>Learning Zones</h4>
         <ul>
-          <li><a href="#pathways">Kindergarten & Pre-K</a></li>
-          <li><a href="#pathways">Grades 1, 2, 3 (Primary)</a></li>
-          <li><a href="#pathways">Grades 4, 5 (Upper Primary)</a></li>
           <li><a href="#learning-modules">Language Lab & Phonics</a></li>
+          <li><a href="#learning-modules">Math Magic in Vernacular</a></li>
+          <li><a href="#story-corner">Vernacular Story Corner</a></li>
+          <li><a href="#collaboration">Peer Collaboration Circle</a></li>
+          <li><a href="#translator">Live Multi-Lingual Translator</a></li>
         </ul>
       </div>
 
@@ -804,15 +703,8 @@
         <h4>Supported Mother Tongues</h4>
         <div class="lang-tags-cloud">
           <span>Santhali (ᱥᱟᱱᱛᱟᱲᱤ)</span>
-          <span>Mundari (मुंडारी)</span>
-          <span>Ho (𑢹𑣉)</span>
-          <span>Kurukh (कुड़ुख़)</span>
-          <span>Kharia (खड़िया)</span>
-          <span>Khortha (खोरठा)</span>
           <span>Nagpuri (नागपुरी)</span>
-          <span>Kurmali (कुड़मालि)</span>
-          <span>Bengali (বাংলা)</span>
-          <span>Tamil (தமிழ்)</span>
+          <span>Khortha (खोरठा)</span>
         </div>
       </div>
     </div>
