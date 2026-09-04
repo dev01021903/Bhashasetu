@@ -157,6 +157,108 @@ def load_words_data() -> Tuple[List[Dict[str, Any]], Optional[str]]:
         return [], "Unable to read word database file. Please verify CSV format."
 
 
+def normalize_language_name(val: str) -> str:
+    """Normalizes language aliases to standardized language keys."""
+    v = clean_str(val).lower()
+    if not v:
+        return ""
+    if any(k in v for k in ["santhali", "santali", "ᱥᱟᱱᱛᱟᱲᱤ", "ol chiki"]):
+        return "Santali"
+    if any(k in v for k in ["nagpuri", "नागपुरी", "sadri"]):
+        return "Nagpuri"
+    if any(k in v for k in ["khortha", "खोरठा"]):
+        return "Khortha"
+    if any(k in v for k in ["hin", "hindi", "हिन्दी", "हिंदी", "hinglish"]):
+        return "hindi"
+    if any(k in v for k in ["eng", "english", "अंग्रेज़ी", "अंग्रेजी"]):
+        return "english"
+    if any(k in v for k in ["local", "mother tongue", "vernacular"]):
+        return "local"
+    return val.strip()
+
+
+def load_concepts_data() -> Tuple[List[Dict[str, Any]], Optional[str]]:
+    """
+    Loads wide-concept dictionary aggregating translations across
+    English, Hindi, Santali, Nagpuri, and Khortha.
+    """
+    words, err = load_words_data()
+    if err:
+        return [], err
+
+    # Check if raw CSV has wide columns
+    try:
+        df = pd.read_csv(CSV_FILE_PATH, encoding="utf-8").fillna("")
+        cols_lower = [c.strip().lower() for c in df.columns]
+        
+        # If wide columns exist directly
+        if "santali" in cols_lower and "nagpuri" in cols_lower:
+            concepts = []
+            col_map = {c.strip().lower(): c for c in df.columns}
+            for idx, row in df.iterrows():
+                eng = clean_str(row.get(col_map.get("english", "english"), ""))
+                hin = clean_str(row.get(col_map.get("hindi", "hindi"), ""))
+                san = clean_str(row.get(col_map.get("santali", "Santali"), ""))
+                nag = clean_str(row.get(col_map.get("nagpuri", "Nagpuri"), ""))
+                kho = clean_str(row.get(col_map.get("khortha", "Khortha"), ""))
+                cat = clean_str(row.get(col_map.get("category", "category"), "General")) or "General"
+                emoji = clean_str(row.get(col_map.get("emoji", "emoji"), "🌟")) or "🌟"
+                img = clean_str(row.get(col_map.get("image_url", "image_url"), ""))
+
+                if eng or hin or san or nag or kho:
+                    concepts.append({
+                        "id": str(idx + 1),
+                        "english": eng,
+                        "hindi": hin,
+                        "Santali": san,
+                        "Nagpuri": nag,
+                        "Khortha": kho,
+                        "category": cat,
+                        "emoji": emoji,
+                        "image_url": img
+                    })
+            if concepts:
+                return concepts, None
+    except Exception:
+        pass
+
+    # Otherwise aggregate row-based words by English/Hindi concept
+    concept_map: Dict[str, Dict[str, Any]] = {}
+    for w in words:
+        eng_key = w["english_word"].lower().strip()
+        hin_key = w["hindi_word"].lower().strip()
+        key = eng_key if eng_key else hin_key
+        if not key:
+            continue
+
+        if key not in concept_map:
+            concept_map[key] = {
+                "id": w["id"],
+                "english": w["english_word"],
+                "hindi": w["hindi_word"],
+                "Santali": "",
+                "Nagpuri": "",
+                "Khortha": "",
+                "category": w["category"],
+                "emoji": w["emoji"],
+                "image_url": w["image_url"],
+                "difficulty": w["difficulty"]
+            }
+
+        lang_norm = normalize_language_name(w["language"])
+        if lang_norm in ["Santali", "Nagpuri", "Khortha"]:
+            concept_map[key][lang_norm] = w["local_word"]
+        elif not concept_map[key]["Santali"]:
+            concept_map[key]["Santali"] = w["local_word"]
+
+        if not concept_map[key]["hindi"] and w["hindi_word"]:
+            concept_map[key]["hindi"] = w["hindi_word"]
+        if not concept_map[key]["english"] and w["english_word"]:
+            concept_map[key]["english"] = w["english_word"]
+
+    return list(concept_map.values()), None
+
+
 def filter_words(
     words: List[Dict[str, Any]],
     category: Optional[str] = None,
@@ -169,8 +271,8 @@ def filter_words(
         filtered = [w for w in filtered if w["category"].lower() == cat_clean]
 
     if language:
-        lang_clean = language.strip().lower()
-        filtered = [w for w in filtered if w["language"].lower() == lang_clean]
+        lang_clean = normalize_language_name(language).lower()
+        filtered = [w for w in filtered if normalize_language_name(w["language"]).lower() == lang_clean]
 
     return filtered
 
@@ -322,13 +424,15 @@ def get_random_words():
 @app.route("/api/translate", methods=["POST"])
 def translate_lookup():
     """
-    Dictionary translation lookup endpoint.
+    Dictionary translation lookup endpoint supporting multi-language concept mapping:
+    English ↕ Hindi ↕ Santali ↕ Nagpuri ↕ Khortha.
     POST /api/translate
     Body:
     {
-      "text": "dog",
+      "text": "water",
       "fromLanguage": "english",
-      "toLanguage": "local"
+      "toLanguage": "local",
+      "targetLanguage": "Santali"
     }
     """
     if not request.is_json:
@@ -338,57 +442,124 @@ def translate_lookup():
 
     data = request.get_json() or {}
     text = clean_str(data.get("text"))
-    from_lang = clean_str(data.get("fromLanguage")).lower()
-    to_lang = clean_str(data.get("toLanguage")).lower()
+    raw_from_lang = clean_str(data.get("fromLanguage", "english"))
+    raw_to_lang = clean_str(data.get("toLanguage", "local"))
+    raw_target_lang = clean_str(data.get("targetLanguage", ""))
 
     if not text:
         return jsonify({
+            "found": False,
             "error": "Missing required field: 'text'."
         }), 400
 
-    valid_langs = ["local", "hindi", "english"]
-    if from_lang not in valid_langs or to_lang not in valid_langs:
-        return jsonify({
-            "error": f"Invalid language parameters. Allowed values: {valid_langs}."
-        }), 400
+    from_lang = normalize_language_name(raw_from_lang)
+    to_lang = normalize_language_name(raw_to_lang)
 
-    words, err = load_words_data()
+    # Determine resolved target language
+    if to_lang == "local" or not to_lang:
+        resolved_target = normalize_language_name(raw_target_lang) if raw_target_lang else "Santali"
+        if resolved_target == "local" or not resolved_target:
+            resolved_target = "Santali"
+    else:
+        resolved_target = to_lang
+
+    valid_sources = ["english", "hindi", "Santali", "Nagpuri", "Khortha", "local", "auto"]
+    if from_lang not in valid_sources:
+        from_lang = "auto"
+
+    concepts, err = load_concepts_data()
     if err:
         return jsonify({"error": err, "found": False}), 500
 
-    # Field mapping
-    lang_to_field = {
-        "local": "local_word",
-        "hindi": "hindi_word",
-        "english": "english_word"
-    }
+    text_lower = text.lower().strip()
+    matched_concept = None
 
-    from_field = lang_to_field[from_lang]
-    to_field = lang_to_field[to_lang]
+    # 1. First attempt direct language-specific match
+    for c in concepts:
+        if from_lang == "english" and c.get("english"):
+            val = c["english"].lower().strip()
+            if val == text_lower or text_lower in val.split():
+                matched_concept = c
+                break
+        elif from_lang == "hindi" and c.get("hindi"):
+            val = c["hindi"].lower().strip()
+            if val == text_lower or text_lower in val.split():
+                matched_concept = c
+                break
+        elif from_lang in ["Santali", "Nagpuri", "Khortha"] and c.get(from_lang):
+            val = c[from_lang].lower().strip()
+            if text_lower in val:
+                matched_concept = c
+                break
 
-    # Search for an exact match (case-insensitive, ignoring surrounding whitespace)
-    text_lower = text.lower()
-    matched_word = None
+    # 2. Fallback search across all language fields if not matched
+    if not matched_concept:
+        for c in concepts:
+            fields_to_check = [
+                c.get("english", "").lower(),
+                c.get("hindi", "").lower(),
+                c.get("Santali", "").lower(),
+                c.get("Nagpuri", "").lower(),
+                c.get("Khortha", "").lower()
+            ]
+            for f in fields_to_check:
+                if f and (f == text_lower or text_lower in f.split() or (len(text_lower) >= 3 and text_lower in f)):
+                    matched_concept = c
+                    break
+            if matched_concept:
+                break
 
-    for w in words:
-        source_val = w[from_field].strip().lower()
-        if source_val == text_lower or text_lower in source_val.split():
-            matched_word = w
-            break
-
-    if not matched_word:
+    if not matched_concept:
         return jsonify({
             "found": False,
-            "message": "We do not know this word yet. Please try another word."
+            "message": "We are still learning this word. Please try another one."
         }), 404
 
-    target_translation = matched_word[to_field]
+    # Extract target translation string
+    target_translation = ""
+    if resolved_target in matched_concept and matched_concept[resolved_target]:
+        target_translation = matched_concept[resolved_target]
+    elif resolved_target == "english":
+        target_translation = matched_concept.get("english", "")
+    elif resolved_target == "hindi":
+        target_translation = matched_concept.get("hindi", "")
+    else:
+        # Fallback to Santali, Nagpuri, or Khortha in order
+        target_translation = matched_concept.get("Santali") or matched_concept.get("Nagpuri") or matched_concept.get("Khortha") or ""
+
+    if not target_translation:
+        return jsonify({
+            "found": False,
+            "message": "We are still learning this word. Please try another one."
+        }), 404
+
+    # Construct complete word dictionary payload
+    word_payload = {
+        "id": matched_concept.get("id", "1"),
+        "english_word": matched_concept.get("english", ""),
+        "hindi_word": matched_concept.get("hindi", ""),
+        "local_word": target_translation,
+        "language": resolved_target,
+        "category": matched_concept.get("category", "General"),
+        "emoji": matched_concept.get("emoji", "🌟"),
+        "image_url": matched_concept.get("image_url", ""),
+        "difficulty": matched_concept.get("difficulty", "easy"),
+        "translations": {
+            "english": matched_concept.get("english", ""),
+            "hindi": matched_concept.get("hindi", ""),
+            "Santali": matched_concept.get("Santali", ""),
+            "Nagpuri": matched_concept.get("Nagpuri", ""),
+            "Khortha": matched_concept.get("Khortha", "")
+        }
+    }
 
     return jsonify({
         "found": True,
         "input": text,
         "translation": target_translation,
-        "word": matched_word
+        "sourceLanguage": from_lang,
+        "targetLanguage": resolved_target,
+        "word": word_payload
     }), 200
 
 

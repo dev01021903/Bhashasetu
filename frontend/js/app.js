@@ -1234,13 +1234,26 @@ async function performStudioTranslation() {
     const result = await window.WordAPI.translateWord(
       cleanedInput,
       mappedFromLanguage,
-      mappedToLanguage
+      mappedToLanguage,
+      targetName
     );
 
     // 8. On success, update existing result section with details
     if (result && result.found && (result.translation || (result.word && result.word.local_word))) {
       const word = result.word || {};
       const translationText = result.translation || word.local_word || "";
+      const translations = word.translations || {};
+
+      let multiLangBadges = '';
+      if (translations.Santali || translations.Nagpuri || translations.Khortha) {
+        multiLangBadges = `
+          <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; font-size: 0.85rem; font-weight: 700; margin-top: 6px;">
+            ${translations.Santali ? `<span style="background: #EEF2FF; color: #4338CA; padding: 3px 10px; border-radius: 999px; border: 1px solid #C7D2FE;">Santali: <strong>${escapeHtml(translations.Santali)}</strong></span>` : ''}
+            ${translations.Nagpuri ? `<span style="background: #F0FDF4; color: #15803D; padding: 3px 10px; border-radius: 999px; border: 1px solid #BBF7D0;">Nagpuri: <strong>${escapeHtml(translations.Nagpuri)}</strong></span>` : ''}
+            ${translations.Khortha ? `<span style="background: #FFFBEB; color: #B45309; padding: 3px 10px; border-radius: 999px; border: 1px solid #FDE68A;">Khortha: <strong>${escapeHtml(translations.Khortha)}</strong></span>` : ''}
+          </div>
+        `;
+      }
 
       outputArea.innerHTML = `
         <div class="translated-result-card" style="display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 4px 0;">
@@ -1257,6 +1270,7 @@ async function performStudioTranslation() {
               English: ${escapeHtml(word.english_word || '')} • Hindi: ${escapeHtml(word.hindi_word || '')}
             </span>
           </div>
+          ${multiLangBadges}
         </div>
       `;
 

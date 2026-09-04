@@ -86,16 +86,17 @@
 
   /**
    * Exact dictionary translation lookup
-   * fromLanguage & toLanguage: "english" | "hindi" | "local"
+   * fromLanguage & toLanguage: "english" | "hindi" | "local" | "Santali" | "Nagpuri" | "Khortha"
    */
-  async function translateWord(text, fromLanguage = "english", toLanguage = "local") {
+  async function translateWord(text, fromLanguage = "english", toLanguage = "local", targetLanguage = "") {
     return requestApi('/api/translate', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         text: text.trim(),
-        fromLanguage: fromLanguage.toLowerCase(),
-        toLanguage: toLanguage.toLowerCase()
+        fromLanguage: fromLanguage,
+        toLanguage: toLanguage,
+        targetLanguage: targetLanguage
       })
     });
   }
