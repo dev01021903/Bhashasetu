@@ -16,6 +16,7 @@
   <link rel="stylesheet" href="css/services-section.css">
   <link rel="stylesheet" href="css/chatbot-widget.css">
   <link rel="stylesheet" href="css/faq-section.css">
+  <link rel="stylesheet" href="css/parental-control.css">
 </head>
 <body>
   <!-- Playful Floating Sky Clouds -->
@@ -80,6 +81,12 @@
             <button class="btn-user-switch" onclick="switchOrLogoutUser()" title="Switch or Logout Student">🔄</button>
           </div>
         </div>
+
+        <!-- Parent / Teacher Area Button -->
+        <button id="openParentAreaBtn" class="btn-parent-nav" title="Parent / Teacher Area: Manage learning goals and safety settings." aria-label="Open Parent and Teacher Area">
+          <span class="parent-nav-icon">🔐</span>
+          <span class="parent-nav-text">Parent / Teacher</span>
+        </button>
 
         <button class="mobile-menu" id="mobileMenu" aria-label="Open navigation menu">☰</button>
       </div>
@@ -935,7 +942,11 @@
     
     <div class="footer-bottom text-center">
       <p>© 2026 BhashaSetu • Every child deserves to learn in their mother tongue.</p>
-      <p style="margin-top: 6px; font-size: 0.82rem;"><a href="terms-privacy.html" target="_blank" style="text-decoration: underline; color: var(--primary-blue); font-weight: 700;">📜 Terms of Service & Privacy Policy (DPDP Act 2023 Compliant)</a></p>
+      <p style="margin-top: 6px; font-size: 0.82rem;">
+        <a href="terms-privacy.html" target="_blank" style="text-decoration: underline; color: var(--primary-blue); font-weight: 700;">📜 Terms of Service & Privacy Policy (DPDP Act 2023 Compliant)</a>
+        <span style="margin: 0 8px; color: var(--ink-light);">•</span>
+        <a href="javascript:void(0)" onclick="window.ParentalControl && window.ParentalControl.openParentArea()" style="text-decoration: underline; color: var(--accent-purple); font-weight: 700;">🔐 Parent / Teacher Area</a>
+      </p>
     </div>
   </footer>
 
@@ -948,6 +959,7 @@
   <!-- Client-Side App Logic -->
   <script src="js/config.js"></script>
   <script src="js/wordApi.js"></script>
+  <script src="js/parentalControl.js"></script>
   <script src="js/app.js"></script>
   <script src="js/about-section.js"></script>
   <script src="js/services-section.js"></script>

@@ -1,0 +1,633 @@
+/**
+ * BhashaSetu - Parent & Teacher Control Dashboard Styles
+ * Child-Safe Educational Pedagogy & Parental Controls
+ */
+
+/* ==========================================================================
+   1. Nav Entry Button & Badges
+   ========================================================================== */
+.btn-parent-nav {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #FFF9C4;
+  color: var(--ink-dark);
+  border: 2px solid var(--ink-dark);
+  border-radius: var(--radius-sm);
+  padding: 8px 14px;
+  font-family: var(--font-primary);
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 3px 0 rgba(30, 41, 59, 0.15);
+  transition: all 0.15s ease;
+  text-decoration: none;
+}
+
+.btn-parent-nav:hover {
+  background: var(--primary-yellow);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 0 rgba(30, 41, 59, 0.2);
+}
+
+.btn-parent-nav:active {
+  transform: translateY(1px);
+  box-shadow: 0 1px 0 rgba(30, 41, 59, 0.15);
+}
+
+.parent-nav-icon {
+  font-size: 1.1rem;
+}
+
+/* ==========================================================================
+   2. Parent Modal Window Container
+   ========================================================================== */
+.parent-modal-window {
+  width: min(720px, 95vw);
+  max-height: 88vh;
+  background: #FFFFFF;
+  border: 3.5px solid var(--ink-dark);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.35);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  animation: popIn 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.parent-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px;
+  background: #EFF6FF;
+  border-bottom: 2.5px solid var(--ink-dark);
+}
+
+.parent-modal-header .modal-title-wrap h3 {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--ink-dark);
+  margin: 0;
+}
+
+.parent-modal-body {
+  padding: 24px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background: #F8FAFC;
+}
+
+/* ==========================================================================
+   3. PIN Lock & Creation Screens
+   ========================================================================== */
+.pin-view-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 16px 12px;
+  max-width: 440px;
+  margin: 0 auto;
+  gap: 16px;
+}
+
+.pin-mascot-badge {
+  width: 64px;
+  height: 64px;
+  background: #FEF3C7;
+  border: 2px solid var(--ink-dark);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  box-shadow: 0 4px 0 rgba(30, 41, 59, 0.1);
+}
+
+.pin-view-title {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--ink-dark);
+  margin: 0;
+}
+
+.pin-view-subtitle {
+  font-size: 0.95rem;
+  color: var(--ink-light);
+  margin: 0;
+  line-height: 1.4;
+}
+
+.pin-inputs-stack {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 8px;
+}
+
+.pin-field-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+  width: 100%;
+}
+
+.pin-field-group label {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--ink-dark);
+}
+
+.pin-digit-input {
+  width: 100%;
+  padding: 12px 16px;
+  font-size: 1.3rem;
+  font-weight: 800;
+  letter-spacing: 0.35em;
+  text-align: center;
+  border: 2px solid var(--ink-dark);
+  border-radius: var(--radius-sm);
+  background: #FFFFFF;
+  color: var(--ink-dark);
+  outline: none;
+  transition: all 0.15s ease;
+  font-family: inherit;
+}
+
+.pin-digit-input:focus {
+  border-color: var(--primary-blue);
+  box-shadow: 0 0 0 3px rgba(2, 136, 209, 0.2);
+}
+
+.pin-feedback-msg {
+  min-height: 22px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #DC2626;
+  margin: 0;
+}
+
+.pin-feedback-msg.success {
+  color: #16A34A;
+}
+
+.pin-action-btn {
+  width: 100%;
+  padding: 12px 20px;
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+.pin-forgot-link {
+  font-size: 0.85rem;
+  color: var(--ink-light);
+  text-decoration: underline;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 4px;
+  font-family: inherit;
+}
+
+.pin-forgot-link:hover {
+  color: var(--primary-blue);
+}
+
+/* ==========================================================================
+   4. Parent Dashboard Layout & Cards
+   ========================================================================== */
+.parent-dashboard-container {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.dashboard-hero-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(135deg, #E0F2FE 0%, #EDE9FE 100%);
+  border: 2px solid var(--ink-dark);
+  border-radius: var(--radius-md);
+  padding: 16px 20px;
+  box-shadow: 0 4px 0 rgba(30, 41, 59, 0.08);
+}
+
+.dashboard-hero-text h4 {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--ink-dark);
+  margin: 0 0 4px 0;
+}
+
+.dashboard-hero-text p {
+  font-size: 0.88rem;
+  color: var(--ink-light);
+  margin: 0;
+}
+
+.dashboard-lock-status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #FFFFFF;
+  border: 1.5px solid var(--ink-dark);
+  border-radius: 999px;
+  padding: 4px 12px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--ink-dark);
+}
+
+.dashboard-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  gap: 16px;
+}
+
+.pc-card {
+  background: #FFFFFF;
+  border: 2px solid var(--ink-dark);
+  border-radius: var(--radius-md);
+  padding: 18px;
+  box-shadow: 0 4px 0 rgba(30, 41, 59, 0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.pc-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1.5px solid #F1F5F9;
+  padding-bottom: 8px;
+}
+
+.pc-card-header h5 {
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--ink-dark);
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.pc-card-badge {
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: #F1F5F9;
+  color: var(--ink-light);
+}
+
+/* Card A: Child Profile */
+.profile-details-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 0.9rem;
+}
+
+.profile-detail-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.profile-detail-label {
+  color: var(--ink-light);
+  font-weight: 600;
+}
+
+.profile-detail-val {
+  font-weight: 800;
+  color: var(--ink-dark);
+}
+
+.profile-edit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.profile-edit-field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.profile-edit-field label {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--ink-dark);
+}
+
+.profile-edit-field input,
+.profile-edit-field select {
+  padding: 8px 12px;
+  border: 1.5px solid var(--ink-dark);
+  border-radius: var(--radius-sm);
+  font-family: inherit;
+  font-size: 0.9rem;
+  font-weight: 600;
+  outline: none;
+}
+
+.profile-form-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 6px;
+}
+
+/* Card B: Learning Progress Tracker */
+.progress-stats-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.progress-stat-tile {
+  background: #F8FAFC;
+  border: 1.5px solid #E2E8F0;
+  border-radius: var(--radius-sm);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.progress-stat-num {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--ink-dark);
+}
+
+.progress-stat-lbl {
+  font-size: 0.75rem;
+  color: var(--ink-light);
+  font-weight: 600;
+}
+
+.progress-bar-container {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 4px;
+}
+
+.progress-bar-track {
+  width: 100%;
+  height: 12px;
+  background: #E2E8F0;
+  border-radius: 999px;
+  overflow: hidden;
+  border: 1px solid #CBD5E1;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #38BDF8 0%, #4ADE80 100%);
+  border-radius: 999px;
+  transition: width 0.35s ease;
+}
+
+.progress-support-text {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #15803D;
+  margin: 0;
+}
+
+/* Card C: Daily Learning Goal */
+.daily-goal-options {
+  display: flex;
+  gap: 8px;
+}
+
+.goal-option-btn {
+  flex: 1;
+  padding: 8px 10px;
+  border: 2px solid var(--ink-dark);
+  border-radius: var(--radius-sm);
+  background: #FFFFFF;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--ink-dark);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.goal-option-btn:hover {
+  background: var(--accent-yellow-light);
+}
+
+.goal-option-btn.active {
+  background: var(--primary-yellow);
+  box-shadow: inset 0 2px 0 rgba(0, 0, 0, 0.1);
+  border-color: var(--ink-dark);
+}
+
+.goal-progress-box {
+  background: #FEF9C3;
+  border: 1.5px solid #FDE047;
+  border-radius: var(--radius-sm);
+  padding: 10px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.goal-progress-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: var(--ink-dark);
+}
+
+.goal-completion-badge {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #15803D;
+}
+
+/* Card D: Community Access Control */
+.community-toggle-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #F8FAFC;
+  border: 1.5px solid #E2E8F0;
+  border-radius: var(--radius-sm);
+  padding: 12px;
+  gap: 12px;
+}
+
+.community-status-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.community-status-heading {
+  font-size: 0.92rem;
+  font-weight: 800;
+  color: var(--ink-dark);
+}
+
+.community-status-sub {
+  font-size: 0.8rem;
+  color: var(--ink-light);
+}
+
+/* Accessible Switch */
+.pc-switch {
+  position: relative;
+  width: 52px;
+  height: 28px;
+  background: #CBD5E1;
+  border: 2px solid var(--ink-dark);
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  display: flex;
+  align-items: center;
+  padding: 2px;
+  flex-shrink: 0;
+  outline: none;
+}
+
+.pc-switch:focus-visible {
+  box-shadow: 0 0 0 3px rgba(2, 136, 209, 0.4);
+}
+
+.pc-switch[aria-checked="true"] {
+  background: #22C55E;
+}
+
+.pc-switch-handle {
+  width: 20px;
+  height: 20px;
+  background: #FFFFFF;
+  border: 1.5px solid var(--ink-dark);
+  border-radius: 50%;
+  transition: transform 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.pc-switch[aria-checked="true"] .pc-switch-handle {
+  transform: translateX(24px);
+}
+
+/* Card E: Basic Data and Privacy Control */
+.privacy-action-box {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.privacy-confirm-panel {
+  background: #FEF2F2;
+  border: 1.5px solid #FCA5A5;
+  border-radius: var(--radius-sm);
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.privacy-confirm-text {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #991B1B;
+  margin: 0;
+}
+
+.privacy-confirm-actions {
+  display: flex;
+  gap: 8px;
+}
+
+/* ==========================================================================
+   5. Community Locked Overlay Helper View
+   ========================================================================== */
+.community-locked-card {
+  background: #FFFBEB;
+  border: 3px dashed #F59E0B;
+  border-radius: var(--radius-md);
+  padding: 36px 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  max-width: 520px;
+  margin: 20px auto;
+  box-shadow: 0 8px 24px rgba(245, 158, 11, 0.15);
+}
+
+.community-locked-icon {
+  font-size: 3rem;
+  line-height: 1;
+}
+
+.community-locked-title {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--ink-dark);
+  margin: 0;
+}
+
+.community-locked-text {
+  font-size: 0.95rem;
+  color: var(--ink-light);
+  margin: 0;
+  max-width: 400px;
+}
+
+.community-locked-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+/* ==========================================================================
+   6. Accessibility & Responsive Adjustments
+   ========================================================================== */
+@media (max-width: 640px) {
+  .parent-modal-window {
+    width: 96vw;
+    max-height: 94vh;
+  }
+  
+  .dashboard-cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .parent-nav-text {
+    display: none;
+  }
+
+  .btn-parent-nav {
+    padding: 8px 10px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .parent-modal-window,
+  .progress-bar-fill,
+  .pc-switch,
+  .pc-switch-handle {
+    animation: none !important;
+    transition: none !important;
+  }
+}
