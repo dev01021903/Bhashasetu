@@ -12,6 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Fredoka:wght@400;500;600;700&family=Noto+Sans+Devanagari:wght@400;600;700&family=Noto+Sans+Ol+Chiki:wght@400;600;700&family=Noto+Sans+Tamil:wght@400;600;700&family=Noto+Sans+Bengali:wght@400;600;700&display=swap" rel="stylesheet">
   
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/faq-section.css">
 </head>
 <body>
   <!-- Playful Floating Sky Clouds -->
@@ -604,6 +605,66 @@
         </div>
       </div>
     </section>
+
+    <!-- ======================================================================
+        5. FAQ SECTION - BHASHASETU (Frequently Asked Questions)
+    ====================================================================== -->
+    <section class="section section-faq bhashasetu-faq-section" id="faq" aria-labelledby="bhashasetu-faq-heading">
+      <div class="container bhashasetu-faq-container">
+        <!-- Header & Cartoon Mascot Visual Accent -->
+        <header class="bhashasetu-faq-header">
+          <div class="bhashasetu-faq-badge-wrapper">
+            <span class="bhashasetu-faq-mascot-icon" aria-hidden="true">🦜</span>
+            <span>Learn • Connect • Explore</span>
+          </div>
+          <h2 class="bhashasetu-faq-title" id="bhashasetu-faq-heading">Frequently Asked Questions</h2>
+          <p class="bhashasetu-faq-subtitle">
+            Everything parents, teachers, and learners need to know about BhashaSetu.
+          </p>
+        </header>
+
+        <!-- Search Bar with Live Real-time Filtering -->
+        <div class="bhashasetu-faq-search-wrapper" role="search" aria-label="FAQ Question Search">
+          <label for="bhashasetu-faq-search-input" class="bhashasetu-visually-hidden">Search a question</label>
+          <div class="bhashasetu-faq-search-box">
+            <span class="bhashasetu-faq-search-icon" aria-hidden="true">🔍</span>
+            <input 
+              type="search" 
+              id="bhashasetu-faq-search-input" 
+              class="bhashasetu-faq-search-input" 
+              placeholder="Search a question…" 
+              autocomplete="off"
+              spellcheck="false"
+              aria-label="Search a question"
+            >
+            <button type="button" id="bhashasetu-faq-search-clear" class="bhashasetu-faq-search-clear" aria-label="Clear search">
+              ✕
+            </button>
+          </div>
+          <div class="bhashasetu-faq-search-stats" id="bhashasetu-faq-stats" aria-live="polite">
+            10 questions available
+          </div>
+        </div>
+
+        <!-- Accordion Container (Dynamically rendered and managed by js/faq-section.js) -->
+        <div class="bhashasetu-faq-list" id="bhashasetu-faq-list" role="region" aria-label="Questions list">
+          <!-- Populated dynamically by js/faq-section.js -->
+        </div>
+
+        <!-- Bottom CTA: Still need help? Contact Support -->
+        <aside class="bhashasetu-faq-bottom-cta" aria-label="Help and Support CTA">
+          <div class="bhashasetu-faq-cta-content">
+            <h3 class="bhashasetu-faq-cta-heading">Still need help?</h3>
+            <p class="bhashasetu-faq-cta-desc">
+              Have questions about mother-tongue learning or words? Our friendly support team is here to guide you.
+            </p>
+          </div>
+          <button type="button" class="bhashasetu-faq-cta-btn" id="bhashasetu-faq-cta-btn">
+            <span>💬</span> Contact Support
+          </button>
+        </aside>
+      </div>
+    </section>
   </main>
 
   <!-- Interactive Story Reader Modal -->
@@ -723,5 +784,6 @@
 
   <!-- Client-Side App Logic -->
   <script src="js/app.js"></script>
+  <script src="js/faq-section.js"></script>
 </body>
 </html>

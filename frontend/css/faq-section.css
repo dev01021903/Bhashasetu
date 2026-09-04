@@ -1,0 +1,561 @@
+/* ==========================================================================
+   BhashaSetu - Children's Educational Platform FAQ Section Styles
+   Theme: Playful, Child-Friendly, Accessible & Fully Cohesive with BhashaSetu
+   Target: Children (5–10), Parents, Teachers, Vernacular Language Learners
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   FAQ Section Layout & Background (Matches BhashaSetu Section Gradient)
+   -------------------------------------------------------------------------- */
+.bhashasetu-faq-section {
+  position: relative;
+  z-index: 10;
+  padding: 64px 0 80px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(225, 245, 254, 0.5) 40%, rgba(255, 249, 196, 0.35) 100%);
+  color: var(--ink-dark, #1E293B);
+  font-family: inherit;
+  overflow: hidden;
+}
+
+.bhashasetu-faq-container {
+  width: min(920px, calc(100% - 32px));
+  margin-inline: auto;
+  position: relative;
+  z-index: 2;
+}
+
+/* --------------------------------------------------------------------------
+   Section Header & Playful Badge Accent
+   -------------------------------------------------------------------------- */
+.bhashasetu-faq-header {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 36px;
+}
+
+.bhashasetu-faq-badge-wrapper {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--accent-yellow-light, #FFF9C4);
+  color: #795548;
+  border: 2px solid var(--accent-yellow-shadow, #FFA000);
+  padding: 6px 18px;
+  border-radius: var(--radius-pill, 999px);
+  font-size: 0.9rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  margin-bottom: 12px;
+  box-shadow: 0 3px 0 rgba(255, 160, 0, 0.25);
+  animation: softWiggle 4s infinite ease-in-out;
+}
+
+.bhashasetu-faq-mascot-icon {
+  font-size: 1.25rem;
+  line-height: 1;
+  display: inline-block;
+}
+
+.bhashasetu-faq-title {
+  font-size: clamp(1.9rem, 3.4vw, 2.5rem);
+  font-weight: 800;
+  color: var(--ink-dark, #1E293B);
+  line-height: 1.2;
+  margin-bottom: 8px;
+  letter-spacing: -0.02em;
+}
+
+.bhashasetu-faq-subtitle {
+  font-size: 1.05rem;
+  color: var(--ink-muted, #475569);
+  line-height: 1.55;
+  margin: 0 auto;
+}
+
+/* --------------------------------------------------------------------------
+   Search Bar (Live Real-Time Filtering - BhashaSetu Input Theme)
+   -------------------------------------------------------------------------- */
+.bhashasetu-faq-search-wrapper {
+  max-width: 640px;
+  margin: 0 auto 36px;
+  position: relative;
+}
+
+.bhashasetu-faq-search-box {
+  display: flex;
+  align-items: center;
+  background-color: var(--bg-card, #FFFFFF);
+  border: var(--border-thick, 3px solid #1E293B);
+  border-radius: var(--radius-pill, 999px);
+  padding: 6px 10px 6px 20px;
+  box-shadow: var(--shadow-chunky, 0 8px 0 rgba(30, 41, 59, 0.12));
+  transition: all 0.2s ease;
+}
+
+.bhashasetu-faq-search-box:focus-within {
+  border-color: var(--primary-blue, #0288D1);
+  box-shadow: 0 0 0 4px rgba(2, 136, 209, 0.2), var(--shadow-chunky, 0 8px 0 rgba(30, 41, 59, 0.12));
+  transform: translateY(-2px);
+}
+
+.bhashasetu-faq-search-icon {
+  font-size: 1.2rem;
+  color: var(--primary-blue, #0288D1);
+  margin-right: 10px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bhashasetu-faq-search-input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  font-family: inherit;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--ink-dark, #1E293B);
+  padding: 10px 0;
+  outline: none;
+  width: 100%;
+}
+
+.bhashasetu-faq-search-input::placeholder {
+  color: var(--ink-light, #64748B);
+  font-weight: 500;
+}
+
+.bhashasetu-faq-search-clear {
+  display: none;
+  background: var(--primary-blue-light, #E1F5FE);
+  border: 2px solid var(--primary-blue, #0288D1);
+  color: var(--primary-blue, #0288D1);
+  width: 34px;
+  height: 34px;
+  border-radius: var(--radius-pill, 999px);
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  font-weight: 800;
+  margin-right: 4px;
+  transition: all 0.15s ease;
+}
+
+.bhashasetu-faq-search-clear:hover {
+  background: var(--primary-blue, #0288D1);
+  color: #FFFFFF;
+  transform: scale(1.08);
+}
+
+.bhashasetu-faq-search-clear.visible {
+  display: inline-flex;
+}
+
+.bhashasetu-faq-search-stats {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  padding: 0 16px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--ink-light, #64748B);
+}
+
+/* --------------------------------------------------------------------------
+   Accordion List & Items (Chunky Rounded BhashaSetu Cards)
+   -------------------------------------------------------------------------- */
+.bhashasetu-faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.bhashasetu-faq-item {
+  background: var(--bg-card, #FFFFFF);
+  border-radius: var(--radius-md, 22px);
+  border: var(--border-thick, 3px solid #1E293B);
+  box-shadow: var(--shadow-chunky, 0 8px 0 rgba(30, 41, 59, 0.12));
+  transition: all 0.2s ease;
+  overflow: hidden;
+}
+
+.bhashasetu-faq-item:hover {
+  border-color: var(--primary-blue, #0288D1);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-chunky-hover, 0 12px 0 rgba(30, 41, 59, 0.12));
+}
+
+.bhashasetu-faq-item.is-open {
+  border-color: var(--primary-blue, #0288D1);
+  box-shadow: 0 8px 0 var(--primary-blue-shadow, #01579B);
+}
+
+/* Accordion Header Button (Large touch target >= 56px) */
+.bhashasetu-faq-trigger {
+  width: 100%;
+  min-height: 58px;
+  padding: 16px 22px;
+  background: transparent;
+  border: none;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 1.12rem;
+  font-weight: 800;
+  color: var(--ink-dark, #1E293B);
+  line-height: 1.35;
+  transition: background-color 0.15s ease, color 0.15s ease;
+  user-select: none;
+}
+
+.bhashasetu-faq-trigger:hover {
+  background-color: var(--primary-blue-light, #E1F5FE);
+}
+
+.bhashasetu-faq-trigger:focus-visible {
+  outline: 3px solid var(--accent-orange, #FF7043);
+  outline-offset: -2px;
+}
+
+.bhashasetu-faq-item.is-open .bhashasetu-faq-trigger {
+  color: var(--primary-blue-hover, #0277BD);
+  background-color: var(--primary-blue-light, #E1F5FE);
+}
+
+/* Question Title & Number Badge */
+.bhashasetu-faq-q-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex: 1;
+}
+
+.bhashasetu-faq-q-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-pill, 999px);
+  background-color: var(--primary-blue-light, #E1F5FE);
+  color: var(--primary-blue, #0288D1);
+  border: 2px solid var(--primary-blue, #0288D1);
+  font-size: 0.86rem;
+  font-weight: 800;
+  flex-shrink: 0;
+  box-shadow: 0 2px 0 var(--primary-blue-shadow, #01579B);
+  transition: all 0.15s ease;
+}
+
+.bhashasetu-faq-item.is-open .bhashasetu-faq-q-number {
+  background-color: var(--primary-blue, #0288D1);
+  color: #FFFFFF;
+}
+
+.bhashasetu-faq-q-text {
+  flex: 1;
+  font-size: 1.1rem;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+
+/* Accordion Chevron Icon Indicator */
+.bhashasetu-faq-icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: var(--radius-pill, 999px);
+  background-color: #FFFFFF;
+  border: 2px solid #E2E8F0;
+  color: var(--ink-muted, #475569);
+  flex-shrink: 0;
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+              background-color 0.15s ease,
+              border-color 0.15s ease,
+              color 0.15s ease;
+}
+
+.bhashasetu-faq-trigger:hover .bhashasetu-faq-icon-wrapper {
+  background-color: #FFFFFF;
+  border-color: var(--primary-blue, #0288D1);
+  color: var(--primary-blue, #0288D1);
+}
+
+.bhashasetu-faq-item.is-open .bhashasetu-faq-icon-wrapper {
+  transform: rotate(180deg);
+  background-color: var(--accent-yellow, #FFC107);
+  border-color: var(--ink-dark, #1E293B);
+  color: #3E2723;
+  box-shadow: 0 2px 0 var(--accent-yellow-shadow, #FFA000);
+}
+
+.bhashasetu-faq-icon {
+  width: 18px;
+  height: 18px;
+  display: block;
+}
+
+/* Accordion Expandable Answer Panel */
+.bhashasetu-faq-panel {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: var(--bg-card, #FFFFFF);
+}
+
+.bhashasetu-faq-item.is-open .bhashasetu-faq-panel {
+  grid-template-rows: 1fr;
+}
+
+.bhashasetu-faq-panel-inner {
+  overflow: hidden;
+}
+
+.bhashasetu-faq-answer {
+  padding: 8px 24px 22px 72px;
+  font-size: 1.02rem;
+  line-height: 1.68;
+  color: var(--ink-muted, #475569);
+  font-weight: 600;
+}
+
+/* --------------------------------------------------------------------------
+   Empty Search Results State (BhashaSetu Dashed Card)
+   -------------------------------------------------------------------------- */
+.bhashasetu-faq-empty-state {
+  text-align: center;
+  padding: 44px 20px;
+  background-color: var(--bg-card, #FFFFFF);
+  border: 3px dashed var(--ink-dark, #1E293B);
+  border-radius: var(--radius-lg, 32px);
+  margin-top: 10px;
+  box-shadow: var(--shadow-chunky, 0 8px 0 rgba(30, 41, 59, 0.12));
+}
+
+.bhashasetu-faq-empty-icon {
+  font-size: 3rem;
+  margin-bottom: 12px;
+  display: inline-block;
+  animation: softWiggle 2.5s infinite ease-in-out;
+}
+
+.bhashasetu-faq-empty-text {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--ink-dark, #1E293B);
+  margin-bottom: 8px;
+}
+
+.bhashasetu-faq-empty-subtext {
+  font-size: 0.98rem;
+  color: var(--ink-muted, #475569);
+  max-width: 480px;
+  margin: 0 auto 20px auto;
+  line-height: 1.55;
+}
+
+.bhashasetu-faq-empty-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 24px;
+  background-color: var(--primary-blue, #0288D1);
+  color: #FFFFFF;
+  border: var(--border-thick, 3px solid #1E293B);
+  border-radius: var(--radius-pill, 999px);
+  font-family: inherit;
+  font-size: 0.98rem;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 4px 0 var(--primary-blue-shadow, #01579B);
+  transition: all 0.15s ease;
+}
+
+.bhashasetu-faq-empty-cta-btn:hover {
+  background-color: var(--primary-blue-hover, #0277BD);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 0 var(--primary-blue-shadow, #01579B);
+}
+
+.bhashasetu-faq-empty-cta-btn:focus-visible {
+  outline: 3px solid var(--accent-orange, #FF7043);
+  outline-offset: 2px;
+}
+
+/* --------------------------------------------------------------------------
+   Bottom Call-to-Action (CTA) Banner Card (BhashaSetu Gradient & Chunky Button)
+   -------------------------------------------------------------------------- */
+.bhashasetu-faq-bottom-cta {
+  margin-top: 48px;
+  background: linear-gradient(135deg, var(--primary-blue, #0288D1) 0%, var(--accent-purple, #7E57C2) 100%);
+  border: var(--border-thick, 3px solid #1E293B);
+  border-radius: var(--radius-lg, 32px);
+  padding: 32px 36px;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  box-shadow: var(--shadow-chunky, 0 8px 0 rgba(30, 41, 59, 0.12));
+  position: relative;
+  overflow: hidden;
+}
+
+.bhashasetu-faq-bottom-cta::before {
+  content: "💬";
+  position: absolute;
+  right: -10px;
+  bottom: -20px;
+  font-size: 8rem;
+  opacity: 0.12;
+  pointer-events: none;
+}
+
+.bhashasetu-faq-cta-content {
+  position: relative;
+  z-index: 1;
+}
+
+.bhashasetu-faq-cta-heading {
+  font-size: 1.65rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  margin-bottom: 6px;
+  letter-spacing: -0.01em;
+}
+
+.bhashasetu-faq-cta-desc {
+  font-size: 1rem;
+  color: var(--primary-blue-light, #E1F5FE);
+  line-height: 1.55;
+  font-weight: 600;
+  max-width: 500px;
+}
+
+.bhashasetu-faq-cta-btn {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: var(--accent-yellow, #FFC107);
+  color: #3E2723;
+  font-family: inherit;
+  font-size: 1.1rem;
+  font-weight: 800;
+  padding: 13px 28px;
+  border: var(--border-thick, 3px solid #1E293B);
+  border-radius: var(--radius-pill, 999px);
+  cursor: pointer;
+  box-shadow: 0 6px 0 var(--accent-yellow-shadow, #FFA000);
+  transition: all 0.15s ease;
+  white-space: nowrap;
+  flex-shrink: 0;
+  min-height: 50px;
+}
+
+.bhashasetu-faq-cta-btn:hover {
+  background-color: #FFCA28;
+  transform: translateY(-3px);
+  box-shadow: 0 9px 0 var(--accent-yellow-shadow, #FFA000);
+}
+
+.bhashasetu-faq-cta-btn:active {
+  transform: translateY(3px);
+  box-shadow: 0 2px 0 var(--accent-yellow-shadow, #FFA000);
+}
+
+.bhashasetu-faq-cta-btn:focus-visible {
+  outline: 3px solid #FFFFFF;
+  outline-offset: 3px;
+}
+
+/* --------------------------------------------------------------------------
+   Responsive Layout (Mobile & Tablet Adjustments)
+   -------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+  .bhashasetu-faq-section {
+    padding: 44px 0 60px;
+  }
+
+  .bhashasetu-faq-header {
+    margin-bottom: 24px;
+  }
+
+  .bhashasetu-faq-title {
+    font-size: 1.85rem;
+  }
+
+  .bhashasetu-faq-subtitle {
+    font-size: 0.98rem;
+  }
+
+  .bhashasetu-faq-trigger {
+    padding: 14px 16px;
+    min-height: 54px;
+  }
+
+  .bhashasetu-faq-q-text {
+    font-size: 1.02rem;
+  }
+
+  .bhashasetu-faq-q-number {
+    width: 32px;
+    height: 32px;
+    font-size: 0.8rem;
+  }
+
+  .bhashasetu-faq-answer {
+    padding: 6px 16px 18px 16px;
+    font-size: 0.98rem;
+  }
+
+  .bhashasetu-faq-bottom-cta {
+    flex-direction: column;
+    text-align: center;
+    padding: 26px 20px;
+    gap: 18px;
+  }
+
+  .bhashasetu-faq-cta-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Accessibility: Reduced Motion Preference & Screen Reader Utility
+   -------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  .bhashasetu-faq-panel,
+  .bhashasetu-faq-item,
+  .bhashasetu-faq-badge-wrapper,
+  .bhashasetu-faq-icon-wrapper,
+  .bhashasetu-faq-cta-btn,
+  .bhashasetu-faq-empty-icon {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+.bhashasetu-visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
