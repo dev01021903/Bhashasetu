@@ -25,15 +25,33 @@
   let ALLOW_MULTIPLE_OPEN = false;
 
   /**
-   * Configurable handler for the "Contact Support" action.
-   * 
-   * TODO: Connect this callback to your application's router (e.g., router.push('/support'))
-   * or open a support modal dialog when that page/feature is connected.
+   * Handler for the "Contact Support" action:
+   * Smoothly navigates to the Chat with Assistant section and opens the Chatbot Widget.
    */
   let onContactSupport = function () {
-    console.info('[BhashaSetu FAQ] "Contact Support" clicked.');
-    // Default fallback action until a dedicated support route is connected:
-    alert('BhashaSetu Support: Our friendly team is here to help! Please check back soon or reach out to support@bhashasetu.org');
+    console.info('[BhashaSetu FAQ] "Contact Support" clicked -> hyperlinking to Chat with Assistant section.');
+
+    // 1. Smoothly scroll to the Chat with Assistant section
+    const target = document.getElementById('chat-assistant-section') || document.getElementById('services');
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+      // Visual highlight animation on the banner
+      target.style.transition = 'box-shadow 0.4s ease, transform 0.4s ease';
+      target.style.boxShadow = '0 0 0 5px #FFC107, 0 12px 28px rgba(0, 0, 0, 0.25)';
+      target.style.transform = 'translateY(-3px)';
+      setTimeout(() => {
+        target.style.boxShadow = '';
+        target.style.transform = '';
+      }, 2000);
+    }
+
+    // 2. Open the site-wide floating AI Assistant chatbot
+    if (window.BhashaSetuChatbot && typeof window.BhashaSetuChatbot.open === 'function') {
+      setTimeout(() => {
+        window.BhashaSetuChatbot.open();
+      }, 400);
+    }
   };
 
   // Currently expanded question IDs
