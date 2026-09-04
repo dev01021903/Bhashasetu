@@ -1,0 +1,820 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Terms of Service & Privacy Policy for BhashaSetu - AI-Powered Vernacular Pedagogy and Real-Time Translation Tool. Compliant with DPDP Act 2023." />
+  <title>Terms of Service & Privacy Policy | BhashaSetu</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Fredoka:wght@400;500;600;700&family=Noto+Sans+Devanagari:wght@400;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --primary-blue: #0288D1;
+      --primary-blue-light: #E1F5FE;
+      --primary-blue-shadow: #01579B;
+      --accent-yellow: #FFC107;
+      --accent-yellow-light: #FFF9C4;
+      --accent-orange: #FF7043;
+      --accent-green: #43A047;
+      --accent-green-light: #E8F5E9;
+      --accent-purple: #7E57C2;
+      --bg-sky: #EDF7FD;
+      --bg-card: #FFFFFF;
+      --ink-dark: #1E293B;
+      --ink-muted: #475569;
+      --ink-light: #64748B;
+      --border-thick: 3px solid #1E293B;
+      --radius-sm: 12px;
+      --radius-md: 20px;
+      --radius-lg: 30px;
+      --radius-pill: 999px;
+      --shadow-chunky: 0 6px 0 rgba(30, 41, 59, 0.12);
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Baloo 2", "Fredoka", "Noto Sans Devanagari", system-ui, sans-serif;
+      color: var(--ink-dark);
+      background-color: var(--bg-sky);
+      background-image: 
+        radial-gradient(circle at 10% 10%, rgba(255, 249, 196, 0.6) 0%, transparent 35%),
+        radial-gradient(circle at 90% 30%, rgba(225, 245, 254, 0.8) 0%, transparent 40%),
+        radial-gradient(circle at 50% 90%, rgba(232, 245, 233, 0.6) 0%, transparent 40%);
+      line-height: 1.6;
+      padding-bottom: 60px;
+    }
+
+    /* Topbar */
+    .legal-topbar {
+      position: sticky;
+      top: 14px;
+      z-index: 100;
+      width: min(1080px, calc(100% - 24px));
+      margin: 12px auto 0;
+    }
+
+    .topbar-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 10px 24px;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      border: var(--border-thick);
+      border-radius: var(--radius-pill);
+      box-shadow: var(--shadow-chunky);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: var(--ink-dark);
+    }
+
+    .brand-icon {
+      font-size: 1.8rem;
+    }
+
+    .brand-text strong {
+      font-size: 1.35rem;
+      font-weight: 800;
+      display: block;
+      line-height: 1.1;
+    }
+
+    .brand-badge {
+      font-size: 0.72rem;
+      font-weight: 800;
+      background: var(--accent-yellow);
+      color: #5D4037;
+      padding: 1px 8px;
+      border-radius: var(--radius-pill);
+      border: 1px solid var(--ink-dark);
+      display: inline-block;
+    }
+
+    .topbar-links {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .btn-nav {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 16px;
+      font-size: 0.9rem;
+      font-weight: 700;
+      border-radius: var(--radius-pill);
+      border: 2px solid var(--ink-dark);
+      text-decoration: none;
+      background: #FFFFFF;
+      color: var(--ink-dark);
+      box-shadow: 0 3px 0 rgba(30, 41, 59, 0.1);
+      transition: all 0.15s ease;
+    }
+
+    .btn-nav:hover {
+      background: var(--primary-blue-light);
+      transform: translateY(-2px);
+    }
+
+    .btn-nav.btn-primary {
+      background: var(--accent-yellow);
+      color: #4E342E;
+    }
+
+    /* Main Container */
+    .legal-container {
+      width: min(980px, calc(100% - 32px));
+      margin: 36px auto 0;
+    }
+
+    /* Hero Banner */
+    .legal-header-card {
+      background: #FFFFFF;
+      border: var(--border-thick);
+      border-radius: var(--radius-lg);
+      padding: 36px 32px;
+      box-shadow: var(--shadow-chunky);
+      text-align: center;
+      margin-bottom: 28px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .header-badge {
+      display: inline-block;
+      background: var(--primary-blue-light);
+      color: var(--primary-blue);
+      border: 2px solid var(--primary-blue);
+      font-size: 0.85rem;
+      font-weight: 800;
+      padding: 4px 14px;
+      border-radius: var(--radius-pill);
+      margin-bottom: 12px;
+    }
+
+    .legal-title {
+      font-size: clamp(2rem, 3.5vw, 2.6rem);
+      font-weight: 800;
+      color: var(--ink-dark);
+      line-height: 1.2;
+      margin-bottom: 10px;
+    }
+
+    .legal-subtitle {
+      font-size: 1.1rem;
+      color: var(--ink-muted);
+      max-width: 720px;
+      margin: 0 auto 18px;
+    }
+
+    .legal-meta-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--ink-light);
+    }
+
+    .meta-pill {
+      background: #F1F5F9;
+      border: 1.5px solid #CBD5E1;
+      padding: 4px 12px;
+      border-radius: var(--radius-pill);
+    }
+
+    /* Executive Pledge Box */
+    .pledge-box {
+      background: linear-gradient(135deg, #FFFDE7, #FFF9C4);
+      border: 3px solid var(--accent-yellow);
+      border-radius: var(--radius-md);
+      padding: 22px 26px;
+      margin-bottom: 28px;
+      box-shadow: var(--shadow-chunky);
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+
+    .pledge-icon {
+      font-size: 2.2rem;
+      line-height: 1;
+    }
+
+    .pledge-content h3 {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: #795548;
+      margin-bottom: 6px;
+    }
+
+    .pledge-content p {
+      font-size: 0.95rem;
+      color: #4E342E;
+      line-height: 1.5;
+    }
+
+    /* Quick Navigation Pills */
+    .quick-nav-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 28px;
+      background: #FFFFFF;
+      padding: 12px 16px;
+      border-radius: var(--radius-pill);
+      border: 2px solid var(--ink-dark);
+      box-shadow: 0 4px 0 rgba(30, 41, 59, 0.1);
+    }
+
+    .quick-nav-bar span {
+      font-size: 0.88rem;
+      font-weight: 800;
+      color: var(--ink-light);
+      align-self: center;
+      margin-right: 6px;
+    }
+
+    .quick-pill {
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-decoration: none;
+      color: var(--ink-dark);
+      background: #F1F5F9;
+      padding: 4px 12px;
+      border-radius: var(--radius-pill);
+      border: 1.5px solid #CBD5E1;
+      transition: all 0.15s ease;
+    }
+
+    .quick-pill:hover {
+      background: var(--primary-blue);
+      color: #FFFFFF;
+      border-color: var(--primary-blue-shadow);
+      transform: translateY(-2px);
+    }
+
+    /* Content Card */
+    .legal-content-card {
+      background: #FFFFFF;
+      border: var(--border-thick);
+      border-radius: var(--radius-lg);
+      padding: 36px;
+      box-shadow: var(--shadow-chunky);
+      margin-bottom: 28px;
+    }
+
+    .part-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      border-bottom: 3px solid var(--ink-dark);
+      padding-bottom: 14px;
+      margin-bottom: 24px;
+    }
+
+    .part-icon {
+      font-size: 2rem;
+      background: var(--accent-yellow-light);
+      border: 2px solid var(--ink-dark);
+      border-radius: 50%;
+      width: 52px;
+      height: 52px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .part-title-wrap h2 {
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: var(--ink-dark);
+      line-height: 1.1;
+    }
+
+    .part-title-wrap span {
+      font-size: 0.85rem;
+      color: var(--ink-light);
+      font-weight: 600;
+    }
+
+    .legal-section {
+      margin-bottom: 32px;
+    }
+
+    .legal-section:last-child {
+      margin-bottom: 0;
+    }
+
+    .section-num-title {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--ink-dark);
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .section-num-title span {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      background: var(--primary-blue-light);
+      color: var(--primary-blue);
+      border: 2px solid var(--primary-blue);
+      border-radius: 50%;
+      font-size: 0.85rem;
+    }
+
+    .legal-section p {
+      font-size: 1rem;
+      color: var(--ink-muted);
+      line-height: 1.6;
+      margin-bottom: 12px;
+    }
+
+    .legal-section ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-bottom: 14px;
+    }
+
+    .legal-section ul li {
+      position: relative;
+      padding-left: 24px;
+      font-size: 0.98rem;
+      color: var(--ink-muted);
+      line-height: 1.5;
+    }
+
+    .legal-section ul li::before {
+      content: "•";
+      position: absolute;
+      left: 8px;
+      color: var(--primary-blue);
+      font-size: 1.3rem;
+      line-height: 1;
+      top: -1px;
+    }
+
+    /* Comparison Table (Collect vs Never Collect) */
+    .table-wrapper {
+      overflow-x: auto;
+      margin: 18px 0;
+      border: 2.5px solid var(--ink-dark);
+      border-radius: var(--radius-md);
+    }
+
+    table.data-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 0.92rem;
+    }
+
+    table.data-table th {
+      background: var(--primary-blue);
+      color: #FFFFFF;
+      padding: 12px 16px;
+      font-weight: 800;
+      border-bottom: 2px solid var(--ink-dark);
+    }
+
+    table.data-table td {
+      padding: 12px 16px;
+      border-bottom: 1px solid #E2E8F0;
+      color: var(--ink-dark);
+    }
+
+    table.data-table tr:nth-child(even) {
+      background: #F8FAFC;
+    }
+
+    .pill-green {
+      display: inline-block;
+      background: #DCFCE7;
+      color: #15803D;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: var(--radius-pill);
+      font-size: 0.78rem;
+    }
+
+    .pill-red {
+      display: inline-block;
+      background: #FEE2E2;
+      color: #B91C1C;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: var(--radius-pill);
+      font-size: 0.78rem;
+    }
+
+    /* Callout Alert */
+    .callout-card {
+      background: var(--accent-green-light);
+      border: 2px solid var(--accent-green);
+      border-radius: var(--radius-sm);
+      padding: 16px 20px;
+      margin: 16px 0;
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+    }
+
+    .callout-icon {
+      font-size: 1.5rem;
+    }
+
+    .callout-card strong {
+      display: block;
+      color: #1B5E20;
+      margin-bottom: 4px;
+      font-size: 1rem;
+    }
+
+    .callout-card p {
+      margin-bottom: 0;
+      font-size: 0.92rem;
+      color: #2E7D32;
+    }
+
+    /* Contact Box */
+    .contact-card {
+      background: #F8FAFC;
+      border: 2.5px solid var(--ink-dark);
+      border-radius: var(--radius-md);
+      padding: 20px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .contact-card strong {
+      font-size: 1.05rem;
+      color: var(--ink-dark);
+    }
+
+    .contact-row {
+      display: flex;
+      gap: 8px;
+      font-size: 0.95rem;
+      color: var(--ink-muted);
+    }
+
+    /* Bottom Action Row */
+    .bottom-actions {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      margin-top: 32px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .topbar-inner {
+        flex-direction: column;
+        gap: 10px;
+        padding: 12px;
+      }
+      .legal-content-card {
+        padding: 24px 18px;
+      }
+      .pledge-box {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Topbar Navigation -->
+  <header class="legal-topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="index.html" aria-label="Back to BhashaSetu Home">
+        <span class="brand-icon">🌉</span>
+        <div class="brand-text">
+          <strong>BhashaSetu</strong>
+          <span class="brand-badge">Child Safety & Privacy</span>
+        </div>
+      </a>
+
+      <div class="topbar-links">
+        <a href="index.html" class="btn-nav"><span>🏠</span> Home</a>
+        <a href="login.html" class="btn-nav"><span>🔑</span> Student Login</a>
+        <button onclick="window.print()" class="btn-nav btn-primary"><span>🖨️</span> Print Policy</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="legal-container">
+
+    <!-- Header Card -->
+    <div class="legal-header-card">
+      <span class="header-badge">DPDP Act (2023) & Child Safety Compliant</span>
+      <h1 class="legal-title">Terms of Service & Privacy Policy</h1>
+      <p class="legal-subtitle">
+        BhashaSetu is dedicated to protecting young children (ages 5–10), honoring cultural linguistic heritage, and upholding transparent, zero-monetization education.
+      </p>
+      <div class="legal-meta-row">
+        <span class="meta-pill">📅 Effective: September 2026</span>
+        <span class="meta-pill">🏫 Platform: BhashaSetu Vernacular AI Tutor</span>
+        <span class="meta-pill">🛡️ Law: Digital Personal Data Protection Act 2023 (Sec. 9)</span>
+      </div>
+    </div>
+
+    <!-- Executive Child-Safety Pledge -->
+    <div class="pledge-box">
+      <span class="pledge-icon">🛡️</span>
+      <div class="pledge-content">
+        <h3>Our Child-First Safety & Privacy Pledge</h3>
+        <p>
+          BhashaSetu is an educational sanctuary. We strictly adhere to a <strong>zero commercial profiling</strong>, <strong>zero behavioral advertising</strong>, and <strong>ephemeral voice processing</strong> architecture. Children's voice inputs, progress, and drawings are never monetized, never shared with data brokers, and never used to build commercial profiles.
+        </p>
+      </div>
+    </div>
+
+    <!-- Quick Navigation Jump Bar -->
+    <div class="quick-nav-bar">
+      <span>Jump to section:</span>
+      <a href="#terms-section" class="quick-pill">📜 Terms of Use</a>
+      <a href="#consent" class="quick-pill">👨‍👩‍👧 Guardian Consent</a>
+      <a href="#safety" class="quick-pill">🧸 Child Safety Rules</a>
+      <a href="#privacy-section" class="quick-pill">🔒 Privacy Policy</a>
+      <a href="#data-table" class="quick-pill">📊 What We Collect</a>
+      <a href="#audio-safety" class="quick-pill">🎙️ Voice & Audio Safety</a>
+      <a href="#rights" class="quick-pill">⚖️ Parental Rights</a>
+      <a href="#contact" class="quick-pill">📞 Grievance Officer</a>
+    </div>
+
+    <!-- Part I: Terms of Service Card -->
+    <article class="legal-content-card" id="terms-section">
+      <div class="part-header">
+        <div class="part-icon">📜</div>
+        <div class="part-title-wrap">
+          <h2>Part I: Terms and Conditions of Use</h2>
+          <span>Guidelines governing the safe and respectful use of the BhashaSetu learning platform</span>
+        </div>
+      </div>
+
+      <!-- 1. Guardian Consent -->
+      <section class="legal-section" id="consent">
+        <h3 class="section-num-title"><span>1</span> Acceptance of Terms & Parental/Guardian Consent</h3>
+        <p>
+          By accessing, browsing, or using BhashaSetu ("the Platform", "we", "us"), including the Web Portal, Android App, and Vernacular AI translation services, you acknowledge and agree to these Terms and Conditions.
+        </p>
+        <ul>
+          <li><strong>For Children (Minors under 18):</strong> If you are under 18 years of age, you may only use BhashaSetu with the verifiable guidance and consent of a parent, legal guardian, teacher, or authorized school administrator.</li>
+          <li><strong>For Parents, Guardians & Teachers:</strong> By permitting a child to use BhashaSetu, you confirm that you have reviewed and approved these Terms and the Privacy Policy on their behalf and assume responsibility for their platform usage.</li>
+        </ul>
+      </section>
+
+      <!-- 2. Educational Scope -->
+      <section class="legal-section">
+        <h3 class="section-num-title"><span>2</span> Educational Purpose & Scope</h3>
+        <p>
+          BhashaSetu is an educational technology initiative created to address early-grade learning poverty and language comprehension gaps in low-resource and tribal schools.
+        </p>
+        <ul>
+          <li>The platform is provided strictly for <strong>educational, non-profit, and pedagogical learning</strong>.</li>
+          <li>Our pedagogical methodology translates standard primary curriculum concepts into culturally familiar regional metaphors aligned with the <strong>National Education Policy (NEP 2020)</strong>.</li>
+        </ul>
+      </section>
+
+      <!-- 3. Child Safety & Acceptable Use -->
+      <section class="legal-section" id="safety">
+        <h3 class="section-num-title"><span>3</span> Child Safety & Zero-Harassment Rules</h3>
+        <p>
+          To maintain a nurturing, gentle, and strictly positive learning environment for young children:
+        </p>
+        <ul>
+          <li><strong>Encouraging Language Only:</strong> The platform may only be used for constructive schoolwork, reading practice, and joyful vernacular exploration.</li>
+          <li><strong>Strictly Prohibited:</strong> Transmitting offensive, violent, vulgar, discriminatory, or adult content; attempting to extract private user data; or tampering with API endpoints.</li>
+          <li><strong>Automated Safety Filters:</strong> Automated text-safety filters and Human-in-the-Loop (HITL) moderation instantly reject and discard inappropriate inputs.</li>
+        </ul>
+      </section>
+
+      <!-- 4. AI Pedagogy Disclaimer -->
+      <section class="legal-section">
+        <h3 class="section-num-title"><span>4</span> AI Pedagogy & Vernacular Accuracy Advisory</h3>
+        <p>
+          BhashaSetu combines rule-based dictionaries, linguist-verified vocabularies, and AI speech models to translate into indigenous languages (such as Santhali, Mundari, Ho, Kurukh, Kharia, Khortha, Nagpuri, Panchpargania, Kurmali, Bengali, and Tamil).
+        </p>
+        <div class="callout-card">
+          <span class="callout-icon">💡</span>
+          <div>
+            <strong>Teacher-Assistive Technology Advisory:</strong>
+            <p>While verified by linguistic experts, automated dialect translations may contain minor colloquial variations. BhashaSetu is designed as a companion to classroom educators, not an autonomous replacement for teachers.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. Cultural Rights -->
+      <section class="legal-section">
+        <h3 class="section-num-title"><span>5</span> Cultural Heritage & Indigenous Language Rights</h3>
+        <p>
+          BhashaSetu recognizes and honors the sovereign cultural and intellectual heritage of indigenous and tribal communities. Indigenous scripts (including <strong>Ol Chiki</strong>, <strong>Warang Citi</strong>, and <strong>Tolong Siki</strong>) and regional folktales belong to their respective heritage communities and are treated with utmost reverence.
+        </p>
+      </section>
+
+      <!-- 6. Picture Passwords -->
+      <section class="legal-section">
+        <h3 class="section-num-title"><span>6</span> Student Identifiers & Picture Passwords</h3>
+        <p>
+          To ensure young children are not intimidated by complex passwords, BhashaSetu supports child-friendly logins such as <strong>Student First Names</strong> and <strong>Picture Passwords</strong> (e.g., tapping 🐘 + 🥭). These credentials should never contain sensitive government identity identifiers (such as Aadhaar or passport numbers).
+        </p>
+      </section>
+
+      <!-- 7. Offline Availability -->
+      <section class="legal-section">
+        <h3 class="section-num-title"><span>7</span> Offline-First Operation</h3>
+        <p>
+          BhashaSetu is engineered to work reliably in rural classrooms with zero or intermittent internet connectivity. Core dictionaries, pre-cached stories, and speech synthesis operate locally on devices.
+        </p>
+      </section>
+    </article>
+
+    <!-- Part II: Privacy Policy Card -->
+    <article class="legal-content-card" id="privacy-section">
+      <div class="part-header">
+        <div class="part-icon">🔒</div>
+        <div class="part-title-wrap">
+          <h2>Part II: Privacy Policy (DPDP Act 2023 Compliant)</h2>
+          <span>How we safeguard child data in strict accordance with the Digital Personal Data Protection Act</span>
+        </div>
+      </div>
+
+      <!-- 1. Privacy Principles -->
+      <section class="legal-section">
+        <h3 class="section-num-title"><span>1</span> Core Privacy Principles</h3>
+        <p>
+          We operate under strict privacy-by-design standards:
+        </p>
+        <ul>
+          <li><strong>Zero Commercial Profiling:</strong> We do not track children across the web, nor do we construct behavioral ad profiles.</li>
+          <li><strong>Zero Data Monetization:</strong> No child data is ever sold, rented, or traded.</li>
+          <li><strong>Data Minimization:</strong> We only process the absolute minimum data required to deliver learning lessons.</li>
+        </ul>
+      </section>
+
+      <!-- 2. Data Collection Table -->
+      <section class="legal-section" id="data-table">
+        <h3 class="section-num-title"><span>2</span> Transparent Data Auditing</h3>
+        <p>Here is an explicit breakdown of what we collect versus what we NEVER collect:</p>
+
+        <div class="table-wrapper">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Data Category</th>
+                <th>Status</th>
+                <th>Details & Purpose</th>
+                <th>Where It Lives</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Government ID / Aadhaar</strong></td>
+                <td><span class="pill-red">❌ Never Collected</span></td>
+                <td>We never ask for or accept government identity records.</td>
+                <td>Nowhere</td>
+              </tr>
+              <tr>
+                <td><strong>Biometric Facial / Voiceprints</strong></td>
+                <td><span class="pill-red">❌ Never Collected</span></td>
+                <td>No biometric identification or voice fingerprinting.</td>
+                <td>Nowhere</td>
+              </tr>
+              <tr>
+                <td><strong>Precise GPS Tracking</strong></td>
+                <td><span class="pill-red">❌ Never Collected</span></td>
+                <td>We do not track physical coordinates or real-time location.</td>
+                <td>Nowhere</td>
+              </tr>
+              <tr>
+                <td><strong>Student Nickname / Magic Word</strong></td>
+                <td><span class="pill-green">✅ Minimal Operational</span></td>
+                <td>e.g. "Aarav" (used purely for friendly screen greetings).</td>
+                <td>Local Browser / Device Only</td>
+              </tr>
+              <tr>
+                <td><strong>Mother Tongue Preference</strong></td>
+                <td><span class="pill-green">✅ Minimal Operational</span></td>
+                <td>Selected language (e.g., Santhali, Hindi, Bengali).</td>
+                <td>Local Settings</td>
+              </tr>
+              <tr>
+                <td><strong>Quiz Badges & Stars</strong></td>
+                <td><span class="pill-green">✅ Minimal Operational</span></td>
+                <td>Encouragement stars and finished story bookmarks.</td>
+                <td>Local Storage</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- 3. Voice & Audio Safety -->
+      <section class="legal-section" id="audio-safety">
+        <h3 class="section-num-title"><span>3</span> Voice, Audio & Speech Data Protocol</h3>
+        <p>
+          BhashaSetu includes interactive voice buttons so children can hear and practice native pronunciations:
+        </p>
+        <ul>
+          <li><strong>Speech Synthesis (Text-to-Speech):</strong> Synthesized locally using on-device Web Audio synthesizers and speech engines. No audio recording is stored.</li>
+          <li><strong>Microphone Input (Speech Practice):</strong> When a child speaks into the microphone to practice a word, audio is processed in temporary volatile memory solely for transcription and immediately purged.</li>
+          <li><strong>No Biometric Storage:</strong> We do not store, catalog, or analyze voice patterns for biometric speaker identification.</li>
+        </ul>
+      </section>
+
+      <!-- 4. Parental Rights -->
+      <section class="legal-section" id="rights">
+        <h3 class="section-num-title"><span>4</span> Parental & Guardian Rights (Section 9, DPDP Act 2023)</h3>
+        <p>
+          Parents, legal guardians, and school administrators possess sovereign rights regarding their child's learning profile:
+        </p>
+        <ul>
+          <li><strong>Right to Review:</strong> Inspect any saved words or localized learning records associated with your child.</li>
+          <li><strong>Right to Complete Erasure:</strong> Clear all local profile history, picture credentials, and saved stars with a single tap in browser settings or by contacting our team.</li>
+          <li><strong>Right to Withdraw Consent:</strong> Revoke consent at any time without penalty.</li>
+        </ul>
+      </section>
+
+      <!-- 5. Third-Party Networks -->
+      <section class="legal-section">
+        <h3 class="section-num-title"><span>5</span> Zero Third-Party Advertising & Tracking</h3>
+        <p>
+          BhashaSetu contains <strong>no third-party ad networks</strong> (no Google AdSense, Facebook Pixel, or commercial marketing SDKs). All cloud endpoints operate on secure infrastructure over encrypted <strong>TLS 1.3</strong> connections.
+        </p>
+      </section>
+
+      <!-- 6. Grievance Redressal -->
+      <section class="legal-section" id="contact">
+        <h3 class="section-num-title"><span>6</span> Grievance Redressal & Contact Officer</h3>
+        <p>
+          In accordance with the Information Technology Act, 2000 and the Digital Personal Data Protection Act, 2023, you may direct any privacy questions or requests to:
+        </p>
+        
+        <div class="contact-card">
+          <strong>Project: BhashaSetu (भाषा सेतु) — Vernacular AI Tutor</strong>
+          <div class="contact-row">
+            <span>👤 <strong>Lead Officers:</strong></span>
+            <span>Adarsh Sharma & Dev Vashisht</span>
+          </div>
+          <div class="contact-row">
+            <span>📧 <strong>Official Email:</strong></span>
+            <span><code>adarshsharma1825@gmail.com</code></span>
+          </div>
+          <div class="contact-row">
+            <span>🌐 <strong>GitHub Repository:</strong></span>
+            <a href="https://github.com/dev01021903/Bhashasetu" target="_blank" style="color: var(--primary-blue); font-weight: 700;">github.com/dev01021903/Bhashasetu</a>
+          </div>
+          <div class="contact-row">
+            <span>⏱️ <strong>Response Window:</strong></span>
+            <span>Within 48 business hours</span>
+          </div>
+        </div>
+      </section>
+    </article>
+
+    <!-- Bottom Actions -->
+    <div class="bottom-actions">
+      <a href="index.html" class="btn-nav btn-primary" style="padding: 12px 28px; font-size: 1rem;">
+        <span>🏠</span> Return to Learning Dashboard
+      </a>
+      <a href="login.html" class="btn-nav" style="padding: 12px 28px; font-size: 1rem;">
+        <span>🔑</span> Student Login
+      </a>
+    </div>
+
+  </main>
+
+</body>
+</html>
