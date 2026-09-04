@@ -89,3 +89,14 @@ PYTHONPATH=. python3 backend/tests/test_translation.py
 # Backend pytest suite
 cd backend && pytest -v
 ```
+
+---
+
+## 📜 Compliance, Safety & Privacy
+
+BhashaSetu is committed to the highest standards of child safety and data protection in compliance with India's **Digital Personal Data Protection Act (DPDP Act, 2023)** and international child privacy benchmarks:
+
+- 🛡️ **Child-First Data Minimization**: Zero behavioral profiling, zero third-party advertisements, and no tracking cookies.
+- 🎙️ **Ephemeral Audio Processing**: Voice inputs are processed in-memory for translation/pronunciation and never stored as biometric profiles.
+- 📖 **Full Policy**: See the complete [Terms of Service & Privacy Policy](TERMS_AND_PRIVACY.md).
+
