@@ -1042,6 +1042,56 @@ async function simulatePeerSend() {
 /* ==========================================================================
    Core Translation Studio
    ========================================================================== */
+
+/**
+ * Maps frontend UI language strings to valid backend language parameters ("hindi", "english", "local")
+ */
+function mapUiLanguageToApiLanguage(uiValue) {
+  const normalized = String(uiValue || "").trim().toLowerCase();
+
+  if (
+    normalized.includes("hindi") ||
+    normalized.includes("हिन्दी") ||
+    normalized.includes("हिंदी") ||
+    normalized.includes("hinglish") ||
+    normalized.includes("auto") ||
+    normalized === "hin"
+  ) {
+    return "hindi";
+  }
+
+  if (
+    normalized.includes("english") ||
+    normalized.includes("अंग्रेज़ी") ||
+    normalized === "eng"
+  ) {
+    return "english";
+  }
+
+  if (
+    normalized.includes("santhali") ||
+    normalized.includes("santali") ||
+    normalized.includes("nagpuri") ||
+    normalized.includes("khortha") ||
+    normalized.includes("mother tongue") ||
+    normalized.includes("vernacular") ||
+    normalized.includes("local")
+  ) {
+    return "local";
+  }
+
+  return "english";
+}
+
+function escapeHtml(str) {
+  if (!str) return '';
+  return String(str)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+}
+
 function initTranslatorStudio() {
   const transBtn = $('translateBtn');
   const inputArea = $('hindiText');
@@ -1051,7 +1101,10 @@ function initTranslatorStudio() {
   const swapBtn = $('swapBtn');
 
   if (transBtn) {
-    transBtn.addEventListener('click', performStudioTranslation);
+    transBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      performStudioTranslation();
+    });
   }
 
   if (inputArea) {
@@ -1064,7 +1117,9 @@ function initTranslatorStudio() {
   }
 
   if (tgtLang) {
-    tgtLang.addEventListener('change', performStudioTranslation);
+    tgtLang.addEventListener('change', () => {
+      performStudioTranslation();
+    });
   }
 
   if (srcLang) {
@@ -1072,11 +1127,11 @@ function initTranslatorStudio() {
       const src = srcLang.value;
       if (src === 'eng') {
         if ($('inputCardLabel')) $('inputCardLabel').textContent = 'Write in English ✍️';
-        if ($('inputTryNote')) $('inputTryNote').textContent = 'Try: Hello, Water, Tree, Thank you';
+        if ($('inputTryNote')) $('inputTryNote').textContent = 'Try: Hello, Water, Tree, Thank you, Dog';
         if (inputArea && inputArea.value === 'नमस्ते') inputArea.value = 'Hello';
       } else {
         if ($('inputCardLabel')) $('inputCardLabel').textContent = 'Write in Hindi / English / Hinglish ✍️';
-        if ($('inputTryNote')) $('inputTryNote').textContent = 'Try: नमस्ते, पानी, धन्यवाद, पेड़';
+        if ($('inputTryNote')) $('inputTryNote').textContent = 'Try: नमस्ते, पानी, धन्यवाद, पेड़, कुत्ता';
       }
       performStudioTranslation();
     });
@@ -1092,24 +1147,29 @@ function initTranslatorStudio() {
 
   if ($('speakInput')) {
     $('speakInput').addEventListener('click', () => {
-      const isEng = srcLang && srcLang.value === 'eng';
+      const isEng = srcLang && (srcLang.value === 'eng' || /^[a-zA-Z\s]+$/.test(inputArea.value));
       speakText(inputArea.value, isEng ? 'en-IN' : 'hi-IN');
     });
   }
 
   if ($('speakResult')) {
     $('speakResult').addEventListener('click', () => {
-      speakText(outputArea.textContent);
+      const text = outputArea ? outputArea.textContent.trim() : '';
+      speakText(text);
     });
   }
 
   if ($('copyResult')) {
     $('copyResult').addEventListener('click', () => {
-      const text = outputArea.textContent.trim();
-      navigator.clipboard.writeText(text).then(() => {
-        toast('📋 Copied translation to clipboard!');
-        playPopSound();
-      });
+      const text = outputArea ? outputArea.textContent.trim() : '';
+      if (text) {
+        navigator.clipboard.writeText(text).then(() => {
+          toast('📋 Copied translation to clipboard!');
+          playPopSound();
+        }).catch(err => {
+          console.warn('Clipboard write error:', err);
+        });
+      }
     });
   }
 
@@ -1136,86 +1196,89 @@ async function performStudioTranslation() {
   const tgtLang = $('targetLanguage');
   const resLabel = $('resultLabel');
 
-  const text = inputArea.value.trim();
-  if (!text) {
-    outputArea.textContent = 'कृपया अनुवाद के लिए कुछ लिखें (Please enter text)';
+  const rawInput = inputArea ? inputArea.value : "";
+  const cleanedInput = rawInput.trim();
+
+  const targetName = tgtLang ? tgtLang.value : (state.activeLanguage || "Santhali");
+
+  // 4. Validate input
+  if (!cleanedInput) {
+    if (outputArea) outputArea.textContent = "Please type a word first. 🌟";
+    if (resLabel) resLabel.textContent = `In ${targetName} ✨`;
     return;
   }
 
-  const targetName = tgtLang ? tgtLang.value : state.activeLanguage;
-  const sourceVal = srcLang ? srcLang.value : 'hin';
+  // 5. Map UI language values to backend API parameters
+  const rawSrc = srcLang ? srcLang.value : "auto";
+  let mappedFromLanguage = mapUiLanguageToApiLanguage(rawSrc);
+  const mappedToLanguage = mapUiLanguageToApiLanguage(targetName);
 
-  if (resLabel) resLabel.textContent = `In ${targetName} ⏳`;
-  outputArea.textContent = 'अनुवाद हो रहा है... ✨';
-  playPopSound();
-
-  // Determine fromLanguage: "english" | "hindi" | "local"
-  let fromLang = "hindi";
-  if (sourceVal === 'eng') {
-    fromLang = "english";
-  } else if (sourceVal === 'hin') {
-    fromLang = "hindi";
-  } else {
-    // auto detect - check if characters are mainly english ASCII
-    fromLang = /^[a-zA-Z0-9\s.,!?'"-]+$/.test(text) ? "english" : "hindi";
+  // Auto-detect English if text contains only Latin letters (e.g. "dog", "water") and source is auto or default
+  if (rawSrc === "auto" || (mappedFromLanguage === "hindi" && /^[a-zA-Z\s.,!?'"-]+$/.test(cleanedInput))) {
+    mappedFromLanguage = "english";
+  } else if (mappedFromLanguage === "english" && /[\u0900-\u097F]/.test(cleanedInput)) {
+    mappedFromLanguage = "hindi";
   }
 
-  // Determine toLanguage: "english" | "hindi" | "local"
-  let toLang = "local";
-  if (targetName.toLowerCase() === 'hindi') toLang = "hindi";
-  else if (targetName.toLowerCase() === 'english') toLang = "english";
-  else toLang = "local";
+  // 6. Show loading state in existing result area
+  if (resLabel) resLabel.textContent = `In ${targetName} ⏳`;
+  if (outputArea) outputArea.textContent = "Finding your word… ✨";
+  playPopSound();
 
+  // 7. Call window.WordAPI.translateWord
   try {
-    if (window.WordAPI && window.WordAPI.translateWord) {
-      const data = await window.WordAPI.translateWord(text, fromLang, toLang);
-      if (data && data.found && data.translation) {
-        const out = data.translation;
-        const w = data.word || {};
-
-        outputArea.innerHTML = `
-          <div class="translated-result-card" style="display: flex; flex-direction: column; align-items: center; gap: 6px;">
-            <span style="font-size: 2.2rem; line-height: 1;">${w.emoji || '✨'}</span>
-            <span style="font-size: 1.35em; font-weight: 800; color: var(--ink-dark);">${out}</span>
-            <div style="font-size: 0.85em; color: var(--accent-purple); font-weight: 700; background: rgba(126, 87, 194, 0.1); padding: 4px 12px; border-radius: 999px;">
-              ${w.english_word ? 'English: ' + w.english_word : ''} ${w.hindi_word ? '• Hindi: ' + w.hindi_word : ''} ${w.language ? '• ' + w.language : ''}
-            </div>
-          </div>
-        `;
-
-        if (resLabel) resLabel.textContent = `In ${targetName} ✨`;
-        toast(`Wonderful! Here is your ${targetName} translation.`);
-        playSparkleSound();
-        return;
-      }
+    if (!window.WordAPI || typeof window.WordAPI.translateWord !== 'function') {
+      throw new Error("WordAPI client is not loaded.");
     }
-  } catch (err) {
-    if (err && err.status === 404) {
+
+    const result = await window.WordAPI.translateWord(
+      cleanedInput,
+      mappedFromLanguage,
+      mappedToLanguage
+    );
+
+    // 8. On success, update existing result section with details
+    if (result && result.found && (result.translation || (result.word && result.word.local_word))) {
+      const word = result.word || {};
+      const translationText = result.translation || word.local_word || "";
+
       outputArea.innerHTML = `
-        <div style="color: var(--ink-light); padding: 12px; font-weight: 600; font-size: 0.95rem; line-height: 1.5;">
-          🌱 We are still learning this word. Try another one or ask a teacher to contribute it!
+        <div class="translated-result-card" style="display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 4px 0;">
+          <span style="font-size: 2.5rem; line-height: 1;">${word.emoji || '✨'}</span>
+          <span style="font-size: 1.45em; font-weight: 800; color: var(--ink-dark);">${escapeHtml(translationText)}</span>
+          <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; font-size: 0.85rem; font-weight: 700; color: var(--ink-dark); margin-top: 4px;">
+            <span style="background: rgba(2, 136, 209, 0.1); color: var(--primary-blue); padding: 3px 10px; border-radius: 999px;">
+              Language: ${escapeHtml(word.language || targetName)}
+            </span>
+            <span style="background: rgba(255, 112, 67, 0.1); color: #EA580C; padding: 3px 10px; border-radius: 999px;">
+              Category: ${escapeHtml(word.category || 'General')}
+            </span>
+            <span style="background: rgba(126, 87, 194, 0.1); color: var(--accent-purple); padding: 3px 10px; border-radius: 999px;">
+              English: ${escapeHtml(word.english_word || '')} • Hindi: ${escapeHtml(word.hindi_word || '')}
+            </span>
+          </div>
         </div>
       `;
+
+      if (resLabel) resLabel.textContent = `In ${targetName} ✨`;
+      toast(`Wonderful! Found translation in ${targetName}.`);
+      playSparkleSound();
+      return;
+    } else {
+      // 9. If API returns found: false or unmatched
+      outputArea.textContent = "We are still learning this word. Try another one or ask a teacher to contribute it! 🌱";
+      if (resLabel) resLabel.textContent = `In ${targetName}`;
+    }
+  } catch (err) {
+    console.error("[TranslationStudio] Translation error:", err);
+    // 9. If API returns 404
+    if (err && err.status === 404) {
+      outputArea.textContent = "We are still learning this word. Try another one or ask a teacher to contribute it! 🌱";
       if (resLabel) resLabel.textContent = `In ${targetName}`;
       return;
     }
-    console.warn('Backend translation studio error, checking phrasebook:', err);
-  }
-
-  // Phrasebook fallback
-  const langMap = phrasebook[targetName] || {};
-  const fallback = langMap[text] || langMap[text.toLowerCase()];
-
-  if (fallback) {
-    outputArea.textContent = fallback;
-    if (resLabel) resLabel.textContent = `In ${targetName} ✨`;
-    playSparkleSound();
-  } else {
-    outputArea.innerHTML = `
-      <div style="color: var(--ink-light); padding: 12px; font-weight: 600; font-size: 0.95rem; line-height: 1.5;">
-        🌱 We are still learning this word. Try another one or ask a teacher to contribute it!
-      </div>
-    `;
+    // 10. If network/API error
+    outputArea.textContent = "Oops! We could not translate right now. Please try again.";
     if (resLabel) resLabel.textContent = `In ${targetName}`;
   }
 }
