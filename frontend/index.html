@@ -3,181 +3,821 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="BhashaSetu — a playful Hindi to tribal and regional language learning prototype." />
-  <title>BhashaSetu | Every language has a voice</title>
+  <meta name="description" content="Vernacular AI Tutor - SIH 2026: AI-Powered Vernacular Pedagogy and Real-Time Translation Tool for Mother Tongue-Based Primary Education." />
+  <title>Vernacular AI Tutor - SIH 2026 | Mother Tongue-Based Learning</title>
+  
+  <!-- Playful, Highly Legible Child-Friendly Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Fredoka:wght@400;500;600;700&family=Noto+Sans+Devanagari:wght@400;600;700&family=Noto+Sans+Ol+Chiki:wght@400;600;700&family=Noto+Sans+Tamil:wght@400;600;700&family=Noto+Sans+Bengali:wght@400;600;700&display=swap" rel="stylesheet">
+  
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <main class="sky">
-    <div class="cloud one"></div>
-    <div class="cloud two"></div>
-    <div class="cloud three"></div>
-    
-    <header class="topbar">
-      <a class="brand" href="#home" aria-label="BhashaSetu home">
-        <span class="bridge-icon" aria-hidden="true"></span>BhashaSetu
-      </a>
-      <nav id="navigation">
-        <a class="active" href="#home">Home</a>
-        <a href="#translate">Translate</a>
-        <a href="#languages">Languages</a>
-        <a href="#games">Play & Learn</a>
-      </nav>
-      <div style="display:flex;gap:8px;align-items:center">
-        <button class="sound-toggle" id="soundToggle" title="Toggle sound effects" aria-label="Toggle sound effects">🔊</button>
-        <button class="mobile-menu" id="mobileMenu" aria-label="Open navigation">☰</button>
-      </div>
-    </header>
+  <!-- Playful Floating Sky Clouds -->
+  <div class="sky-decorations" aria-hidden="true">
+    <div class="cloud cloud-1"></div>
+    <div class="cloud cloud-2"></div>
+    <div class="cloud cloud-3"></div>
+    <div class="cloud cloud-4"></div>
+    <div class="sparkle star-1">⭐</div>
+    <div class="sparkle star-2">✨</div>
+    <div class="sparkle star-3">🌟</div>
+  </div>
 
-    <section class="hero" id="home">
-      <div class="hero-copy">
-        <div class="eyebrow">🌈 Every language has a voice!</div>
-        <h1>Hindi se<br><span>apni bhasha</span> tak.</h1>
-        <p>Welcome to a happy little bridge where children can listen, learn, play, and connect through the beautiful languages of Jharkhand and beyond.</p>
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="#translate">✨ Start translating</a>
-          <a class="btn btn-secondary" href="#games">🎮 Play a game</a>
+  <!-- 1. Header & Navigation -->
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="#home" aria-label="Vernacular AI Tutor home">
+        <span class="brand-icon" aria-hidden="true">🦜</span>
+        <div class="brand-text">
+          <span class="brand-title">Vernacular AI Tutor</span>
+          <span class="brand-badge">SIH 2026</span>
+        </div>
+      </a>
+
+      <nav id="navigation" aria-label="Primary Navigation">
+        <a class="nav-link active" href="#home"><span>🏠</span> Home</a>
+        <a class="nav-link" href="#pathways"><span>🎯</span> Grade Tracks</a>
+        <a class="nav-link" href="#learning-modules"><span>🔬</span> Learning Zones</a>
+        <a class="nav-link" href="#story-corner"><span>📖</span> Story Corner</a>
+        <a class="nav-link" href="#collaboration"><span>💬</span> Peer Connect</a>
+        <a class="nav-link" href="#translator"><span>🌐</span> Live Translator</a>
+      </nav>
+
+      <div class="topbar-actions">
+        <!-- Prominently displayed Language Selector Dropdown -->
+        <div class="lang-selector-box" title="Select your Mother Tongue">
+          <span class="lang-icon" aria-hidden="true">🗣️</span>
+          <label for="globalLangSelect" class="sr-only">Choose Mother Tongue</label>
+          <select id="globalLangSelect" class="global-lang-select">
+            <option value="Santhali" selected>ᱥᱟᱱᱛᱟᱲᱤ (Santhali)</option>
+            <option value="Hindi">हिन्दी (Hindi)</option>
+            <option value="Mundari">मुंडारी (Mundari)</option>
+            <option value="Ho">𑢹𑣉 (Ho)</option>
+            <option value="Kurukh">कुड़ुख़ (Kurukh)</option>
+            <option value="Kharia">खड़िया (Kharia)</option>
+            <option value="Khortha">खोरठा (Khortha)</option>
+            <option value="Nagpuri">नागपुरी (Nagpuri)</option>
+            <option value="Panchpargania">पंचपरगनिया (Panchpargania)</option>
+            <option value="Kurmali">कुड़मालि (Kurmali)</option>
+            <option value="Bengali">বাংলা (Bengali)</option>
+            <option value="Tamil">தமிழ் (Tamil)</option>
+            <option value="English">English</option>
+          </select>
+        </div>
+
+        <button class="sound-toggle" id="soundToggle" title="Toggle audio sound effects" aria-label="Toggle sound effects">
+          <span class="sound-icon">🔊</span>
+        </button>
+
+        <button class="mobile-menu" id="mobileMenu" aria-label="Open navigation menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- 2. Hero Section (The AI Tutor Mascot) -->
+    <section class="hero-section" id="home">
+      <div class="hero-container">
+        <!-- AI Mascot Visual -->
+        <div class="hero-mascot-wrapper">
+          <div class="mascot-frame">
+            <div class="mascot-halo"></div>
+            <!-- Uploaded Image: Hen with robotic earpiece reading a book -->
+            <img 
+              src="assets/hen_ai_tutor.jpg" 
+              alt="AI Teacher Hen Mascot with robotic earpiece reading an educational storybook" 
+              class="mascot-img"
+              id="mascotImg"
+              loading="eager"
+            />
+            <div class="mascot-badge">
+              <span class="badge-dot"></span> AI Teacher Tutor
+            </div>
+            <div class="floating-sticker sticker-book">📚</div>
+            <div class="floating-sticker sticker-robot">🤖</div>
+          </div>
+        </div>
+
+        <!-- Dynamic Greeting & Call-To-Action -->
+        <div class="hero-content">
+          <div class="hero-tag">
+            <span>✨ AI-Powered Vernacular Pedagogy • SIH 2026</span>
+          </div>
+          
+          <h1 class="hero-heading">
+            Learn with joy in your <br>
+            <span class="gradient-text" id="heroMotherTongueText">Mother Tongue!</span>
+          </h1>
+
+          <!-- Real-Time Dynamic Greeting Speech Bubble -->
+          <div class="greeting-bubble-card" id="greetingBubble">
+            <div class="bubble-speaker-header">
+              <div class="speaker-avatar">🐣</div>
+              <div class="speaker-info">
+                <strong>Kuku AI Teacher says:</strong>
+                <span class="greeting-lang-tag" id="greetingLangTag">In Santhali</span>
+              </div>
+              <button class="btn-bubble-audio" id="listenGreetingBtn" title="Listen to greeting" aria-label="Listen to greeting">
+                <span>🔊</span> Listen
+              </button>
+            </div>
+            <div class="bubble-text-box">
+              <p class="greeting-vernacular" id="greetingVernacular">"ᱡᱚᱦᱟᱨ ᱜᱤᱫᱽᱨᱟᱹ! ᱟᱞᱮ ᱥᱟᱶ ᱟᱯᱱᱟᱨ ᱯᱟᱹᱨᱥᱤ ᱛᱮ ᱥᱮᱪᱮᱫᱚᱜ ᱢᱮ!"</p>
+              <p class="greeting-pronunciation" id="greetingPronunciation">(Johar gidra! Ale saw apnar parsi te sechedog me!)</p>
+              <p class="greeting-translation" id="greetingTranslation">"Namaste children! Come learn and explore with joy in your mother tongue!"</p>
+            </div>
+            <div class="bubble-footer">
+              <button class="btn-chip" id="cycleGreetingBtn">🔄 Next Greeting</button>
+              <span class="live-dot-pulse">● Live Vernacular Sync</span>
+            </div>
+          </div>
+
+          <div class="hero-cta-group">
+            <a href="#pathways" class="btn btn-primary btn-bounce" id="startLearningBtn">
+              <span>🚀</span> Start Learning
+            </a>
+            <a href="#translator" class="btn btn-secondary">
+              <span>🌐</span> Open Translator
+            </a>
+            <button class="btn btn-accent" id="sayHelloBtn">
+              <span>🎙️</span> Say Hello!
+            </button>
+          </div>
+
+          <div class="hero-highlights">
+            <div class="highlight-item">
+              <span class="highlight-icon">🗣️</span>
+              <div>
+                <strong>9+ Tribal Languages</strong>
+                <small>Santhali, Mundari, Ho & more</small>
+              </div>
+            </div>
+            <div class="highlight-item">
+              <span class="highlight-icon">🎧</span>
+              <div>
+                <strong>Natural AI Voice</strong>
+                <small>Crystal clear audio pronunciation</small>
+              </div>
+            </div>
+            <div class="highlight-item">
+              <span class="highlight-icon">📖</span>
+              <div>
+                <strong>NEP 2020 Aligned</strong>
+                <small>Mother tongue foundational literacy</small>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="hero-art" aria-label="A playful illustrated child in a forest">
-        <div class="sun"></div>
-        <div class="speech">Namaste! Let’s learn a new word today! 💬</div>
-        <div class="tree">
-          <div class="trunk"></div>
-          <div class="branch a"></div>
-          <div class="branch b"></div>
-          <div class="branch c"></div>
-          <div class="crown a"></div>
-          <div class="crown b"></div>
-          <div class="crown c"></div>
+    </section>
+
+    <!-- 3. Curriculum Pathway (Grade Selection) -->
+    <section class="section section-pathway" id="pathways">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-badge">🎯 Learning Journey</span>
+          <h2 class="section-title">Select Your Grade Pathway</h2>
+          <p class="section-subtitle">Pick your learning level to unlock fun interactive games, colorful vocabulary, and stories tailored for you.</p>
         </div>
-        <div class="ground"></div>
-        <div class="kid">
-          <div class="ear l"></div>
-          <div class="ear r"></div>
-          <div class="head">
-            <div class="hair"></div>
-            <div class="eye l"></div>
-            <div class="eye r"></div>
-            <div class="smile"></div>
+
+        <!-- Panoramic Visual Banner -->
+        <div class="pathway-banner-card">
+          <!-- Uploaded Image: Curriculum Pathways Banner -->
+          <img 
+            src="assets/curriculum_pathways.jpg" 
+            alt="Curriculum pathways showing Kindergarten & Pre-K, Grades 1-2-3, and Grades 4-5" 
+            class="pathway-banner-img"
+            loading="lazy"
+          />
+          <div class="pathway-banner-overlay">
+            <span>✨ Tap any pathway below to explore interactive lessons!</span>
           </div>
-          <div class="body">
-            <div class="shirt"></div>
-            <div class="arm l"></div>
-            <div class="arm r"></div>
+        </div>
+
+        <!-- Three Large Interactive Clickable Pathway Cards -->
+        <div class="pathway-grid">
+          <!-- Card 1: Kindergarten & Pre-K -->
+          <article class="pathway-card card-yellow" data-grade="pre-k" tabindex="0" role="button" aria-pressed="false">
+            <div class="pathway-card-header">
+              <span class="pathway-sticker">🧸</span>
+              <span class="pathway-age-pill">Ages 3–5</span>
+            </div>
+            <h3 class="pathway-title">Kindergarten & Pre-K</h3>
+            <p class="pathway-desc">First steps in learning! Discover letters, colorful crayons, musical animals, and basic numbers.</p>
+            <ul class="pathway-topics">
+              <li>🎵 Mother-Tongue Rhymes</li>
+              <li>🎨 Color & Shape Discovery</li>
+              <li>🚂 ABC & 1-2-3 Counting Train</li>
+              <li>🐘 Animal Voices & Sounds</li>
+            </ul>
+            <div class="pathway-card-footer">
+              <span class="pathway-status-pill">Explore Pathway ➜</span>
+            </div>
+          </article>
+
+          <!-- Card 2: Grades 1, 2, 3 (Default Active) -->
+          <article class="pathway-card card-blue active" data-grade="primary" tabindex="0" role="button" aria-pressed="true">
+            <div class="pathway-badge-featured">⭐ Most Popular</div>
+            <div class="pathway-card-header">
+              <span class="pathway-sticker">🚀</span>
+              <span class="pathway-age-pill">Ages 6–8</span>
+            </div>
+            <h3 class="pathway-title">Grades 1, 2 & 3</h3>
+            <p class="pathway-desc">Word builders & young explorers! Connect everyday phrases, tell time, and master math magic.</p>
+            <ul class="pathway-topics">
+              <li>💬 Daily Conversational Words</li>
+              <li>⏰ Clock & Calendar Fun</li>
+              <li>🧮 Math Magic & Number Quests</li>
+              <li>🌳 Nature & Forest Folktales</li>
+            </ul>
+            <div class="pathway-card-footer">
+              <span class="pathway-status-pill">Active Pathway ✓</span>
+            </div>
+          </article>
+
+          <!-- Card 3: Grades 4, 5 -->
+          <article class="pathway-card card-green" data-grade="upper-primary" tabindex="0" role="button" aria-pressed="false">
+            <div class="pathway-card-header">
+              <span class="pathway-sticker">🏆</span>
+              <span class="pathway-age-pill">Ages 9–11</span>
+            </div>
+            <h3 class="pathway-title">Grades 4 & 5</h3>
+            <p class="pathway-desc">Deep bilingual comprehension! Read regional stories, discover science in mother tongue, and collaborate.</p>
+            <ul class="pathway-topics">
+              <li>📖 Full Vernacular Stories & Scripts</li>
+              <li>🔬 Science & Environment In Mother Tongue</li>
+              <li>🧩 Advanced Word Puzzles</li>
+              <li>🤝 Cross-State Peer Learning</li>
+            </ul>
+            <div class="pathway-card-footer">
+              <span class="pathway-status-pill">Explore Pathway ➜</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Interactive Learning Modules: Two-Column Grid -->
+    <section class="section section-modules" id="learning-modules">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-badge">🎮 Interactive Learning Zones</span>
+          <h2 class="section-title">Play, Read & Discover in Vernacular</h2>
+          <p class="section-subtitle">Engaging multi-sensory activities that combine visual learning, joyful audio, and interactive practice.</p>
+        </div>
+
+        <div class="modules-two-column-grid">
+          <!-- Column 1: Language Lab & Math Magic -->
+          <div class="module-card col-lab">
+            <div class="module-media-container">
+              <!-- Uploaded Image: Caterpillar wearing headphones -->
+              <img 
+                src="assets/caterpillar_headphones.jpg" 
+                alt="Caterpillar wearing headphones in the Language Lab & Math Magic zone" 
+                class="module-img"
+                loading="lazy"
+              />
+              <div class="module-tag-overlay">
+                <span>🎧 Language Lab & Math Magic</span>
+              </div>
+            </div>
+
+            <div class="module-body">
+              <div class="module-tabs">
+                <button class="module-tab-btn active" id="tabLangLab" data-tab="lang">
+                  <span>🔤</span> Language Lab
+                </button>
+                <button class="module-tab-btn" id="tabMathMagic" data-tab="math">
+                  <span>🔢</span> Math Magic
+                </button>
+              </div>
+
+              <!-- Sub-view 1: Language Lab -->
+              <div class="module-subview active" id="viewLangLab">
+                <div class="subview-header">
+                  <h4>🌟 Word Explorer (Interactive Flashcards)</h4>
+                  <p>Tap any card to hear the native pronunciation and discover the word bridge:</p>
+                </div>
+                <div class="flashcard-grid">
+                  <button class="flashcard-btn" data-word="Tree" data-hin="पेड़" data-san="ᱫᱟᱨᱮ (Dare)" data-mun="दारे (Dare)">
+                    <span class="fc-emoji">🌳</span>
+                    <span class="fc-eng">Tree</span>
+                    <span class="fc-hin">पेड़</span>
+                    <span class="fc-native">ᱫᱟᱨᱮ (Dare)</span>
+                    <span class="fc-sound">🔊</span>
+                  </button>
+                  <button class="flashcard-btn" data-word="Water" data-hin="पानी" data-san="ᱫᱟᱜ (Daak)" data-mun="दाः (Da)">
+                    <span class="fc-emoji">💧</span>
+                    <span class="fc-eng">Water</span>
+                    <span class="fc-hin">पानी</span>
+                    <span class="fc-native">ᱫᱟᱜ (Daak)</span>
+                    <span class="fc-sound">🔊</span>
+                  </button>
+                  <button class="flashcard-btn" data-word="Sun" data-hin="सूरज" data-san="ᱥᱤᱧ (Singi)" data-mun="सिंगी (Singi)">
+                    <span class="fc-emoji">☀️</span>
+                    <span class="fc-eng">Sun</span>
+                    <span class="fc-hin">सूरज</span>
+                    <span class="fc-native">ᱥᱤᱧ (Singi)</span>
+                    <span class="fc-sound">🔊</span>
+                  </button>
+                  <button class="flashcard-btn" data-word="Book" data-hin="किताब" data-san="ᱯᱩᱛᱷᱤ (Puthi)" data-mun="पुथी (Puthi)">
+                    <span class="fc-emoji">📖</span>
+                    <span class="fc-eng">Book</span>
+                    <span class="fc-hin">किताब</span>
+                    <span class="fc-native">ᱯᱩᱛᱷᱤ (Puthi)</span>
+                    <span class="fc-sound">🔊</span>
+                  </button>
+                </div>
+                <div class="activity-cta">
+                  <button class="btn btn-primary btn-sm" id="btnPlayVocabGame">
+                    <span>🎮</span> Play Vocabulary Match Game
+                  </button>
+                </div>
+              </div>
+
+              <!-- Sub-view 2: Math Magic -->
+              <div class="module-subview" id="viewMathMagic">
+                <div class="subview-header">
+                  <h4>✨ Counting Blocks in Mother Tongue</h4>
+                  <p>Tap the blocks to count along in English, Hindi, and Santhali:</p>
+                </div>
+                <div class="math-blocks-container">
+                  <button class="math-block" data-num="1" data-hin="एक" data-san="ᱢᱤᱫ (Mit')">1</button>
+                  <button class="math-block" data-num="2" data-hin="दो" data-san="ᱵᱟᱨ (Bar)">2</button>
+                  <button class="math-block" data-num="3" data-hin="तीन" data-san="ᱯᱮ (Pe)">3</button>
+                  <button class="math-block" data-num="4" data-hin="चार" data-san="ᱯᱩᱱ (Pun)">4</button>
+                  <button class="math-block" data-num="5" data-hin="पाँच" data-san="ᱢᱚᱬᱮ (More)">5</button>
+                  <button class="math-block" data-num="6" data-hin="छह" data-san="ᱛᱩᱨᱩᱭ (Turui)">6</button>
+                  <button class="math-block" data-num="7" data-hin="सात" data-san="ᱮᱭᱟᱭ (Eae)">7</button>
+                  <button class="math-block" data-num="8" data-hin="आठ" data-san="ᱤᱨᱟᱹᱞ (Iral)">8</button>
+                </div>
+                <div class="math-output-card" id="mathCounterCard">
+                  <span class="math-num-display" id="mathNumDisplay">5</span>
+                  <div class="math-num-details">
+                    <strong id="mathHinDisplay">पाँच (Hindi)</strong>
+                    <span id="mathSanDisplay">ᱢᱚᱬᱮ • More (Santhali)</span>
+                  </div>
+                  <button class="btn-bubble-audio" id="speakMathNum" title="Listen to number">🔊 Listen</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Column 2: Vernacular Story Corner -->
+          <div class="module-card col-story" id="story-corner">
+            <div class="module-media-container">
+              <!-- Uploaded Image: Arthur and D.W. reading -->
+              <img 
+                src="assets/arthur_story_corner.jpg" 
+                alt="Arthur and D.W. in the Vernacular Story Corner" 
+                class="module-img"
+                loading="lazy"
+              />
+              <div class="module-tag-overlay">
+                <span>📚 Vernacular Story Corner</span>
+              </div>
+            </div>
+
+            <div class="module-body">
+              <div class="story-intro">
+                <h3>Read Classic Tales In Regional Voices</h3>
+                <p>Enjoy beloved storybooks translated sentence-by-sentence into Santhali, Mundari, Kurukh, Hindi, and more with synchronous speech narration.</p>
+              </div>
+
+              <!-- Featured Story Preview Card -->
+              <div class="story-preview-card">
+                <div class="story-badge">⭐ Today's Featured Story</div>
+                <h4 class="story-title" id="featuredStoryTitle">The Clever Rabbit & The Lion (चतुर खरगोश)</h4>
+                <p class="story-blurb">
+                  Deep inside the lush sal forests of Jharkhand, a clever little rabbit saves all his jungle friends using quick thinking and wisdom.
+                </p>
+                <div class="story-meta">
+                  <span>⏱️ 4 min read</span>
+                  <span>👶 Grade 1–3</span>
+                  <span>🗣️ 9 Languages Available</span>
+                </div>
+                <div class="story-actions">
+                  <button class="btn btn-primary btn-bounce" id="btnReadNow">
+                    <span>📖</span> Read Now
+                  </button>
+                  <button class="btn btn-secondary btn-sm" id="btnBrowseStories">
+                    <span>📚</span> More Stories
+                  </button>
+                </div>
+              </div>
+
+              <!-- Quick Story Selector Pills -->
+              <div class="story-quick-list">
+                <span class="quick-list-label">Popular Stories:</span>
+                <div class="quick-pills">
+                  <button class="story-pill active" data-story="rabbit">🐇 The Clever Rabbit</button>
+                  <button class="story-pill" data-story="tree">🌳 The Sacred Sal Tree</button>
+                  <button class="story-pill" data-story="bird">🐦 The Singing Bird</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Real-Time Translation & Collaboration Zone -->
+    <section class="section section-collab" id="collaboration">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-badge">🤝 Peer Learning & Connectivity</span>
+          <h2 class="section-title">Real-Time Vernacular Classroom Circle</h2>
+          <p class="section-subtitle">Children from diverse states talk, collaborate, and share ideas—each speaking and reading seamlessly in their own mother tongue.</p>
+        </div>
+
+        <div class="collab-interactive-wrapper">
+          <!-- Multi-Lingual Floating Peer Bubbles Stage -->
+          <div class="collab-stage">
+            <!-- Uploaded Image: Three diverse children using tablets and laptops -->
+            <div class="collab-centerpiece">
+              <img 
+                src="assets/children_collaboration.jpg" 
+                alt="Three diverse children joyfully collaborating with tablets and laptops" 
+                class="collab-centerpiece-img"
+                loading="lazy"
+              />
+              <div class="collab-badge-center">
+                <span>⚡ Live Vernacular Mesh</span>
+              </div>
+            </div>
+
+            <!-- Floating Multilingual Chat Bubbles Around The Children -->
+            <div class="peer-bubble bubble-hindi" data-lang="Hindi" style="--delay: 0s;">
+              <div class="bubble-avatar">👦🏽</div>
+              <div class="bubble-content">
+                <div class="bubble-header-row">
+                  <strong>Rahul (Jharkhand)</strong>
+                  <span class="bubble-flag">हिन्दी</span>
+                </div>
+                <p class="bubble-msg">"नमस्ते! आज तुमने कौन सा नया शब्द सीखा?"</p>
+                <small class="bubble-sub">"Hello! What new word did you learn today?"</small>
+                <button class="bubble-speak-btn" data-text="नमस्ते! आज तुमने कौन सा नया शब्द सीखा?" data-lang="hi-IN" title="Listen in Hindi">🔊</button>
+              </div>
+            </div>
+
+            <div class="peer-bubble bubble-bengali" data-lang="Bengali" style="--delay: 1s;">
+              <div class="bubble-avatar">👧🏻</div>
+              <div class="bubble-content">
+                <div class="bubble-header-row">
+                  <strong>Ananya (West Bengal)</strong>
+                  <span class="bubble-flag">বাংলা</span>
+                </div>
+                <p class="bubble-msg">"নমস্কার! চলো একসাথে অংক খেলা খেলি!"</p>
+                <small class="bubble-sub">"Hello! Let's play the math game together!"</small>
+                <button class="bubble-speak-btn" data-text="নমস্কার! চলো একসাথে অংক খেলা খেলি!" data-lang="bn-IN" title="Listen in Bengali">🔊</button>
+              </div>
+            </div>
+
+            <div class="peer-bubble bubble-tamil" data-lang="Tamil" style="--delay: 2s;">
+              <div class="bubble-avatar">👧🏾</div>
+              <div class="bubble-content">
+                <div class="bubble-header-row">
+                  <strong>Priya (Tamil Nadu)</strong>
+                  <span class="bubble-flag">தமிழ்</span>
+                </div>
+                <p class="bubble-msg">"வணக்கம்! எனக்கு இந்தப் புதிய கதை மிகவும் பிடித்திருக்கிறது!"</p>
+                <small class="bubble-sub">"Vanakkam! I really loved this new story!"</small>
+                <button class="bubble-speak-btn" data-text="வணக்கம்! எனக்கு இந்தப் புதிய கதை மிகவும் பிடித்திருக்கிறது!" data-lang="ta-IN" title="Listen in Tamil">🔊</button>
+              </div>
+            </div>
+
+            <div class="peer-bubble bubble-santhali" data-lang="Santhali" style="--delay: 1.5s;">
+              <div class="bubble-avatar">👦🏾</div>
+              <div class="bubble-content">
+                <div class="bubble-header-row">
+                  <strong>Birsa (Mayurbhanj)</strong>
+                  <span class="bubble-flag">ᱥᱟᱱᱛᱟᱲᱤ</span>
+                </div>
+                <p class="bubble-msg">"ᱡᱚᱦᱟᱨ! ᱤᱧ ᱱᱟᱣᱟ ᱥᱟᱱᱛᱟᱲᱤ ᱟᱹᱲᱟᱹᱧ ᱪᱮᱫ ᱠᱮᱫᱟ!"</p>
+                <small class="bubble-sub">(Johar! Injań nawa Santhali aṛanń ched keda!)</small>
+                <button class="bubble-speak-btn" data-text="Johar! Injań nawa Santhali aṛanń ched keda!" data-lang="hi-IN" title="Listen in Santhali">🔊</button>
+              </div>
+            </div>
+
+            <div class="peer-bubble bubble-english" data-lang="English" style="--delay: 2.5s;">
+              <div class="bubble-avatar">🧒🏼</div>
+              <div class="bubble-content">
+                <div class="bubble-header-row">
+                  <strong>Leo (Kerala)</strong>
+                  <span class="bubble-flag">English</span>
+                </div>
+                <p class="bubble-msg">"The AI Tutor translated your messages instantly to my screen!"</p>
+                <small class="bubble-sub">Real-time peer translation active</small>
+                <button class="bubble-speak-btn" data-text="The AI Tutor translated your messages instantly to my screen!" data-lang="en-IN" title="Listen in English">🔊</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Interactive Live Peer Chat Simulator Box -->
+          <div class="peer-chat-simulator">
+            <div class="simulator-header">
+              <div class="sim-icon">💬</div>
+              <div class="sim-title">
+                <h4>Try the Peer Chat Simulator</h4>
+                <p>Type any message in your language, and watch the AI Tutor translate it into your friend's language in real-time!</p>
+              </div>
+            </div>
+            
+            <div class="sim-controls">
+              <div class="sim-input-row">
+                <div class="sim-field">
+                  <label for="simSenderLang">You speak:</label>
+                  <select id="simSenderLang">
+                    <option value="hin">Hindi (हिन्दी)</option>
+                    <option value="eng">English</option>
+                    <option value="bengali">Bengali (বাংলা)</option>
+                    <option value="tamil">Tamil (தமிழ்)</option>
+                  </select>
+                </div>
+                <div class="sim-arrow">➜</div>
+                <div class="sim-field">
+                  <label for="simPeerLang">Your friend speaks:</label>
+                  <select id="simPeerLang">
+                    <option value="Santhali" selected>Santhali (ᱥᱟᱱᱛᱟᱲᱤ)</option>
+                    <option value="Mundari">Mundari (मुंडारी)</option>
+                    <option value="Ho">Ho (𑢹𑣉)</option>
+                    <option value="Kurukh">Kurukh (कुड़ुख़)</option>
+                    <option value="Bengali">Bengali (বাংলা)</option>
+                    <option value="Tamil">Tamil (தமிழ்)</option>
+                    <option value="Hindi">Hindi (हिन्दी)</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="sim-input-group">
+                <input 
+                  type="text" 
+                  id="simMessageInput" 
+                  placeholder="Type a message: e.g. Hello friend! Let's learn together!" 
+                  value="नमस्ते दोस्त! चलो मिलकर नया पाठ पढ़ें!"
+                />
+                <button class="btn btn-primary" id="btnSimulateSend">
+                  <span>🚀</span> Send to Circle
+                </button>
+              </div>
+
+              <!-- Quick chips for kids -->
+              <div class="sim-chips">
+                <span>Try quick phrases:</span>
+                <button class="chip-btn" data-phrase="नमस्ते दोस्त! चलो मिलकर पढ़ें!">👋 Hello Friend!</button>
+                <button class="chip-btn" data-phrase="क्या तुम मेरी मदद कर सकते हो?">🤝 Can you help me?</button>
+                <button class="chip-btn" data-phrase="मुझे यह कहानी बहुत पसंद आई!">⭐ I love this story!</button>
+                <button class="chip-btn" data-phrase="धन्यवाद! बहुत अच्छा!">🎉 Thank you!</button>
+              </div>
+
+              <!-- Simulator Result Broadcast Card -->
+              <div class="sim-result-card" id="simResultCard">
+                <div class="sim-result-header">
+                  <span class="sim-result-status">✅ Instant Peer Translation Broadcast:</span>
+                  <button class="btn-bubble-audio" id="speakSimResult">🔊 Listen</button>
+                </div>
+                <div class="sim-result-body">
+                  <div class="sim-result-original">
+                    <small>You sent (Hindi):</small>
+                    <p id="simOriginalText">"नमस्ते दोस्त! चलो मिलकर नया पाठ पढ़ें!"</p>
+                  </div>
+                  <div class="sim-result-target">
+                    <small id="simTargetLabel">Your peer sees (Santhali):</small>
+                    <p class="sim-target-text" id="simTargetText">"ᱡᱚᱦᱟᱨ ᱜᱟᱛᱮ! ᱫᱮᱞᱟ ᱢᱤᱫ ᱥᱟᱶᱛᱮ ᱱᱟᱣᱟ ᱯᱟᱲᱦᱟᱣ ᱵᱚᱱ ᱯᱟᱲᱦᱟᱣᱟ!"</p>
+                    <span class="sim-target-phonetic" id="simTargetPhonetic">(Johar gate! Dela mid sawte nawa parhaw bon parhawa!)</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Instant Vernacular Translation Studio (The Core Engine) -->
+    <section class="section section-translator" id="translator">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-badge">🌐 AI Mother Tongue Bridge</span>
+          <h2 class="section-title">Vernacular Translation Studio</h2>
+          <p class="section-subtitle">Type any sentence or word to explore accurate translations across Jharkhand and Eastern India's tribal and regional languages.</p>
+        </div>
+
+        <div class="translator-card">
+          <div class="translator-top-row">
+            <div class="lang-field-group">
+              <label for="sourceLanguage">Translate From:</label>
+              <select id="sourceLanguage" class="styled-select">
+                <option value="auto">Auto Detect (Hindi / English / Hinglish)</option>
+                <option value="hin" selected>Hindi (हिन्दी)</option>
+                <option value="eng">English (अंग्रेज़ी)</option>
+                <option value="hinglish">Hinglish (रोमन हिन्दी)</option>
+              </select>
+            </div>
+
+            <button class="swap-btn" id="swapBtn" title="Switch source language" aria-label="Switch source language">
+              <span>⇄</span>
+            </button>
+
+            <div class="lang-field-group">
+              <label for="targetLanguage">Translate To Mother Tongue:</label>
+              <select id="targetLanguage" class="styled-select">
+                <option value="Santhali" selected>Santhali (ᱥᱟᱱᱛᱟᱲᱤ)</option>
+                <option value="Mundari">Mundari (मुंडारी)</option>
+                <option value="Ho">Ho (𑢹𑣉)</option>
+                <option value="Kurukh">Kurukh (कुड़ुख़)</option>
+                <option value="Kharia">Kharia (खड़िया)</option>
+                <option value="Khortha">Khortha (खोरठा)</option>
+                <option value="Nagpuri">नागपुरी (नागपुरी)</option>
+                <option value="Panchpargania">Panchpargania (पंचपरगनिया)</option>
+                <option value="Kurmali">Kurmali (कुड़मालि)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="translator-boxes">
+            <!-- Input Text Box -->
+            <div class="trans-box input-box">
+              <div class="trans-box-header">
+                <label for="hindiText" id="inputCardLabel">Write in Hindi / English / Hinglish ✍️</label>
+                <span class="box-badge">Input</span>
+              </div>
+              <textarea id="hindiText" placeholder="जैसे: नमस्ते, पानी, मेरा नाम, पेड़ और जंगल..." rows="4">नमस्ते</textarea>
+              <div class="trans-box-footer">
+                <div class="quick-try">
+                  <span id="inputTryNote">Try: नमस्ते, पानी, धन्यवाद, पेड़</span>
+                </div>
+                <div class="trans-box-actions">
+                  <button class="action-btn" id="speakInput" title="Listen to input text" aria-label="Listen to input">
+                    <span>🔊</span> Listen
+                  </button>
+                  <button class="action-btn" id="clearInput" title="Clear text">
+                    <span>✕</span> Clear
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Output Text Box -->
+            <div class="trans-box output-box">
+              <div class="trans-box-header">
+                <label id="resultLabel">In Santhali ✨</label>
+                <span class="box-badge badge-accent">Mother Tongue Result</span>
+              </div>
+              <div class="result-display-area" id="translatedText" aria-live="polite">
+                Johar (ᱡᱚᱦᱟᱨ)
+              </div>
+              <div class="trans-box-footer">
+                <span class="engine-badge">⚡ Real-Time Vernacular Engine</span>
+                <div class="trans-box-actions">
+                  <button class="action-btn" id="speakResult" title="Listen to translated speech" aria-label="Listen to translation">
+                    <span>🔊</span> Listen
+                  </button>
+                  <button class="action-btn" id="copyResult" title="Copy translation to clipboard">
+                    <span>📋</span> Copy
+                  </button>
+                  <button class="action-btn" id="saveWord" title="Save to my learning list">
+                    <span>⭐</span> Save
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="translator-action-row">
+            <button class="btn btn-primary btn-large btn-bounce" id="translateBtn">
+              <span>🌟</span> Translate Now
+            </button>
           </div>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- Section 1: Translator -->
-  <section class="section section-cream" id="translate">
-    <div class="section-inner">
-      <h2 class="section-title">Make a language bridge 🌉</h2>
-      <p class="section-subtitle">Type a Hindi word or sentence, choose a language, and listen to the result. This demo includes a small starter phrasebook.</p>
-      
-      <div class="translator">
-        <div class="language-row">
-          <div class="lang-field">
-            <label for="sourceLanguage">I want to translate from</label>
-            <select id="sourceLanguage">
-              <option value="auto">Auto Detect (Hindi / English / Hinglish)</option>
-              <option value="hin" selected>Hindi (हिन्दी)</option>
-              <option value="eng">English (अंग्रेज़ी)</option>
-              <option value="hinglish">Hinglish (रोमन हिन्दी)</option>
-            </select>
-          </div>
-          <button class="arrow" id="swapBtn" title="Switch between Hindi and English" aria-label="Switch source language">➜</button>
-          <div class="lang-field">
-            <label for="targetLanguage">I want to translate to</label>
-            <select id="targetLanguage">
-              <option value="Santhali">Santhali</option>
-              <option value="Mundari">Mundari</option>
-              <option value="Ho">Ho</option>
-              <option value="Kurukh">Kurukh</option>
-              <option value="Kharia">Kharia</option>
-              <option value="Khortha">Khortha</option>
-              <option value="Nagpuri">Nagpuri</option>
-              <option value="Panchpargania">Panchpargania</option>
-              <option value="Kurmali">Kurmali</option>
-            </select>
+  <!-- Interactive Story Reader Modal -->
+  <div class="story-modal-backdrop" id="storyModal" aria-hidden="true" role="dialog" aria-labelledby="modalStoryTitle">
+    <div class="story-modal-window">
+      <div class="modal-header">
+        <div class="modal-title-wrap">
+          <span class="modal-icon">📖</span>
+          <h3 id="modalStoryTitle">The Clever Rabbit & The Lion</h3>
+        </div>
+        <button class="modal-close-btn" id="closeStoryModal" aria-label="Close story reader">✕</button>
+      </div>
+
+      <div class="modal-body">
+        <div class="story-reader-hero">
+          <img src="assets/arthur_story_corner.jpg" alt="Story illustration" class="modal-story-thumb" />
+          <div class="story-reader-meta">
+            <span class="reader-pill" id="storyLangPill">Language: Santhali (ᱥᱟᱱᱛᱟᱲᱤ)</span>
+            <span class="reader-pill">Page <span id="currentPageNum">1</span> of 3</span>
           </div>
         </div>
-        
-        <div class="translate-boxes">
-          <div class="text-card">
-            <label for="hindiText" id="inputCardLabel">Write in Hindi / English / Hinglish ✍️</label>
-            <textarea id="hindiText" placeholder="जैसे: नमस्ते, Water is life, Mera naam Dev hai, Ped aur jungle">नमस्ते</textarea>
-            <div class="card-actions">
-              <button class="round-icon" id="speakInput" aria-label="Listen to input text">🔊 Listen</button>
-              <span class="small-note" id="inputTryNote">Try: नमस्ते, Water, Ped, Mera naam</span>
-            </div>
-          </div>
-          <div class="text-card">
-            <label id="resultLabel">Your new word ✨</label>
-            <div class="result" id="translatedText" aria-live="polite">Johar</div>
-            <div class="card-actions">
-              <button class="round-icon" id="speakResult" aria-label="Listen to translated text">🔊 Listen</button>
-              <button class="round-icon" id="saveWord" aria-label="Save word">⭐ Save</button>
-            </div>
-          </div>
+
+        <div class="story-reader-content" id="storyReaderContent">
+          <!-- Populated dynamically by app.js -->
         </div>
-        
-        <div class="translate-action">
-          <button class="btn btn-primary" id="translateBtn">🌟 Translate now</button>
+
+        <div class="story-audio-controls">
+          <button class="btn btn-primary" id="btnPlayStoryAudio">
+            <span>🔊</span> Read Aloud In Mother Tongue
+          </button>
+          <button class="btn btn-secondary" id="btnPauseStoryAudio">
+            <span>⏸️</span> Pause
+          </button>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn btn-secondary btn-sm" id="btnPrevPage" disabled>◀ Previous Page</button>
+        <div class="page-dots" id="pageDots">
+          <span class="dot active"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
+        <button class="btn btn-secondary btn-sm" id="btnNextPage">Next Page ▶</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Vocabulary Match Mini-Game Modal -->
+  <div class="story-modal-backdrop" id="vocabGameModal" aria-hidden="true" role="dialog" aria-labelledby="vocabGameTitle">
+    <div class="story-modal-window vocab-modal-window">
+      <div class="modal-header">
+        <div class="modal-title-wrap">
+          <span class="modal-icon">🎮</span>
+          <h3 id="vocabGameTitle">Match The Vernacular Words!</h3>
+        </div>
+        <button class="modal-close-btn" id="closeVocabModal" aria-label="Close game">✕</button>
+      </div>
+      <div class="modal-body text-center">
+        <p class="game-instructions">Find the matching word in your mother tongue for: <strong id="gameTargetWord">Water (पानी)</strong></p>
+        <div class="vocab-options-grid" id="vocabOptionsGrid">
+          <!-- Populated by app.js -->
+        </div>
+        <div class="game-score-row">
+          <span>⭐ Score: <strong id="gameScore">0</strong> / 5</span>
+          <span id="gameFeedbackText">Tap an option to match!</span>
         </div>
       </div>
     </div>
-  </section>
-
-  <!-- Section 2: Language Adventure -->
-  <section class="section" id="languages">
-    <div class="section-inner">
-      <h2 class="section-title">Choose your language adventure</h2>
-      <p class="section-subtitle">Nine languages, many stories, and countless new words to discover.</p>
-      <div class="language-grid" id="languageGrid"></div>
-    </div>
-  </section>
-
-  <!-- Section 3: Games -->
-  <section class="section games" id="games">
-    <div class="section-inner">
-      <h2 class="section-title">Play, listen, and learn!</h2>
-      <p class="section-subtitle">Little games make big learning moments. Pick an activity and let the fun begin.</p>
-      <div class="game-grid">
-        <article class="game-card">
-          <div class="game-icon">🧩</div>
-          <h3>Word Match</h3>
-          <p>Match a Hindi word with its picture and translation.</p>
-          <button class="btn btn-primary game-btn" data-game="Word Match">Play now</button>
-        </article>
-        <article class="game-card">
-          <div class="game-icon">🎧</div>
-          <h3>Listen & Pick</h3>
-          <p>Listen carefully, then choose the word you heard.</p>
-          <button class="btn btn-primary game-btn" data-game="Listen & Pick">Play now</button>
-        </article>
-        <article class="game-card">
-          <div class="game-icon">🌟</div>
-          <h3>Word Quest</h3>
-          <p>Collect stars by learning a new word every day.</p>
-          <button class="btn btn-primary game-btn" data-game="Word Quest">Play now</button>
-        </article>
-      </div>
-    </div>
-  </section>
+  </div>
 
   <!-- Footer -->
-  <footer>
-    <div class="footer-brand">🌉 BhashaSetu</div>
-    <p>Hindi se apni bhasha tak — seekho, bolo, judo!</p>
-    <p>Built with care for languages, children, and communities.</p>
-  </footer>
-  
-  <div class="toast" id="toast" role="status"></div>
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-brand-column">
+        <div class="footer-logo">
+          <span class="brand-icon">🦜</span>
+          <strong>Vernacular AI Tutor</strong>
+          <span class="footer-sih-tag">SIH 2026</span>
+        </div>
+        <p class="footer-desc">
+          AI-Powered Vernacular Pedagogy and Real-Time Translation Tool for Mother Tongue-Based Primary Education. Bridging learning gaps for tribal & regional languages.
+        </p>
+      </div>
 
-  <!-- Scripts -->
+      <div class="footer-links-column">
+        <h4>Learning Tracks</h4>
+        <ul>
+          <li><a href="#pathways">Kindergarten & Pre-K</a></li>
+          <li><a href="#pathways">Grades 1, 2, 3 (Primary)</a></li>
+          <li><a href="#pathways">Grades 4, 5 (Upper Primary)</a></li>
+          <li><a href="#learning-modules">Language Lab & Phonics</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links-column">
+        <h4>Supported Mother Tongues</h4>
+        <div class="lang-tags-cloud">
+          <span>Santhali (ᱥᱟᱱᱛᱟᱲᱤ)</span>
+          <span>Mundari (मुंडारी)</span>
+          <span>Ho (𑢹𑣉)</span>
+          <span>Kurukh (कुड़ुख़)</span>
+          <span>Kharia (खड़िया)</span>
+          <span>Khortha (खोरठा)</span>
+          <span>Nagpuri (नागपुरी)</span>
+          <span>Kurmali (कुड़मालि)</span>
+          <span>Bengali (বাংলা)</span>
+          <span>Tamil (தமிழ்)</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-bottom text-center">
+      <p>© 2026 Vernacular AI Tutor • Built for Smart India Hackathon (SIH 2026) • Every child deserves to learn in their mother tongue.</p>
+    </div>
+  </footer>
+
+  <!-- Toast Notification Alert Box -->
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <!-- Confetti Canvas for Celebratory Moments -->
+  <canvas id="confettiCanvas" class="confetti-canvas"></canvas>
+
+  <!-- Client-Side App Logic -->
   <script src="js/app.js"></script>
 </body>
 </html>
