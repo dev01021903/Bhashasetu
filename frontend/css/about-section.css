@@ -1,0 +1,449 @@
+/* ==========================================================================
+   BhashaSetu - About Section Styles
+   Theme: Playful, Child-Friendly, Accessible & Culturally Respectful
+   ========================================================================== */
+
+.about-section {
+  position: relative;
+  z-index: 10;
+  padding: 64px 0 80px;
+  background: linear-gradient(180deg, rgba(255, 249, 240, 0.6) 0%, rgba(225, 245, 254, 0.5) 50%, rgba(255, 255, 255, 0) 100%);
+  color: var(--ink-dark, #1E293B);
+  font-family: inherit;
+  overflow: hidden;
+}
+
+.about-container {
+  width: min(1140px, calc(100% - 32px));
+  margin-inline: auto;
+  position: relative;
+  z-index: 2;
+}
+
+/* --------------------------------------------------------------------------
+   Section Header & Language Switcher
+   -------------------------------------------------------------------------- */
+.about-header {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 36px;
+}
+
+.about-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--accent-yellow-light, #FFF9C4);
+  color: #795548;
+  border: 2px solid var(--accent-yellow-shadow, #FFA000);
+  padding: 6px 18px;
+  border-radius: var(--radius-pill, 999px);
+  font-size: 0.88rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  margin-bottom: 12px;
+  box-shadow: 0 3px 0 rgba(255, 160, 0, 0.2);
+}
+
+.about-title {
+  font-size: clamp(2rem, 3.8vw, 2.7rem);
+  font-weight: 800;
+  color: var(--ink-dark, #1E293B);
+  line-height: 1.2;
+  margin-bottom: 10px;
+  letter-spacing: -0.02em;
+}
+
+.about-subtitle {
+  font-size: 1.1rem;
+  color: var(--ink-muted, #475569);
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Local Language Selector Pill Bar */
+.about-lang-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.about-lang-label {
+  font-size: 0.9rem;
+  font-weight: 800;
+  color: var(--ink-dark, #1E293B);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.about-lang-select {
+  background: #FFFFFF;
+  border: var(--border-thick, 3px solid #1E293B);
+  border-radius: var(--radius-pill, 999px);
+  padding: 6px 18px;
+  font-size: 0.92rem;
+  font-weight: 800;
+  color: var(--ink-dark, #1E293B);
+  box-shadow: 0 4px 0 rgba(30, 41, 59, 0.12);
+  cursor: pointer;
+  outline: none;
+  transition: all 0.15s ease;
+}
+
+.about-lang-select:focus {
+  border-color: var(--primary-blue, #0288D1);
+  box-shadow: 0 0 0 3px rgba(2, 136, 209, 0.2), 0 4px 0 rgba(30, 41, 59, 0.12);
+}
+
+.about-coming-soon-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #FEF3C7;
+  color: #92400E;
+  border: 1.5px solid #F59E0B;
+  padding: 4px 14px;
+  border-radius: var(--radius-pill, 999px);
+  font-size: 0.82rem;
+  font-weight: 700;
+  margin-top: 6px;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* --------------------------------------------------------------------------
+   Intro / Concept 2-Column Section
+   -------------------------------------------------------------------------- */
+.about-concept-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 32px;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.about-concept-card {
+  background: #FFFFFF;
+  border: var(--border-thick, 3px solid #1E293B);
+  border-radius: var(--radius-lg, 32px);
+  padding: 36px 32px;
+  box-shadow: var(--shadow-chunky, 0 8px 0 rgba(30, 41, 59, 0.12));
+}
+
+.about-card-badge {
+  display: inline-block;
+  background: var(--accent-green-light, #E8F5E9);
+  color: var(--accent-green-shadow, #2E7D32);
+  border: 1.5px solid var(--accent-green, #43A047);
+  font-weight: 800;
+  font-size: 0.82rem;
+  padding: 4px 12px;
+  border-radius: var(--radius-pill, 999px);
+  margin-bottom: 12px;
+}
+
+.about-concept-heading {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--ink-dark, #1E293B);
+  line-height: 1.3;
+  margin-bottom: 16px;
+}
+
+.about-concept-text {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--ink-muted, #475569);
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.about-bridge-motif {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  padding: 12px 16px;
+  background: var(--bg-sky, #EDF7FD);
+  border: 2px dashed #94A3B8;
+  border-radius: var(--radius-md, 22px);
+}
+
+.about-motif-pill {
+  background: #FFFFFF;
+  border: 2px solid var(--primary-blue, #0288D1);
+  color: var(--primary-blue, #0288D1);
+  padding: 4px 12px;
+  border-radius: var(--radius-pill, 999px);
+  font-size: 0.88rem;
+  font-weight: 800;
+}
+
+.about-motif-arrow {
+  color: var(--accent-orange, #FF7043);
+  font-weight: 800;
+  font-size: 1rem;
+}
+
+/* Concept Illustration */
+.about-concept-visual {
+  background: linear-gradient(135deg, #FFF9C4 0%, #FFE082 100%);
+  border: var(--border-thick, 3px solid #1E293B);
+  border-radius: var(--radius-lg, 32px);
+  padding: 36px 24px;
+  text-align: center;
+  box-shadow: var(--shadow-chunky, 0 8px 0 rgba(30, 41, 59, 0.12));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.about-mascot-avatar {
+  font-size: 5rem;
+  line-height: 1;
+  margin-bottom: 16px;
+  animation: softWiggle 3s infinite ease-in-out;
+}
+
+.about-speech-bubbles {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.about-bubble {
+  background: #FFFFFF;
+  border: 2px solid var(--ink-dark, #1E293B);
+  border-radius: var(--radius-md, 22px);
+  padding: 8px 16px;
+  font-weight: 800;
+  font-size: 0.95rem;
+  color: var(--ink-dark, #1E293B);
+  box-shadow: 0 4px 0 rgba(30, 41, 59, 0.1);
+}
+
+/* --------------------------------------------------------------------------
+   Vision & Mission Cards (2-Column)
+   -------------------------------------------------------------------------- */
+.about-vm-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 48px;
+}
+
+.about-vm-card {
+  background: #FFFFFF;
+  border: var(--border-thick, 3px solid #1E293B);
+  border-radius: var(--radius-md, 22px);
+  padding: 30px 28px;
+  box-shadow: var(--shadow-chunky, 0 8px 0 rgba(30, 41, 59, 0.12));
+  transition: all 0.2s ease;
+}
+
+.about-vm-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-chunky-hover, 0 12px 0 rgba(30, 41, 59, 0.12));
+}
+
+.about-vm-card.card-vision {
+  border-top: 8px solid var(--primary-blue, #0288D1);
+}
+
+.about-vm-card.card-mission {
+  border-top: 8px solid var(--accent-orange, #FF7043);
+}
+
+.about-vm-icon {
+  font-size: 2.2rem;
+  margin-bottom: 12px;
+  display: inline-block;
+}
+
+.about-vm-title {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--ink-dark, #1E293B);
+  margin-bottom: 10px;
+}
+
+.about-vm-desc {
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--ink-muted, #475569);
+  font-weight: 500;
+}
+
+/* --------------------------------------------------------------------------
+   What We Do - 4 Feature Cards Grid
+   -------------------------------------------------------------------------- */
+.about-features-section {
+  margin-bottom: 48px;
+}
+
+.about-features-header {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.about-features-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.about-feature-card {
+  background: #FFFFFF;
+  border: var(--border-thick, 3px solid #1E293B);
+  border-radius: var(--radius-md, 22px);
+  padding: 24px 20px;
+  box-shadow: var(--shadow-chunky, 0 8px 0 rgba(30, 41, 59, 0.12));
+  text-align: center;
+  transition: all 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-chunky-hover, 0 12px 0 rgba(30, 41, 59, 0.12));
+  border-color: var(--primary-blue, #0288D1);
+}
+
+.about-feature-icon-box {
+  width: 60px;
+  height: 60px;
+  border-radius: var(--radius-pill, 999px);
+  background: var(--bg-sky, #EDF7FD);
+  border: 2px solid var(--ink-dark, #1E293B);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  margin-bottom: 14px;
+  box-shadow: 0 4px 0 rgba(30, 41, 59, 0.1);
+}
+
+.about-feature-card:nth-child(1) .about-feature-icon-box { background: #E1F5FE; }
+.about-feature-card:nth-child(2) .about-feature-icon-box { background: #FFF9C4; }
+.about-feature-card:nth-child(3) .about-feature-icon-box { background: #E8F5E9; }
+.about-feature-card:nth-child(4) .about-feature-icon-box { background: #EDE7F6; }
+
+.about-feature-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--ink-dark, #1E293B);
+  margin-bottom: 8px;
+}
+
+.about-feature-desc {
+  font-size: 0.92rem;
+  line-height: 1.55;
+  color: var(--ink-muted, #475569);
+  font-weight: 500;
+}
+
+/* --------------------------------------------------------------------------
+   Cultural Closing Banner (Deep Green #285943)
+   -------------------------------------------------------------------------- */
+.about-cultural-banner {
+  background: linear-gradient(135deg, #285943 0%, #1E5E3A 100%);
+  border: var(--border-thick, 3px solid #1E293B);
+  border-radius: var(--radius-lg, 32px);
+  padding: 36px 40px;
+  color: #FFF9F0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+  box-shadow: var(--shadow-chunky, 0 8px 0 rgba(30, 41, 59, 0.12));
+  margin-bottom: 40px;
+}
+
+.about-cultural-content {
+  flex: 1;
+}
+
+.about-cultural-heading {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  margin-bottom: 8px;
+}
+
+.about-cultural-text {
+  font-size: 1.02rem;
+  line-height: 1.65;
+  color: #E8F5E9;
+  font-weight: 500;
+}
+
+.about-cultural-icon {
+  font-size: 4.5rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+/* --------------------------------------------------------------------------
+   Call To Action (Explore Words)
+   -------------------------------------------------------------------------- */
+.about-cta-card {
+  text-align: center;
+  background: #FFFFFF;
+  border: var(--border-thick, 3px solid #1E293B);
+  border-radius: var(--radius-lg, 32px);
+  padding: 36px 24px;
+  box-shadow: var(--shadow-chunky, 0 8px 0 rgba(30, 41, 59, 0.12));
+}
+
+.about-cta-title {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--ink-dark, #1E293B);
+  margin-bottom: 16px;
+}
+
+/* --------------------------------------------------------------------------
+   Responsive Adjustments
+   -------------------------------------------------------------------------- */
+@media (max-width: 992px) {
+  .about-features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .about-concept-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .about-vm-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .about-features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-cultural-banner {
+    flex-direction: column;
+    text-align: center;
+    padding: 28px 20px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .about-section *,
+  .about-mascot-avatar,
+  .about-eyebrow {
+    animation: none !important;
+    transition: none !important;
+  }
+}

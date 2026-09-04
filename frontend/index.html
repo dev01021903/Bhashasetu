@@ -12,6 +12,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Fredoka:wght@400;500;600;700&family=Noto+Sans+Devanagari:wght@400;600;700&family=Noto+Sans+Ol+Chiki:wght@400;600;700&family=Noto+Sans+Tamil:wght@400;600;700&family=Noto+Sans+Bengali:wght@400;600;700&display=swap" rel="stylesheet">
   
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/about-section.css">
+  <link rel="stylesheet" href="css/services-section.css">
+  <link rel="stylesheet" href="css/chatbot-widget.css">
   <link rel="stylesheet" href="css/faq-section.css">
 </head>
 <body>
@@ -38,10 +41,13 @@
 
       <nav id="navigation" aria-label="Primary Navigation">
         <a class="nav-link active" href="#home"><span>🏠</span> Home</a>
+        <a class="nav-link" href="#about"><span>🌿</span> About</a>
+        <a class="nav-link" href="#services"><span>✨</span> Services</a>
         <a class="nav-link" href="#learning-modules"><span>🔬</span> Learning Zones</a>
         <a class="nav-link" href="#story-corner"><span>📖</span> Story Corner</a>
         <a class="nav-link" href="#collaboration"><span>💬</span> Peer Connect</a>
         <a class="nav-link" href="#translator"><span>🌐</span> Live Translator</a>
+        <a class="nav-link" href="#faq"><span>❓</span> FAQ</a>
       </nav>
 
       <div class="topbar-actions">
@@ -177,7 +183,177 @@
       </div>
     </section>
 
-    <!-- 3. Interactive Learning Modules: Two-Column Grid -->
+    <!-- ======================================================================
+        2. ABOUT BHASHASETU SECTION
+    ====================================================================== -->
+    <section class="section about-section" id="about" aria-labelledby="aboutTitleText">
+      <div class="about-container">
+        <!-- Header & Language Switcher -->
+        <header class="about-header">
+          <div class="about-eyebrow" id="aboutEyebrowText" aria-hidden="true">
+            <span>🌿</span> ABOUT BHASHASETU
+          </div>
+          <h2 class="about-title" id="aboutTitleText">About BhashaSetu</h2>
+          <p class="about-subtitle" id="aboutSubtitleText">
+            Building a bridge between children, culture, and language.
+          </p>
+
+          <!-- Component-Scoped Multi-Language Selector -->
+          <div class="about-lang-bar">
+            <label for="aboutLangSelect" class="about-lang-label">
+              <span>🌐</span> Choose Language:
+            </label>
+            <select id="aboutLangSelect" class="about-lang-select" aria-label="Select About Section Language">
+              <option value="en" selected>English</option>
+              <option value="hi">हिन्दी (Hindi)</option>
+              <option value="sat">ᱥᱟᱱᱛᱟᱲᱤ (Santali)</option>
+              <option value="gon">Gondi (गोंडी)</option>
+              <option value="bhi">Bhili (भीली)</option>
+              <option value="hoc">Ho (हो)</option>
+              <option value="unr">Mundari (मुंडारी)</option>
+              <option value="kru">Kurukh (कुड़ुख़)</option>
+              <option value="kfq">Korku (कोरकू)</option>
+              <option value="kxu">Kui (कुई)</option>
+              <option value="brx">Bodo (बोडो)</option>
+              <option value="dis">Dimasa (दिमासा)</option>
+            </select>
+          </div>
+          <div id="aboutComingSoonWrapper"></div>
+        </header>
+
+        <!-- Intro / Concept (2-Col) -->
+        <div class="about-concept-grid">
+          <div class="about-concept-card">
+            <span class="about-card-badge" id="aboutConceptBadge">OUR IDEA</span>
+            <h3 class="about-concept-heading" id="aboutConceptHeading">Learning begins in the language of home.</h3>
+            <p class="about-concept-text" id="aboutConceptText">
+              Children learn best when they can connect new ideas to the words they hear in their homes. BhashaSetu bridges the gap between indigenous tribal languages and state languages (Hindi & English), empowering young minds to celebrate their cultural roots while excelling in modern education.
+            </p>
+            <div class="about-bridge-motif" aria-label="Language Bridge Motif">
+              <span class="about-motif-pill" id="aboutMotif1">English</span>
+              <span class="about-motif-arrow" aria-hidden="true">⇄</span>
+              <span class="about-motif-pill" id="aboutMotif2">Hindi</span>
+              <span class="about-motif-arrow" aria-hidden="true">⇄</span>
+              <span class="about-motif-pill" id="aboutMotif3">Mother Tongue</span>
+            </div>
+          </div>
+
+          <div class="about-concept-visual" aria-hidden="true">
+            <div class="about-mascot-avatar">🦉📖</div>
+            <div class="about-speech-bubbles">
+              <div class="about-bubble" id="aboutBubble1">Hello! 👋</div>
+              <div class="about-bubble" id="aboutBubble2">नमस्ते! 🌟</div>
+              <div class="about-bubble" id="aboutBubble3">ᱡᱚᱦᱟᱨ / Johar! 🌾</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Vision & Mission Cards (2-Col) -->
+        <div class="about-vm-grid">
+          <div class="about-vm-card card-vision">
+            <div class="about-vm-icon" aria-hidden="true">🌟</div>
+            <h3 class="about-vm-title" id="aboutVisionTitle">Our Vision</h3>
+            <p class="about-vm-desc" id="aboutVisionDesc">
+              A world where no child feels left behind because of their mother tongue, and every indigenous language is celebrated and preserved digitally.
+            </p>
+          </div>
+          <div class="about-vm-card card-mission">
+            <div class="about-vm-icon" aria-hidden="true">🎯</div>
+            <h3 class="about-vm-title" id="aboutMissionTitle">Our Mission</h3>
+            <p class="about-vm-desc" id="aboutMissionDesc">
+              To provide AI-powered, joyful, and culturally respectful learning tools for primary education in tribal and regional mother tongues.
+            </p>
+          </div>
+        </div>
+
+        <!-- What We Do - 4 Feature Cards -->
+        <div class="about-features-section">
+          <div class="about-features-header">
+            <span class="section-badge" id="aboutWhatBadge">WHAT WE DO</span>
+            <h3 class="section-title" id="aboutWhatHeading">How BhashaSetu Helps</h3>
+            <p class="section-subtitle" id="aboutWhatSubtitle">Simple, fun, and accessible tools designed specifically for children aged 5–10.</p>
+          </div>
+
+          <div class="about-features-grid">
+            <div class="about-feature-card">
+              <div class="about-feature-icon-box" aria-hidden="true">📚</div>
+              <h4 class="about-feature-title" id="aboutFeat1Title">Learn New Words</h4>
+              <p class="about-feature-desc" id="aboutFeat1Desc">Interactive picture flashcards with words in tribal languages, Hindi, and English.</p>
+            </div>
+            <div class="about-feature-card">
+              <div class="about-feature-icon-box" aria-hidden="true">🔊</div>
+              <h4 class="about-feature-title" id="aboutFeat2Title">Listen & Speak</h4>
+              <p class="about-feature-desc" id="aboutFeat2Desc">Crystal clear native pronunciations to build confidence in speaking both languages.</p>
+            </div>
+            <div class="about-feature-card">
+              <div class="about-feature-icon-box" aria-hidden="true">🎮</div>
+              <h4 class="about-feature-title" id="aboutFeat3Title">Play & Practise</h4>
+              <p class="about-feature-desc" id="aboutFeat3Desc">Joyful quizzes, matching mini-games, and daily challenges that turn learning into play.</p>
+            </div>
+            <div class="about-feature-card">
+              <div class="about-feature-icon-box" aria-hidden="true">🤝</div>
+              <h4 class="about-feature-title" id="aboutFeat4Title">Grow Together</h4>
+              <p class="about-feature-desc" id="aboutFeat4Desc">Collaborative classroom features and community contributions from teachers and parents.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cultural Closing Banner -->
+        <div class="about-cultural-banner">
+          <div class="about-cultural-content">
+            <h3 class="about-cultural-heading" id="aboutCultureHeading">Every Language Has a Story</h3>
+            <p class="about-cultural-text" id="aboutCultureText">
+              Indigenous languages carry centuries of wisdom, folklore, and connection to nature. When a child learns in their mother tongue, they carry forward a living legacy of community and identity.
+            </p>
+          </div>
+          <div class="about-cultural-icon" aria-hidden="true">🌳✨</div>
+        </div>
+
+        <!-- CTA Explore Words -->
+        <div class="about-cta-card">
+          <h3 class="about-cta-title" id="aboutCtaTitle">Ready to start learning?</h3>
+          <button type="button" class="btn btn-primary btn-large btn-bounce" id="aboutCtaBtn">
+            <span id="aboutCtaBtnText">Explore Words ➜</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+        3. SERVICES SECTION
+    ====================================================================== -->
+    <section class="section services-section" id="services" aria-labelledby="servicesTitleText">
+      <div class="services-container">
+        <header class="services-header">
+          <div class="services-eyebrow" aria-hidden="true">
+            <span>✨</span> OUR SERVICES
+          </div>
+          <h2 class="services-title" id="servicesTitleText">What BhashaSetu Offers</h2>
+          <p class="services-subtitle">Everything a child needs to explore and learn their mother tongue.</p>
+        </header>
+
+        <!-- 6-Service Cards Grid (Populated dynamically by services-section.js) -->
+        <div class="services-grid" id="servicesGrid">
+          <!-- Populated by services-section.js -->
+        </div>
+
+        <!-- Floating Assistant Banner Note -->
+        <div class="services-chat-banner">
+          <div class="services-chat-banner-text">
+            <span class="services-chat-banner-icon" aria-hidden="true">💬</span>
+            <div>
+              <h3 class="services-chat-banner-title">Have a question about languages or features?</h3>
+              <p class="services-chat-banner-sub">Look for the chat icon in the bottom-right corner of your screen to talk with BhashaSetu Assistant!</p>
+            </div>
+          </div>
+          <button type="button" class="services-chat-btn" id="servicesBannerChatBtn">
+            <span>🤖</span> Chat with Assistant
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Interactive Learning Modules: Two-Column Grid -->
     <section class="section section-modules" id="learning-modules">
       <div class="container">
         <div class="section-header text-center">
@@ -784,6 +960,9 @@
 
   <!-- Client-Side App Logic -->
   <script src="js/app.js"></script>
+  <script src="js/about-section.js"></script>
+  <script src="js/services-section.js"></script>
+  <script src="js/chatbot-widget.js"></script>
   <script src="js/faq-section.js"></script>
 </body>
 </html>

@@ -1,0 +1,241 @@
+/* ==========================================================================
+   BhashaSetu - Services Section Styles
+   Theme: Playful, Child-Friendly, 6-Service Grid, Cohesive BhashaSetu Cards
+   ========================================================================== */
+
+.services-section {
+  position: relative;
+  z-index: 10;
+  padding: 64px 0 80px;
+  background: linear-gradient(180deg, rgba(225, 245, 254, 0.4) 0%, rgba(255, 255, 255, 0) 100%);
+  color: var(--ink-dark, #1E293B);
+  font-family: inherit;
+  overflow: hidden;
+}
+
+.services-container {
+  width: min(1140px, calc(100% - 32px));
+  margin-inline: auto;
+  position: relative;
+  z-index: 2;
+}
+
+/* --------------------------------------------------------------------------
+   Section Header
+   -------------------------------------------------------------------------- */
+.services-header {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 40px;
+}
+
+.services-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--primary-blue-light, #E1F5FE);
+  color: var(--primary-blue, #0288D1);
+  border: 2px solid var(--primary-blue, #0288D1);
+  padding: 6px 18px;
+  border-radius: var(--radius-pill, 999px);
+  font-size: 0.88rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  margin-bottom: 12px;
+  box-shadow: 0 3px 0 var(--primary-blue-shadow, #01579B);
+}
+
+.services-title {
+  font-size: clamp(2rem, 3.8vw, 2.7rem);
+  font-weight: 800;
+  color: var(--ink-dark, #1E293B);
+  line-height: 1.2;
+  margin-bottom: 10px;
+  letter-spacing: -0.02em;
+}
+
+.services-subtitle {
+  font-size: 1.1rem;
+  color: var(--ink-muted, #475569);
+  line-height: 1.6;
+}
+
+/* --------------------------------------------------------------------------
+   6-Card Grid (3 Columns Desktop / 2 Tablet / 1 Mobile)
+   -------------------------------------------------------------------------- */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.service-card {
+  background: #FFFFFF;
+  border: var(--border-thick, 3px solid #1E293B);
+  border-radius: var(--radius-md, 22px);
+  padding: 30px 24px;
+  box-shadow: var(--shadow-chunky, 0 8px 0 rgba(30, 41, 59, 0.12));
+  transition: all 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-chunky-hover, 0 12px 0 rgba(30, 41, 59, 0.12));
+  border-color: var(--primary-blue, #0288D1);
+}
+
+.service-icon-wrap {
+  width: 64px;
+  height: 64px;
+  border-radius: var(--radius-md, 22px);
+  border: 2.5px solid var(--ink-dark, #1E293B);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  margin-bottom: 18px;
+  box-shadow: 0 4px 0 rgba(30, 41, 59, 0.1);
+  flex-shrink: 0;
+}
+
+.service-card:nth-child(1) .service-icon-wrap { background: #FFF9C4; }
+.service-card:nth-child(2) .service-icon-wrap { background: #E1F5FE; }
+.service-card:nth-child(3) .service-icon-wrap { background: #E8F5E9; }
+.service-card:nth-child(4) .service-icon-wrap { background: #EDE7F6; }
+.service-card:nth-child(5) .service-icon-wrap { background: #FBE9E7; }
+.service-card:nth-child(6) .service-icon-wrap { background: #FFF3E0; }
+
+.service-title {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--ink-dark, #1E293B);
+  margin-bottom: 10px;
+}
+
+.service-desc {
+  font-size: 0.98rem;
+  line-height: 1.6;
+  color: var(--ink-muted, #475569);
+  font-weight: 500;
+  flex: 1;
+}
+
+.service-action-link {
+  margin-top: 16px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.92rem;
+  font-weight: 800;
+  color: var(--primary-blue, #0288D1);
+  transition: transform 0.15s ease;
+  cursor: pointer;
+}
+
+.service-action-link:hover {
+  transform: translateX(4px);
+  color: var(--primary-blue-hover, #0277BD);
+}
+
+/* --------------------------------------------------------------------------
+   Services Floating Assistant Banner Note
+   -------------------------------------------------------------------------- */
+.services-chat-banner {
+  background: linear-gradient(135deg, #0288D1 0%, #7E57C2 100%);
+  border: var(--border-thick, 3px solid #1E293B);
+  border-radius: var(--radius-lg, 32px);
+  padding: 24px 32px;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  box-shadow: var(--shadow-chunky, 0 8px 0 rgba(30, 41, 59, 0.12));
+}
+
+.services-chat-banner-text {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.services-chat-banner-icon {
+  font-size: 2.4rem;
+  flex-shrink: 0;
+}
+
+.services-chat-banner-title {
+  font-size: 1.25rem;
+  font-weight: 800;
+  margin-bottom: 2px;
+}
+
+.services-chat-banner-sub {
+  font-size: 0.95rem;
+  color: #E1F5FE;
+  font-weight: 500;
+}
+
+.services-chat-btn {
+  background: var(--accent-yellow, #FFC107);
+  color: #3E2723;
+  font-weight: 800;
+  font-size: 1rem;
+  padding: 10px 22px;
+  border-radius: var(--radius-pill, 999px);
+  border: var(--border-thick, 3px solid #1E293B);
+  box-shadow: 0 4px 0 var(--accent-yellow-shadow, #FFA000);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.15s ease;
+}
+
+.services-chat-btn:hover {
+  background: #FFCA28;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 0 var(--accent-yellow-shadow, #FFA000);
+}
+
+/* --------------------------------------------------------------------------
+   Responsive Adjustments
+   -------------------------------------------------------------------------- */
+@media (max-width: 992px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .services-chat-banner {
+    flex-direction: column;
+    text-align: center;
+    padding: 22px 18px;
+  }
+
+  .services-chat-banner-text {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .services-chat-btn {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .services-section *,
+  .service-card,
+  .services-eyebrow {
+    animation: none !important;
+    transition: none !important;
+  }
+}
