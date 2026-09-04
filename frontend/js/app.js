@@ -1,5 +1,5 @@
 /**
- * Vernacular AI Tutor - SIH 2026
+ * BhashaSetu - Interactive Engine for Vernacular Learning
  * Interactive Child-Friendly Dashboard Application Script
  * AI-Powered Vernacular Pedagogy & Real-Time Translation
  */
@@ -252,7 +252,7 @@ const mascotGreetings = {
   English: [
     {
       vernacular: '“Hello Little Explorers! Ready to learn with joy in your mother tongue?”',
-      pronunciation: '(Vernacular AI Tutor - SIH 2026)',
+      pronunciation: '(BhashaSetu)',
       translation: '“AI-Powered Vernacular Pedagogy and Real-Time Translation for Primary Education!”',
       speakText: 'Hello Little Explorers! Ready to learn with joy in your mother tongue?'
     }

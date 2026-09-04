@@ -27,7 +27,7 @@ async def lifespan(app: FastAPI):
 
 app = FastAPI(
     title=settings.PROJECT_NAME,
-    description="Vernacular Pedagogy Engine & Duplex Translation Backend for Low-Resource Tribal Languages (SIH26042)",
+    description="Vernacular Pedagogy Engine & Duplex Translation Backend for Low-Resource Tribal Languages",
     version="1.0.0",
     lifespan=lifespan,
     docs_url="/docs",
