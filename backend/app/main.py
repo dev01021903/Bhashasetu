@@ -2,6 +2,7 @@ import os
 import sys
 from contextlib import asynccontextmanager
 from fastapi import FastAPI
+from fastapi.responses import FileResponse
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 
@@ -71,5 +72,14 @@ if os.path.exists(settings.MEDIA_DIR):
 
 # 4. Mount Frontend Web UI at root (/)
 frontend_dir = os.path.join(BASE_DIR, "frontend")
+
+@app.get("/login", tags=["Web Frontend"], include_in_schema=False)
+async def serve_login_page():
+    login_file = os.path.join(frontend_dir, "login.html")
+    if os.path.exists(login_file):
+        return FileResponse(login_file)
+    return FileResponse(os.path.join(frontend_dir, "index.html"))
+
 if os.path.exists(frontend_dir):
     app.mount("/", StaticFiles(directory=frontend_dir, html=True), name="frontend")
+

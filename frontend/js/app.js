@@ -1135,5 +1135,39 @@ document.addEventListener('DOMContentLoaded', () => {
   initCollaborationZone();
   initTranslatorStudio();
   initSparkleCursor();
+  initStudentSession();
   updateHeroGreeting();
 });
+
+// Student Profile & Login Session Manager
+function initStudentSession() {
+  try {
+    const raw = localStorage.getItem('bhashasetu_user');
+    const loginBtn = $('loginNavBtn');
+    const userBadge = $('userBadgeCard');
+    const avatarIcon = $('userAvatarIcon');
+    const nameLabel = $('userNameLabel');
+
+    if (raw && loginBtn && userBadge) {
+      const user = JSON.parse(raw);
+      if (user && user.name) {
+        loginBtn.style.display = 'none';
+        userBadge.style.display = 'inline-flex';
+        if (avatarIcon) avatarIcon.textContent = user.avatar || '🧒';
+        if (nameLabel) nameLabel.textContent = user.name;
+        userBadge.title = `Logged in as ${user.name} (${user.grade || 'Primary'}) - Click switch to change student`;
+      }
+    }
+  } catch (e) {
+    console.warn('Session load error', e);
+  }
+}
+
+window.switchOrLogoutUser = function() {
+  if (confirm('Do you want to switch or log in as a different student? 🧒')) {
+    try {
+      localStorage.removeItem('bhashasetu_user');
+    } catch(e) {}
+    window.location.href = 'login.html';
+  }
+};

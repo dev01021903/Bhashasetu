@@ -354,6 +354,82 @@ nav#navigation {
   box-shadow: 0 2px 0 rgba(30, 41, 59, 0.12);
 }
 
+/* Student Login / Profile Chip */
+.user-profile-nav {
+  display: flex;
+  align-items: center;
+}
+
+.btn-login-nav {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: linear-gradient(135deg, var(--accent-orange, #FF7043), var(--accent-yellow, #FFCA28));
+  color: #1E293B;
+  font-size: 0.88rem;
+  font-weight: 800;
+  padding: 6px 14px;
+  border-radius: var(--radius-pill);
+  border: 2px solid var(--ink-dark);
+  box-shadow: 0 3.5px 0 rgba(30, 41, 59, 0.15);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn-login-nav:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 0 rgba(30, 41, 59, 0.2);
+}
+
+.btn-login-nav:active {
+  transform: translateY(2px);
+  box-shadow: 0 1px 0 rgba(30, 41, 59, 0.15);
+}
+
+.user-badge-card {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #FFFFFF;
+  border: 2px solid var(--primary-teal, #26A69A);
+  border-radius: var(--radius-pill);
+  padding: 4px 10px 4px 8px;
+  box-shadow: 0 3px 0 rgba(38, 166, 154, 0.4);
+  font-size: 0.88rem;
+  font-weight: 800;
+  color: var(--ink-dark);
+}
+
+.user-avatar {
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+.user-name {
+  max-width: 100px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #0F766E;
+}
+
+.btn-user-switch {
+  background: #F0FDFA;
+  border: 1px solid #99F6E4;
+  cursor: pointer;
+  font-size: 0.85rem;
+  padding: 2px 5px;
+  border-radius: var(--radius-pill);
+  transition: transform 0.2s;
+  margin-left: 2px;
+}
+
+.btn-user-switch:hover {
+  transform: rotate(90deg) scale(1.1);
+  background: #CCFBF1;
+}
+
 .mobile-menu {
   display: none;
   font-size: 1.5rem;
