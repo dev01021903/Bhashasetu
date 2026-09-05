@@ -18,8 +18,8 @@
   // ==========================================================================
   const mockResponses = [
     {
-      keywords: ["language", "languages", "tribal", "vernacular", "mother tongue", "dialect", "supported", "which language"],
-      response: "BhashaSetu is designed to support tribal and regional mother tongues: Santhali, Nagpuri, and Khortha, alongside Hindi and English! 🌿"
+      keywords: ["language", "languages", "tribal", "vernacular", "mother tongue", "dialect", "dialects", "supported", "which language", "how many language", "what language", "list of language"],
+      response: "BhashaSetu supports 3 tribal and regional languages: Santhali, Khortha, and Nagpuri! 🌿"
     },
     {
       keywords: ["santali", "santhali", "ol chiki", "olchiki"],

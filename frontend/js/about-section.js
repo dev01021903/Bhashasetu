@@ -82,15 +82,8 @@
       isUnverified: false
     },
     sat: { isUnverified: true, langName: "Santhali (ᱥᱟᱱᱛᱟᱲᱤ)" },
-    gon: { isUnverified: true, langName: "Gondi (गोंडी)" },
-    bhi: { isUnverified: true, langName: "Bhili (भीली)" },
-    hoc: { isUnverified: true, langName: "Ho (हो / 𑢪𑣉𑢦𑢬𑣂)" },
-    unr: { isUnverified: true, langName: "Mundari (मुंडारी)" },
-    kru: { isUnverified: true, langName: "Kurukh (कुड़ुख़)" },
-    kfq: { isUnverified: true, langName: "Korku (कोरकू)" },
-    kxu: { isUnverified: true, langName: "Kui (कुई)" },
-    brx: { isUnverified: true, langName: "Bodo (बोडो)" },
-    dis: { isUnverified: true, langName: "Dimasa (दिमासा)" }
+    nag: { isUnverified: true, langName: "Nagpuri (नागपुरी)" },
+    kho: { isUnverified: true, langName: "Khortha (खोरठा)" }
   };
 
   let currentLang = 'en';
