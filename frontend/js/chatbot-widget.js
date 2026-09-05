@@ -18,12 +18,20 @@
   // ==========================================================================
   const mockResponses = [
     {
-      keywords: ["language", "languages", "tribal", "vernacular", "mother tongue", "dialect"],
-      response: "BhashaSetu is designed to support tribal and regional mother tongues including Santhali, Gondi, Bhili, Ho, Mundari, Korku, Kui, Bodo, Dimasa, and Kurukh, alongside Hindi and English! 🌿"
+      keywords: ["language", "languages", "tribal", "vernacular", "mother tongue", "dialect", "supported", "which language"],
+      response: "BhashaSetu is designed to support tribal and regional mother tongues: Santhali, Nagpuri, and Khortha, alongside Hindi and English! 🌿"
     },
     {
       keywords: ["santali", "santhali", "ol chiki", "olchiki"],
       response: "Santhali (ᱥᱟᱱᱛᱟᱲᱤ) uses the beautiful Ol Chiki script. You can explore Santhali word cards, listen to native audio, and read folklore stories right here on BhashaSetu! 🌾"
+    },
+    {
+      keywords: ["nagpuri", "sadri"],
+      response: "Nagpuri (नागपुरी / Sadri) is an important regional language. You can explore Nagpuri word cards, interactive translations, and audio pronunciations right here on BhashaSetu! 🌸"
+    },
+    {
+      keywords: ["khortha", "khotta"],
+      response: "Khortha (खोरठा) is a vibrant regional language. You can explore Khortha word cards, conversational phrases, and translations right here on BhashaSetu! 🌻"
     },
     {
       keywords: ["word card", "word cards", "card", "flashcard", "vocabulary", "vocab"],

@@ -77,7 +77,7 @@
     {
       id: 3,
       question: "Which languages does BhashaSetu support?",
-      answer: "The platform is designed to support tribal and vernacular languages such as Santali, Gondi, Bhili, and other regional mother tongues, along with Hindi and English. Available languages may grow as community members contribute more words."
+      answer: "The platform supports indigenous tribal and regional mother tongues: Santhali, Nagpuri, and Khortha, along with Hindi and English. Available languages may grow as community members contribute more words."
     },
     {
       id: 4,
