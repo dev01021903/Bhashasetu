@@ -593,11 +593,11 @@ def handle_500(e):
 # 5. SERVER ENTRYPOINT
 # ==============================================================================
 if __name__ == "__main__":
-    port = int(os.getenv("PORT", 5000))
-    debug_mode = os.getenv("FLASK_DEBUG", "True").lower() in ["true", "1", "t"]
+    port = int(os.getenv("PORT", 5001))
+    debug_mode = os.getenv("FLASK_DEBUG", "False").lower() in ["true", "1", "t"]
     print("=" * 60)
     print(">> BhashaSetu Flask Backend API (CSV Word Database)")
     print(f">> Server running at: http://127.0.0.1:{port}")
     print(f">> Loaded CSV database: {CSV_FILE_PATH}")
     print("=" * 60)
-    app.run(host="0.0.0.0", port=port, debug=debug_mode)
+    app.run(host="0.0.0.0", port=port, debug=debug_mode, use_reloader=False)

@@ -1,112 +1,511 @@
 id,language,local_word,hindi_word,english_word,category,emoji,audio_url,image_url,difficulty
-1,Santali,ᱡᱚᱦᱟᱨ (Johar),नमस्ते,Hello,Greetings,👋,,assets/words/hello.png,easy
-2,Santali,ᱫᱟᱜ (Da'),पानी,Water,Daily Life,💧,,assets/words/water.png,easy
-3,Santali,ᱫᱟᱨᱮ (Dare),पेड़,Tree,Nature,🌳,,assets/words/tree.png,easy
-4,Santali,ᱥᱮᱛᱟ (Seta),कुत्ता,Dog,Animals,🐶,,assets/words/dog.png,easy
-5,Santali,ᱵᱤᱞᱟᱹᱭ (Bilai),बिल्ली,Cat,Animals,🐱,,assets/words/cat.png,easy
-6,Santali,ᱜᱟᱹᱭ (Gai),गाय,Cow,Animals,🐮,,assets/words/cow.png,easy
-7,Santali,ᱪᱮᱬᱮ (Chene),चिड़िया,Bird,Animals,🐦,,assets/words/bird.png,easy
-8,Santali,ᱦᱟᱹᱠᱩ (Haku),मछली,Fish,Animals,🐟,,assets/words/fish.png,easy
-9,Santali,ᱛᱟᱹᱨᱩᱵ (Tarub),बाघ,Tiger,Animals,🐯,,assets/words/tiger.png,medium
-10,Santali,ᱦᱟᱹᱛᱤ (Hati),हाथी,Elephant,Animals,🐘,,assets/words/elephant.png,easy
-11,Santali,ᱵᱟᱦᱟ (Baha),फूल,Flower,Nature,🌸,,assets/words/flower.png,easy
-12,Santali,ᱵᱤᱨ (Bir),जंगल,Forest,Nature,🌲,,assets/words/forest.png,medium
-13,Santali,ᱜᱟᱰᱟ (Gada),नदी,River,Nature,🌊,,assets/words/river.png,easy
-14,Santali,ᱵᱩᱨᱩ (Buru),पहाड़,Mountain,Nature,⛰️,,assets/words/mountain.png,medium
-15,Santali,ᱥᱤᱧ (Sinj / Ber),सूरज,Sun,Nature,☀️,,assets/words/sun.png,easy
-16,Santali,ᱧᱤᱫᱟᱹ (Nida),रात,Night,Nature,🌙,,assets/words/night.png,easy
-17,Santali,ᱢᱟᱦᱟ (Maha),दिन,Day,Daily Life,📅,,assets/words/day.png,easy
-18,Santali,ᱯᱩᱛᱷᱤ (Puthi),किताब,Book,School,📖,,assets/words/book.png,easy
-19,Santali,ᱠᱚᱞᱚᱢ (Kolom),कलम,Pen,School,🖊️,,assets/words/pen.png,easy
-20,Santali,ᱤᱛᱩᱱ ᱟᱥᱲᱟ (Itun Asra),स्कूल,School,School,🏫,,assets/words/school.png,medium
-21,Santali,ᱫᱟᱠᱟ (Daka),चावल / भात,Rice,Food,🍚,,assets/words/rice.png,easy
-22,Santali,ᱡᱚᱢ (Jom),खाना,Eat,Actions,🍽️,,assets/words/eat.png,easy
-23,Santali,ᱧᱩ (Nju),पीना,Drink,Actions,🥤,,assets/words/drink.png,easy
-24,Santali,ᱮᱱᱮᱡ (Enej),खेलना,Play,Actions,⚽,,assets/words/play.png,easy
-25,Santali,ᱯᱟᱲᱦᱟᱣ (Parhaw),पढ़ना,Read,Actions,📚,,assets/words/read.png,easy
-26,Santali,ᱚᱞ (Ol),लिखना,Write,Actions,✍️,,assets/words/write.png,easy
-27,Santali,ᱢᱤᱫ (Mid),एक,One,Numbers,1️⃣,,assets/words/one.png,easy
-28,Santali,ᱵᱟᱨ (Bar),दो,Two,Numbers,2️⃣,,assets/words/two.png,easy
-29,Santali,ᱯᱮ (Pe),तीन,Three,Numbers,3️⃣,,assets/words/three.png,easy
-30,Santali,ᱯᱩᱱ (Pun),चार,Four,Numbers,4️⃣,,assets/words/four.png,easy
-31,Santali,ᱢᱚᱬᱮ (More),पाँच,Five,Numbers,5️⃣,,assets/words/five.png,easy
-32,Santali,ᱟᱯᱟᱛ (Apat / Baba),पिता,Father,Family,👨,,assets/words/father.png,easy
-33,Santali,ᱮᱸᱜᱟᱛ (Engat / Ayo),माता,Mother,Family,👩,,assets/words/mother.png,easy
-34,Santali,ᱵᱚᱭᱦᱟ (Boyha),भाई,Brother,Family,👦,,assets/words/brother.png,easy
-35,Santali,ᱢᱤᱥᱤ (Misi),बहन,Sister,Family,👧,,assets/words/sister.png,easy
-36,Santali,ᱜᱟᱛᱮ (Gate),दोस्त,Friend,Family,🤝,,assets/words/friend.png,easy
-37,Santali,ᱥᱟᱨᱦᱟᱣ (Sarhaw),धन्यवाद,Thank you,Greetings,🙏,,assets/words/thankyou.png,easy
-38,Nagpuri,जोहार (Johar / God Lagila),नमस्ते,Hello,Greetings,👋,,assets/words/hello.png,easy
-39,Nagpuri,पानी (Pani),पानी,Water,Daily Life,💧,,assets/words/water.png,easy
-40,Nagpuri,गाछ / रुख (Gaachh),पेड़,Tree,Nature,🌳,,assets/words/tree.png,easy
-41,Nagpuri,कुकुर (Kukur),कुत्ता,Dog,Animals,🐶,,assets/words/dog.png,easy
-42,Nagpuri,बिलाई (Bilai),बिल्ली,Cat,Animals,🐱,,assets/words/cat.png,easy
-43,Nagpuri,गाय (Gai),गाय,Cow,Animals,🐮,,assets/words/cow.png,easy
-44,Nagpuri,चिरई (Chirai),चिड़िया,Bird,Animals,🐦,,assets/words/bird.png,easy
-45,Nagpuri,माछरी (Machhri),मछली,Fish,Animals,🐟,,assets/words/fish.png,easy
-46,Nagpuri,बाघ (Bagh),बाघ,Tiger,Animals,🐯,,assets/words/tiger.png,medium
-47,Nagpuri,हाथी (Hathi),हाथी,Elephant,Animals,🐘,,assets/words/elephant.png,easy
-48,Nagpuri,फूल (Phool),फूल,Flower,Nature,🌸,,assets/words/flower.png,easy
-49,Nagpuri,बोन / जंगल (Bon),जंगल,Forest,Nature,🌲,,assets/words/forest.png,medium
-50,Nagpuri,नदी / गड़ा (Nadi),नदी,River,Nature,🌊,,assets/words/river.png,easy
-51,Nagpuri,पहाड़ / बुरु (Pahar),पहाड़,Mountain,Nature,⛰️,,assets/words/mountain.png,medium
-52,Nagpuri,सुरुज / बेर (Suruj),सूरज,Sun,Nature,☀️,,assets/words/sun.png,easy
-53,Nagpuri,रात (Raat),रात,Night,Nature,🌙,,assets/words/night.png,easy
-54,Nagpuri,दिन (Din),दिन,Day,Daily Life,📅,,assets/words/day.png,easy
-55,Nagpuri,पोथी / किताब (Pothi),किताब,Book,School,📖,,assets/words/book.png,easy
-56,Nagpuri,कलम (Kalam),कलम,Pen,School,🖊️,,assets/words/pen.png,easy
-57,Nagpuri,इस्कूल (School),स्कूल,School,School,🏫,,assets/words/school.png,medium
-58,Nagpuri,भात (Bhat),चावल / भात,Rice,Food,🍚,,assets/words/rice.png,easy
-59,Nagpuri,खाएक (Khaek),खाना,Eat,Actions,🍽️,,assets/words/eat.png,easy
-60,Nagpuri,पीएक (Piek),पीना,Drink,Actions,🥤,,assets/words/drink.png,easy
-61,Nagpuri,खेलेक (Kholek),खेलना,Play,Actions,⚽,,assets/words/play.png,easy
-62,Nagpuri,पढ़े़क (Padhek),पढ़ना,Read,Actions,📚,,assets/words/read.png,easy
-63,Nagpuri,लिखेक (Likhek),लिखना,Write,Actions,✍️,,assets/words/write.png,easy
-64,Nagpuri,एक (Ek),एक,One,Numbers,1️⃣,,assets/words/one.png,easy
-65,Nagpuri,दुई (Dui),दो,Two,Numbers,2️⃣,,assets/words/two.png,easy
-66,Nagpuri,तीन (Teen),तीन,Three,Numbers,3️⃣,,assets/words/three.png,easy
-67,Nagpuri,चार (Chaar),चार,Four,Numbers,4️⃣,,assets/words/four.png,easy
-68,Nagpuri,पाँच (Paanch),पाँच,Five,Numbers,5️⃣,,assets/words/five.png,easy
-69,Nagpuri,अब्बा / बाप (Abba / Baap),पिता,Father,Family,👨,,assets/words/father.png,easy
-70,Nagpuri,माई / आयो (Maai),माता,Mother,Family,👩,,assets/words/mother.png,easy
-71,Nagpuri,भाई (Bhai),भाई,Brother,Family,👦,,assets/words/brother.png,easy
-72,Nagpuri,बहिन (Bahin),बहन,Sister,Family,👧,,assets/words/sister.png,easy
-73,Nagpuri,संगी (Sangi),दोस्त,Friend,Family,🤝,,assets/words/friend.png,easy
-74,Nagpuri,धन्यवाद / जोहार (Dhanyabad),धन्यवाद,Thank you,Greetings,🙏,,assets/words/thankyou.png,easy
-75,Khortha,गोड़ लागो ही / जोहार (God Lago Hi),नमस्ते,Hello,Greetings,👋,,assets/words/hello.png,easy
-76,Khortha,पानी (Pani),पानी,Water,Daily Life,💧,,assets/words/water.png,easy
-77,Khortha,गाछ (Gachh),पेड़,Tree,Nature,🌳,,assets/words/tree.png,easy
-78,Khortha,कुकुर (Kukur),कुत्ता,Dog,Animals,🐶,,assets/words/dog.png,easy
-79,Khortha,बिलाई (Bilai),बिल्ली,Cat,Animals,🐱,,assets/words/cat.png,easy
-80,Khortha,गाय (Gai),गाय,Cow,Animals,🐮,,assets/words/cow.png,easy
-81,Khortha,चिरई (Chirai),चिड़िया,Bird,Animals,🐦,,assets/words/bird.png,easy
-82,Khortha,माछ (Machh),मछली,Fish,Animals,🐟,,assets/words/fish.png,easy
-83,Khortha,बाघ (Bagh),बाघ,Tiger,Animals,🐯,,assets/words/tiger.png,medium
-84,Khortha,हाथी (Hathi),हाथी,Elephant,Animals,🐘,,assets/words/elephant.png,easy
-85,Khortha,फूल (Phool),फूल,Flower,Nature,🌸,,assets/words/flower.png,easy
-86,Khortha,बोन (Bon),जंगल,Forest,Nature,🌲,,assets/words/forest.png,medium
-87,Khortha,नदी / गड़ा (Gada),नदी,River,Nature,🌊,,assets/words/river.png,easy
-88,Khortha,पहाड़ / ढोंगी (Pahar),पहाड़,Mountain,Nature,⛰️,,assets/words/mountain.png,medium
-89,Khortha,बेरो / सुरुज (Bero),सूरज,Sun,Nature,☀️,,assets/words/sun.png,easy
-90,Khortha,राइत (Rait),रात,Night,Nature,🌙,,assets/words/night.png,easy
-91,Khortha,दिन (Din),दिन,Day,Daily Life,📅,,assets/words/day.png,easy
-92,Khortha,पोथी / किताब (Pothi),किताब,Book,School,📖,,assets/words/book.png,easy
-93,Khortha,कलम (Kalam),कलम,Pen,School,🖊️,,assets/words/pen.png,easy
-94,Khortha,इस्कूल (School),स्कूल,School,School,🏫,,assets/words/school.png,medium
-95,Khortha,भात (Bhat),चावल / भात,Rice,Food,🍚,,assets/words/rice.png,easy
-96,Khortha,खायेक (Khayek),खाना,Eat,Actions,🍽️,,assets/words/eat.png,easy
-97,Khortha,पीयेक (Piyek),पीना,Drink,Actions,🥤,,assets/words/drink.png,easy
-98,Khortha,खेलेक (Khelek),खेलना,Play,Actions,⚽,,assets/words/play.png,easy
-99,Khortha,पढ़े़क (Padhek),पढ़ना,Read,Actions,📚,,assets/words/read.png,easy
-100,Khortha,लिखेक (Likhek),लिखना,Write,Actions,✍️,,assets/words/write.png,easy
-101,Khortha,एक (Ek),एक,One,Numbers,1️⃣,,assets/words/one.png,easy
-102,Khortha,दुई (Dui),दो,Two,Numbers,2️⃣,,assets/words/two.png,easy
-103,Khortha,तीन (Teen),तीन,Three,Numbers,3️⃣,,assets/words/three.png,easy
-104,Khortha,चार (Chaar),चार,Four,Numbers,4️⃣,,assets/words/four.png,easy
-105,Khortha,पाँच (Paanch),पाँच,Five,Numbers,5️⃣,,assets/words/five.png,easy
-106,Khortha,बाप (Baap),पिता,Father,Family,👨,,assets/words/father.png,easy
-107,Khortha,माय (Maay),माता,Mother,Family,👩,,assets/words/mother.png,easy
-108,Khortha,भाई (Bhai),भाई,Brother,Family,👦,,assets/words/brother.png,easy
-109,Khortha,बहिन (Bahin),बहन,Sister,Family,👧,,assets/words/sister.png,easy
-110,Khortha,संगी (Sangi),दोस्त,Friend,Family,🤝,,assets/words/friend.png,easy
-111,Khortha,धनबाद / जोहार (Dhanbaad),धन्यवाद,Thank you,Greetings,🙏,,assets/words/thankyou.png,easy
+1,Santali,ᱡᱚᱦᱟᱨ (Johar),नमस्ते,hello,Greetings,👋,,assets/words/hello.png,easy
+2,Santali,ᱟᱨᱦᱚᱸ ᱵᱚᱱ ᱧᱟᱯᱟᱢᱟ (Arho bon njapama),अलविदा / फिर मिलेंगे,goodbye,Greetings,👋,,assets/words/goodbye.png,easy
+3,Santali,ᱥᱮᱱᱚᱜ ᱠᱟᱹᱱᱟᱹᱧ (Senog kanaj),अलविदा,Ba?,Greetings,👋,,assets/words/ba?.png,easy
+4,Santali,ᱫᱟᱭᱟ ᱠᱟᱛᱮ (Daya kate),कृपया,please,Greetings,🙏,,assets/words/please.png,easy
+5,Santali,ᱥᱟᱨᱦᱟᱣ (Sarhaw),धन्यवाद / बहुत-बहुत धन्यवाद,thank you,Greetings,🙏,,assets/words/thank_you.png,easy
+6,Santali,ᱤᱠᱟᱹ (Ika),माफ़ कीजिए,sorry,Greetings,🙇,,assets/words/sorry.png,easy
+7,Santali,ᱦᱮᱸ (Hẽ),हाँ,Yes,Greetings,👍,,assets/words/yes.png,easy
+8,Santali,ᱵᱟᱝ (Bang),नहीं,No,Greetings,👎,,assets/words/no.png,easy
+9,Santali,ᱫᱟᱜ (Da'),पानी,water,Daily Life,💧,,assets/words/water.png,easy
+10,Santali,ᱡᱚᱢᱟᱜ (Jomag),खाना / भोजन,food,Food,🍲,,assets/words/food.png,easy
+11,Santali,ᱫᱟᱠᱟ (Daka),चावल / भात,rice,Food,🍚,,assets/words/rice.png,easy
+12,Santali,ᱯᱤᱴᱷᱟᱹ (Pitha / Roti),रोटी,Bread,Food,🫓,,assets/words/bread.png,easy
+13,Santali,ᱯᱤᱴᱷᱟᱹ (Pitha),रोटी,Chapati,Food,🫓,,assets/words/chapati.png,easy
+14,Santali,ᱩᱛᱩ (Utu),सब्ज़ी / तरकारी,Vegetable,Food,🥬,,assets/words/vegetable.png,easy
+15,Santali,ᱛᱚᱣᱟ (Towa),दूध,Milk,Food,🥛,,assets/words/milk.png,easy
+16,Santali,ᱩᱞ (Ul),आम,Mango,Food,🥭,,assets/words/mango.png,easy
+17,Santali,ᱦᱮᱲᱮᱢ (Herem),मीठा,Sweet,Food,🍬,,assets/words/sweet.png,easy
+18,Santali,ᱨᱮᱸᱜᱮᱡ (Rengej),भूखा,Hungry,Daily Life,😋,,assets/words/hungry.png,easy
+19,Santali,ᱛᱮᱛᱟᱝ (Tetang),प्यासा,Thirsty,Daily Life,🥤,,assets/words/thirsty.png,easy
+20,Santali,ᱡᱚᱢ (Jom),खाना,eat,Actions,🍽️,,assets/words/eat.png,easy
+21,Santali,ᱧᱩ (Nju),पीना,drink,Actions,🥤,,assets/words/drink.png,easy
+22,Santali,ᱡᱟᱹᱯᱤᱫ (Japid),सोना,sleep,Actions,😴,,assets/words/sleep.png,easy
+23,Santali,ᱮᱵᱷᱮᱱ (Ebhen),जागना,wake up,Actions,⏰,,assets/words/wake_up.png,easy
+24,Santali,ᱦᱤᱡᱩᱜ (Hijug),आना,come,Actions,🚶,,assets/words/come.png,easy
+25,Santali,ᱥᱮᱱᱚᱜ (Senog),जाना,go,Actions,🏃,,assets/words/go.png,easy
+26,Santali,ᱛᱟᱲᱟᱢ (Taram),चलना,walk,Actions,🚶‍♂️,,assets/words/walk.png,easy
+27,Santali,ᱫᱟᱹᱲ (Dar),दौड़ना,run,Actions,🏃‍♂️,,assets/words/run.png,easy
+28,Santali,ᱫᱩᱲᱩᱵ (Durub),बैठना,sit,Actions,🪑,,assets/words/sit.png,easy
+29,Santali,ᱛᱤᱸᱜᱩᱱ (Tingun),खड़ा होना,stand,Actions,🧍,,assets/words/stand.png,easy
+30,Santali,ᱮᱢ (Em),देना,give,Actions,🤲,,assets/words/give.png,easy
+31,Santali,ᱦᱟᱛᱟᱣ (Hataw),लेना,take,Actions,🫳,,assets/words/take.png,easy
+32,Santali,ᱧᱮᱞ (Njel),देखना,see,Actions,👀,,assets/words/see.png,easy
+33,Santali,ᱟᱸᱡᱚᱢ (Anjom),सुनना,hear,Actions,👂,,assets/words/hear.png,easy
+34,Santali,ᱨᱚᱲ (Ror),बोलना,speak,Actions,🗣️,,assets/words/speak.png,easy
+35,Santali,ᱟᱸᱡᱚᱢ (Anjom),सुनना,listen,Actions,🎧,,assets/words/listen.png,easy
+36,Santali,ᱵᱟᱰᱟᱭ (Baday),जानना,know,Actions,🧠,,assets/words/know.png,easy
+37,Santali,ᱵᱩᱡᱷᱟᱹᱣ (Bujhaw),समझना,understand,Actions,💡,,assets/words/understand.png,easy
+38,Santali,ᱫᱩᱞᱟᱹᱲ (Dular),प्यार / प्रेम,love,Actions,❤️,,assets/words/love.png,easy
+39,Santali,ᱜᱚᱲᱚ (Goro),मदद,help,Actions,🤝,,assets/words/help.png,easy
+40,Santali,ᱠᱷᱚᱡ (Khoj),चाहना,want,Actions,✨,,assets/words/want.png,easy
+41,Santali,ᱞᱟᱹᱠᱛᱤ (Lakti),ज़रूरत,need,Actions,📌,,assets/words/need.png,easy
+42,Santali,ᱯᱟᱲᱦᱟᱣ (Parhaw),पढ़ना,Read,Actions,📚,,assets/words/read.png,easy
+43,Santali,ᱚᱞ (Ol),लिखना,Write,Actions,✍️,,assets/words/write.png,easy
+44,Santali,ᱮᱱᱮᱡ (Enej),खेलना,Play,Actions,⚽,,assets/words/play.png,easy
+45,Santali,ᱫᱚᱱ (Don),कूदना,Jump,Actions,🦘,,assets/words/jump.png,easy
+46,Santali,ᱞᱟᱸᱫᱟ (Landa),हँसना,Laugh,Actions,😄,,assets/words/laugh.png,easy
+47,Santali,ᱨᱟᱜ (Rag),रोना,Cry,Actions,😢,,assets/words/cry.png,easy
+48,Santali,ᱨᱚᱲ (Ror),बोलना,Speak,Actions,🗣️,,assets/words/speak.png,easy
+49,Santali,ᱧᱮᱞ (Njel),देखना,Look,Actions,👁️,,assets/words/look.png,easy
+50,Santali,ᱚᱲᱟᱜ (Orag),घर,house,Places,🏠,,assets/words/house.png,easy
+51,Santali,ᱚᱲᱟᱜ (Orag),घर,home,Places,🏡,,assets/words/home.png,easy
+52,Santali,ᱟᱹᱛᱩ (Atu),गाँव,village,Places,🌾,,assets/words/village.png,easy
+53,Santali,ᱵᱟᱡᱟᱨ (Bajar),शहर,city,Places,🏙️,,assets/words/city.png,easy
+54,Santali,ᱰᱟᱦᱟᱨ (Dahar),सड़क / रास्ता,road,Places,🛣️,,assets/words/road.png,easy
+55,Santali,ᱫᱟᱨᱮ (Dare),पेड़,tree,Nature,🌳,,assets/words/tree.png,easy
+56,Santali,ᱵᱤᱨ (Bir),जंगल / वन,forest,Nature,🌲,,assets/words/forest.png,easy
+57,Santali,ᱜᱟᱰᱟ (Gada),नदी,river,Nature,🌊,,assets/words/river.png,easy
+58,Santali,ᱵᱩᱨᱩ (Buru),पहाड़,mountain,Nature,⛰️,,assets/words/mountain.png,easy
+59,Santali,ᱥᱤᱧ (Sinj / Ber),सूरज,sun,Nature,☀️,,assets/words/sun.png,easy
+60,Santali,ᱪᱟᱸᱫᱚ (Chando),चाँद,moon,Nature,🌙,,assets/words/moon.png,easy
+61,Santali,ᱤᱯᱤᱞ (Ipil),तारा,star,Nature,⭐,,assets/words/star.png,easy
+62,Santali,ᱥᱮᱨᱢᱟ (Serma),आसमान / आकाश,sky,Nature,☁️,,assets/words/sky.png,easy
+63,Santali,ᱫᱟᱜ (Dag),बारिश,rain,Nature,🌧️,,assets/words/rain.png,easy
+64,Santali,ᱥᱮᱸᱜᱮᱞ (Sengel),आग,fire,Nature,🔥,,assets/words/fire.png,easy
+65,Santali,ᱦᱚᱭ (Hoy),हवा,wind,Nature,💨,,assets/words/wind.png,easy
+66,Santali,ᱫᱷᱟᱹᱨᱛᱤ (Dharti),धरती,earth,Nature,🌍,,assets/words/earth.png,easy
+67,Santali,ᱵᱟᱦᱟ (Baha),फूल,Flower,Nature,🌸,,assets/words/flower.png,easy
+68,Santali,ᱦᱟᱥᱟ (Hasa),मिट्टी,Mud / Soil,Nature,🪴,,assets/words/mud_/_soil.png,easy
+69,Santali,ᱢᱟᱦᱟ (Maha),दिन,day,Time,📅,,assets/words/day.png,easy
+70,Santali,ᱧᱤᱫᱟᱹ (Nida),रात,night,Time,🌙,,assets/words/night.png,easy
+71,Santali,ᱜᱟᱯᱟ (Gapa),कल (आने वाला),tomorrow,Time,⏭️,,assets/words/tomorrow.png,easy
+72,Santali,ᱛᱮᱦᱮᱧ (Tehenj),आज,today,Time,📆,,assets/words/today.png,easy
+73,Santali,ᱦᱚᱞᱟ (Hola),कल (बीता हुआ),yesterday,Time,⏮️,,assets/words/yesterday.png,easy
+74,Santali,ᱥᱮᱛᱟᱜ (Setag),सुबह / सवेरा,morning,Time,🌅,,assets/words/morning.png,easy
+75,Santali,ᱟᱹᱭᱩᱵ (Ayub),शाम / सांझ,evening,Time,🌇,,assets/words/evening.png,easy
+76,Santali,ᱦᱮᱲ (Hor / Manwa),आदमी / पुरुष,man,Family,👨,,assets/words/man.png,easy
+77,Santali,ᱛᱤᱨᱞᱟᱹ (Tirla),महिला / औरत,woman,Family,👩,,assets/words/woman.png,easy
+78,Santali,ᱜᱤᱫᱽᱨᱟᱹ (Gidra),बच्चा,child,Family,🧒,,assets/words/child.png,easy
+79,Santali,ᱠᱚᱲᱟ (Kora),लड़का,boy,Family,👦,,assets/words/boy.png,easy
+80,Santali,ᱠᱩᱲᱤ (Kuri),लड़की,girl,Family,👧,,assets/words/girl.png,easy
+81,Santali,ᱟᱯᱟᱛ (Apat / Baba),पिता / बाबा,father,Family,👨,,assets/words/father.png,easy
+82,Santali,ᱮᱸᱜᱟᱛ (Engat / Ayo),माता / माँ,mother,Family,👩,,assets/words/mother.png,easy
+83,Santali,ᱵᱚᱭᱦᱟ (Boyha),भाई,brother,Family,👦,,assets/words/brother.png,easy
+84,Santali,ᱢᱤᱥᱤ (Misi),बहन,sister,Family,👧,,assets/words/sister.png,easy
+85,Santali,ᱦᱚᱯᱚᱱ (Hopon),बेटा,son,Family,👶,,assets/words/son.png,easy
+86,Santali,ᱦᱚᱯᱚᱱ ᱮᱨᱟ (Hopon Era),बेटी,daughter,Family,👧,,assets/words/daughter.png,easy
+87,Santali,ᱦᱮᱨᱮᱞ (Herel),पति,husband,Family,🤵,,assets/words/husband.png,easy
+88,Santali,ᱵᱟᱹᱦᱩ (Bahu / Era),पत्नी,wife,Family,👰,,assets/words/wife.png,easy
+89,Santali,ᱜᱟᱛᱮ (Gate),दोस्त / संगी,friend,Family,🤝,,assets/words/friend.png,easy
+90,Santali,ᱜᱟᱛᱮ (Gate),दोस्त / संगी,Friend,Family,🤝,,assets/words/friend.png,easy
+91,Santali,ᱵᱩᱰᱷᱤ ᱟᱭᱳ (Budhi Ayo),दादी / नानी,Grandmother,Family,👵,,assets/words/grandmother.png,easy
+92,Santali,ᱦᱟᱲᱟᱢ ᱵᱟᱵᱟ (Haram Baba),दादा / नाना,Grandfather,Family,👴,,assets/words/grandfather.png,easy
+93,Santali,ᱥᱮᱛᱟ (Seta),कुत्ता,Dog,Animals,🐶,,assets/words/dog.png,easy
+94,Santali,ᱵᱤᱞᱟᱹᱭ (Bilai),बिल्ली,Cat,Animals,🐱,,assets/words/cat.png,easy
+95,Santali,ᱜᱟᱹᱭ (Gai),गाय,Cow,Animals,🐮,,assets/words/cow.png,easy
+96,Santali,ᱢᱮᱨᱚᱢ (Merom),बकरी,Goat,Animals,🐐,,assets/words/goat.png,easy
+97,Santali,ᱪᱮᱬᱮ (Chene),चिड़िया,Bird,Animals,🐦,,assets/words/bird.png,easy
+98,Santali,ᱦᱟᱹᱠᱩ (Haku),मछली,Fish,Animals,🐟,,assets/words/fish.png,easy
+99,Santali,ᱛᱟᱹᱨᱩᱵ (Tarub),बाघ,Tiger,Animals,🐯,,assets/words/tiger.png,medium
+100,Santali,ᱦᱟᱹᱛᱤ (Hati),हाथी,Elephant,Animals,🐘,,assets/words/elephant.png,easy
+101,Santali,ᱜᱟᱹᱬᱤ (Gani),बंदर,Monkey,Animals,🐒,,assets/words/monkey.png,easy
+102,Santali,ᱵᱤᱧ (Binj),साँप,Snake,Animals,🐍,,assets/words/snake.png,easy
+103,Santali,ᱵᱚᱦᱚᱜ (Bohog),सिर / माथा,Head,Body Parts,🗣️,,assets/words/head.png,easy
+104,Santali,ᱢᱮᱫ (Med),आँख,Eye,Body Parts,👁️,,assets/words/eye.png,easy
+105,Santali,ᱞᱩᱛᱩᱨ (Lutur),कान,Ear,Body Parts,👂,,assets/words/ear.png,easy
+106,Santali,ᱢᱩᱸ (Mũ),नाक,Nose,Body Parts,👃,,assets/words/nose.png,easy
+107,Santali,ᱢᱚᱪᱟ (Mocha),मुँह,Mouth,Body Parts,👄,,assets/words/mouth.png,easy
+108,Santali,ᱛᱤ (Ti),हाथ,Hand,Body Parts,✋,,assets/words/hand.png,easy
+109,Santali,ᱡᱟᱝᱜᱟ (Janga),पैर / गोड़,Leg,Body Parts,🦵,,assets/words/leg.png,easy
+110,Santali,ᱩᱵ (Ub),बाल,Hair,Body Parts,💇,,assets/words/hair.png,easy
+111,Santali,ᱞᱟᱡ (Laj),पेट,Stomach,Body Parts,🤰,,assets/words/stomach.png,easy
+112,Santali,ᱰᱟᱴᱟ (Data),दाँत,Teeth,Body Parts,🦷,,assets/words/teeth.png,easy
+113,Santali,ᱟᱨᱟᱜ (Arag),लाल,Red,Colors,🔴,,assets/words/red.png,easy
+114,Santali,ᱦᱮᱸᱫᱮ (Hende),काला,Black,Colors,⚫,,assets/words/black.png,easy
+115,Santali,ᱯᱩᱸᱰ (Pund),सफ़ेद,White,Colors,⚪,,assets/words/white.png,easy
+116,Santali,ᱦᱟᱹᱨᱭᱟᱹᱲ (Haryar),हरा,Green,Colors,🟢,,assets/words/green.png,easy
+117,Santali,ᱥᱟᱥᱟᱝ (Sasang),पीला,Yellow,Colors,🟡,,assets/words/yellow.png,easy
+118,Santali,ᱧᱩᱛᱩᱢ (Nutum),नाम,name,Society,🏷️,,assets/words/name.png,easy
+119,Santali,ᱩᱢᱮᱨ (Umer),उम्र / आयु,age,Society,🎂,,assets/words/age.png,easy
+120,Santali,ᱠᱟᱹᱢᱤ (Kami),काम / कार्य,work,Society,💼,,assets/words/work.png,easy
+121,Santali,ᱴᱟᱠᱟ (Taka),पैसा / धन,money,Society,💰,,assets/words/money.png,easy
+122,Santali,ᱦᱟᱴ (Haat),बाज़ार / हाट,market,Society,🛍️,,assets/words/market.png,easy
+123,Santali,ᱠᱤᱨᱤᱧ (Kirinj),खरीदना,buy,Society,🛒,,assets/words/buy.png,easy
+124,Santali,ᱟᱹᱠᱷᱨᱤᱧ (Akhrinj),बेचना,sell,Society,🏷️,,assets/words/sell.png,easy
+125,Santali,ᱤᱛᱩᱱ ᱟᱥᱲᱟ (Itun Asra),स्कूल,School,School,🏫,,assets/words/school.png,easy
+126,Santali,ᱯᱩᱛᱷᱤ (Puthi),किताब / पोथी,Book,School,📖,,assets/words/book.png,easy
+127,Santali,ᱠᱚᱞᱚᱢ (Kolom),कलम,Pen,School,🖊️,,assets/words/pen.png,easy
+128,Santali,ᱢᱟᱨᱟᱝ (Marang),बड़ा,big,Adjectives,🐘,,assets/words/big.png,easy
+129,Santali,ᱦᱩᱰᱤᱧ (Hudinj),छोटा,small,Adjectives,🐁,,assets/words/small.png,easy
+130,Santali,ᱵᱮᱥ / ᱵᱷᱟᱹᱜᱤ (Bes / Bhagi),अच्छा / बढ़िया,good,Adjectives,⭐,,assets/words/good.png,easy
+131,Santali,ᱵᱟᱹᱲᱤᱡ (Barij),बुरा / खराब,bad,Adjectives,❌,,assets/words/bad.png,easy
+132,Santali,ᱞᱚᱞᱚ (Lolo),गर्म,hot,Adjectives,🔥,,assets/words/hot.png,easy
+133,Santali,ᱨᱮᱭᱟᱲ (Reyar),ठंडा,cold,Adjectives,❄️,,assets/words/cold.png,easy
+134,Santali,ᱱᱟᱣᱟ (Nawa),नया,new,Adjectives,✨,,assets/words/new.png,easy
+135,Santali,ᱢᱟᱨᱮ (Mare),पुराना,old,Adjectives,📜,,assets/words/old.png,easy
+136,Santali,ᱞᱚᱜᱚᱱ (Logon),तेज़ / जल्दी,fast,Adjectives,⚡,,assets/words/fast.png,easy
+137,Santali,ᱵᱟᱹᱭ ᱵᱟᱹᱭᱛᱮ (Bay bayte),धीमा / धीरे,slow,Adjectives,🐢,,assets/words/slow.png,easy
+138,Santali,ᱨᱟᱹᱥᱠᱟᱹ (Raska),खुश / प्रसन्न,happy,Adjectives,😊,,assets/words/happy.png,easy
+139,Santali,ᱟᱹᱲᱤᱥ (Aris / Dukh),उदास,sad,Adjectives,😔,,assets/words/sad.png,easy
+140,Santali,ᱮᱫᱽᱨᱮ (Edre),गुस्सा,angry,Adjectives,😠,,assets/words/angry.png,easy
+141,Santali,ᱞᱟᱸᱜᱟ (Langa),थका हुआ,tired,Adjectives,😫,,assets/words/tired.png,easy
+142,Santali,ᱨᱩᱣᱟᱹ (Ruwa),बीमार,sick,Adjectives,🤒,,assets/words/sick.png,easy
+143,Santali,ᱱᱤᱨᱚᱜ (Nirog),स्वस्थ,healthy,Adjectives,💪,,assets/words/healthy.png,easy
+144,Santali,ᱢᱤᱫ (Mid),एक,one,Numbers,1️⃣,,assets/words/one.png,easy
+145,Santali,ᱵᱟᱨ (Bar),दो,two,Numbers,2️⃣,,assets/words/two.png,easy
+146,Santali,ᱯᱮ (Pe),तीन,three,Numbers,3️⃣,,assets/words/three.png,easy
+147,Santali,ᱯᱩᱱ (Pun),चार,four,Numbers,4️⃣,,assets/words/four.png,easy
+148,Santali,ᱢᱚᱬᱮ (More),पाँच,five,Numbers,5️⃣,,assets/words/five.png,easy
+149,Santali,ᱪᱮᱫ (Ched),क्या,what,Questions,❓,,assets/words/what.png,easy
+150,Santali,ᱚᱠᱟ (Oka / Okare),कहाँ,where,Questions,📍,,assets/words/where.png,easy
+151,Santali,ᱚᱠᱚᱭ (Okoy),कौन,who,Questions,👤,,assets/words/who.png,easy
+152,Santali,ᱪᱮᱫ ᱞᱮᱠᱟ (Ched leka),कैसे,how,Questions,🤔,,assets/words/how.png,easy
+153,Santali,ᱛᱤᱥ (Tis),कब,when,Questions,⏰,,assets/words/when.png,easy
+154,Santali,ᱪᱮᱫᱟᱜ (Chedag),क्यों,why,Questions,🤷,,assets/words/why.png,easy
+155,Santali,ᱪᱮᱫ ᱞᱮᱠᱟ ᱢᱮᱱᱟᱢᱟ? (Ched leka menama?),आप कैसे हैं? / तुम कैसे हो?,How are you?,Conversations,🤝,,assets/words/how_are_you?.png,easy
+156,Santali,ᱤᱧ ᱵᱮᱥ ᱜᱮ ᱢᱤᱱᱟᱹᱧᱟ (Inj bes ge minanja),मैं ठीक हूँ।,I am fine.,Conversations,😊,,assets/words/i_am_fine..png,easy
+157,Santali,ᱟᱢᱟᱜ ᱧᱩᱛᱩᱢ ᱫᱚ ᱪᱮᱫ? (Amag nutum do ched?),तुम्हारा नाम क्या है?,What is your name?,Conversations,🏷️,,assets/words/what_is_your_name?.png,easy
+158,Santali,ᱤᱧᱟᱜ ᱧᱩᱛᱩᱢ ... ᱠᱟᱱᱟ (Injag nutum ... kana),मेरा नाम ... है।,My name is...,Conversations,🧒,,assets/words/my_name_is....png,easy
+159,Santali,ᱱᱚᱰᱮ ᱦᱤᱡᱩᱜ ᱢᱮ (Node hijug me),यहाँ आओ,Come here,Conversations,👉,,assets/words/come_here.png,easy
+160,Santali,ᱦᱟᱸᱰᱮ ᱥᱮᱱᱚᱜ ᱢᱮ (Hande senog me),वहाँ जाओ,Go there,Conversations,👉,,assets/words/go_there.png,easy
+161,Santali,ᱤᱧ ᱮᱱᱮᱡ ᱠᱟᱱᱟᱹᱧ (Inj enej kanaj),मैं खेल रहा हूँ,I am playing,Conversations,⚽,,assets/words/i_am_playing.png,easy
+162,Santali,ᱱᱚᱣᱟ ᱢᱤᱫ ᱯᱩᱛᱷᱤ ᱠᱟᱱᱟ (Nowa mid puthi kana),यह एक किताब है।,This is a book.,Conversations,📖,,assets/words/this_is_a_book..png,easy
+163,Santali,ᱤᱧ ᱫᱟᱜ ᱮᱢᱟᱹᱧ ᱢᱮ (Inj da' emaj me),मुझे पानी दो।,Give me water.,Conversations,💧,,assets/words/give_me_water..png,easy
+164,Santali,ᱟᱢ ᱚᱠᱟᱛᱮᱢ ᱪᱟᱞᱟᱜ ᱠᱟᱱᱟ? (Am okatem chalag kana?),तुम कहाँ जा रहे हो?,Where are you going?,Conversations,🧭,,assets/words/where_are_you_going?.png,easy
+165,Santali,ᱪᱚᱞᱚ ᱵᱚᱱ ᱯᱟᱲᱦᱟᱣᱜᱼᱟ (Cholo bon parhawg-a),चलो पढ़ाई करें।,Let's study.,Conversations,📚,,assets/words/let's_study..png,easy
+166,Santali,ᱫᱟᱨᱮ ᱧᱮᱞ ᱢᱮ (Dare njel me),पेड़ को देखो।,Look at the tree.,Conversations,🌳,,assets/words/look_at_the_tree..png,easy
+167,Santali,ᱛᱚᱣᱟ ᱧᱩᱭ ᱢᱮ (Towa njuy me),दूध पियो।,Drink milk.,Conversations,🥛,,assets/words/drink_milk..png,easy
+168,Santali,ᱛᱤᱸᱜᱩᱱ ᱢᱮ (Tingun me),खड़े हो जाओ।,Stand up.,Conversations,🧍,,assets/words/stand_up..png,easy
+169,Santali,ᱫᱩᱲᱩᱵ ᱢᱮ (Durub me),बैठ जाओ।,Sit down.,Conversations,🪑,,assets/words/sit_down..png,easy
+170,Santali,ᱟᱢ ᱟᱹᱰᱤ ᱪᱟᱞᱟᱠ ᱠᱟᱱᱟᱢ (Am adi chalak kanam),तुम बहुत होशियार हो।,You are very smart.,Conversations,🌟,,assets/words/you_are_very_smart..png,easy
+171,Nagpuri,जोहार (Johar),नमस्ते,hello,Greetings,👋,,assets/words/hello.png,easy
+172,Nagpuri,फिन मिलब (Phin milab),अलविदा / फिर मिलेंगे,goodbye,Greetings,👋,,assets/words/goodbye.png,easy
+173,Nagpuri,जात अही (Jaat ahi),अलविदा,Ba?,Greetings,👋,,assets/words/ba?.png,easy
+174,Nagpuri,बिनती / किरपा (Binti),कृपया,please,Greetings,🙏,,assets/words/please.png,easy
+175,Nagpuri,धन्यबाद (Dhanyabad),धन्यवाद / बहुत-बहुत धन्यवाद,thank you,Greetings,🙏,,assets/words/thank_you.png,easy
+176,Nagpuri,माफ़ करब (Maaf karab),माफ़ कीजिए,sorry,Greetings,🙇,,assets/words/sorry.png,easy
+177,Nagpuri,हँ (Hã),हाँ,Yes,Greetings,👍,,assets/words/yes.png,easy
+178,Nagpuri,ना / नई (Na / Nai),नहीं,No,Greetings,👎,,assets/words/no.png,easy
+179,Nagpuri,पानी (Pani),पानी,water,Daily Life,💧,,assets/words/water.png,easy
+180,Nagpuri,खाएक (Khaek),खाना / भोजन,food,Food,🍲,,assets/words/food.png,easy
+181,Nagpuri,भात (Bhat),चावल / भात,rice,Food,🍚,,assets/words/rice.png,easy
+182,Nagpuri,रोटी (Roti),रोटी,Bread,Food,🫓,,assets/words/bread.png,easy
+183,Nagpuri,रोटी (Roti),रोटी,Chapati,Food,🫓,,assets/words/chapati.png,easy
+184,Nagpuri,तरकारी (Tarkari),सब्ज़ी / तरकारी,Vegetable,Food,🥬,,assets/words/vegetable.png,easy
+185,Nagpuri,दूध (Doodh),दूध,Milk,Food,🥛,,assets/words/milk.png,easy
+186,Nagpuri,आम (Aam),आम,Mango,Food,🥭,,assets/words/mango.png,easy
+187,Nagpuri,मीठा (Meetha),मीठा,Sweet,Food,🍬,,assets/words/sweet.png,easy
+188,Nagpuri,भूखल (Bhukhal),भूखा,Hungry,Daily Life,😋,,assets/words/hungry.png,easy
+189,Nagpuri,पियासल (Piyasal),प्यासा,Thirsty,Daily Life,🥤,,assets/words/thirsty.png,easy
+190,Nagpuri,खाएक (Khaek),खाना,eat,Actions,🍽️,,assets/words/eat.png,easy
+191,Nagpuri,पीएक (Piek),पीना,drink,Actions,🥤,,assets/words/drink.png,easy
+192,Nagpuri,सूतेक (Sootek),सोना,sleep,Actions,😴,,assets/words/sleep.png,easy
+193,Nagpuri,जागेक (Jagek),जागना,wake up,Actions,⏰,,assets/words/wake_up.png,easy
+194,Nagpuri,आवेक (Aawek),आना,come,Actions,🚶,,assets/words/come.png,easy
+195,Nagpuri,जाएक (Jaek),जाना,go,Actions,🏃,,assets/words/go.png,easy
+196,Nagpuri,चलेक (Chalek),चलना,walk,Actions,🚶‍♂️,,assets/words/walk.png,easy
+197,Nagpuri,दौड़ेक (Daudek),दौड़ना,run,Actions,🏃‍♂️,,assets/words/run.png,easy
+198,Nagpuri,बैठेक (Baithek),बैठना,sit,Actions,🪑,,assets/words/sit.png,easy
+199,Nagpuri,ठाढ़ होवेक (Thadh howek),खड़ा होना,stand,Actions,🧍,,assets/words/stand.png,easy
+200,Nagpuri,देवेक (Dewek),देना,give,Actions,🤲,,assets/words/give.png,easy
+201,Nagpuri,लेवेक (Lewek),लेना,take,Actions,🫳,,assets/words/take.png,easy
+202,Nagpuri,देखेक (Dekhek),देखना,see,Actions,👀,,assets/words/see.png,easy
+203,Nagpuri,सुनेक (Sunek),सुनना,hear,Actions,👂,,assets/words/hear.png,easy
+204,Nagpuri,बोलेक (Bolek),बोलना,speak,Actions,🗣️,,assets/words/speak.png,easy
+205,Nagpuri,सुनेक (Sunek),सुनना,listen,Actions,🎧,,assets/words/listen.png,easy
+206,Nagpuri,जानेक (Janek),जानना,know,Actions,🧠,,assets/words/know.png,easy
+207,Nagpuri,बुझेक (Bujhek),समझना,understand,Actions,💡,,assets/words/understand.png,easy
+208,Nagpuri,पिरीत / मया (Pirit / Maya),प्यार / प्रेम,love,Actions,❤️,,assets/words/love.png,easy
+209,Nagpuri,मदत (Madat),मदद,help,Actions,🤝,,assets/words/help.png,easy
+210,Nagpuri,चाहेक (Chahek),चाहना,want,Actions,✨,,assets/words/want.png,easy
+211,Nagpuri,जरूरत (Jaroorat),ज़रूरत,need,Actions,📌,,assets/words/need.png,easy
+212,Nagpuri,पढ़ेब (Padheb),पढ़ना,Read,Actions,📚,,assets/words/read.png,easy
+213,Nagpuri,लिखेक (Likhek),लिखना,Write,Actions,✍️,,assets/words/write.png,easy
+214,Nagpuri,खेलेक (Khelek),खेलना,Play,Actions,⚽,,assets/words/play.png,easy
+215,Nagpuri,कूदेक (Kudek),कूदना,Jump,Actions,🦘,,assets/words/jump.png,easy
+216,Nagpuri,हँसेक (Hãsek),हँसना,Laugh,Actions,😄,,assets/words/laugh.png,easy
+217,Nagpuri,कांदेब (Kandeb),रोना,Cry,Actions,😢,,assets/words/cry.png,easy
+218,Nagpuri,बोलेक (Bolek),बोलना,Speak,Actions,🗣️,,assets/words/speak.png,easy
+219,Nagpuri,देखेब (Dekheb),देखना,Look,Actions,👁️,,assets/words/look.png,easy
+220,Nagpuri,घर (Ghar),घर,house,Places,🏠,,assets/words/house.png,easy
+221,Nagpuri,घर (Ghar),घर,home,Places,🏡,,assets/words/home.png,easy
+222,Nagpuri,गाँव (Gaon),गाँव,village,Places,🌾,,assets/words/village.png,easy
+223,Nagpuri,सहर (Sahar),शहर,city,Places,🏙️,,assets/words/city.png,easy
+224,Nagpuri,डहर (Dahar),सड़क / रास्ता,road,Places,🛣️,,assets/words/road.png,easy
+225,Nagpuri,गाछ / रुख (Gaachh),पेड़,tree,Nature,🌳,,assets/words/tree.png,easy
+226,Nagpuri,बोन / जंगल (Bon),जंगल / वन,forest,Nature,🌲,,assets/words/forest.png,easy
+227,Nagpuri,नदी / गड़ा (Nadi),नदी,river,Nature,🌊,,assets/words/river.png,easy
+228,Nagpuri,पहाड़ / बुरु (Pahar),पहाड़,mountain,Nature,⛰️,,assets/words/mountain.png,easy
+229,Nagpuri,सुरुज / बेर (Suruj),सूरज,sun,Nature,☀️,,assets/words/sun.png,easy
+230,Nagpuri,चंदा (Chanda),चाँद,moon,Nature,🌙,,assets/words/moon.png,easy
+231,Nagpuri,तारा (Tara),तारा,star,Nature,⭐,,assets/words/star.png,easy
+232,Nagpuri,अकास (Akaas),आसमान / आकाश,sky,Nature,☁️,,assets/words/sky.png,easy
+233,Nagpuri,बरखा (Barkha),बारिश,rain,Nature,🌧️,,assets/words/rain.png,easy
+234,Nagpuri,आग / आगि (Aagi),आग,fire,Nature,🔥,,assets/words/fire.png,easy
+235,Nagpuri,बयार / हवा (Bayar),हवा,wind,Nature,💨,,assets/words/wind.png,easy
+236,Nagpuri,धरती (Dharti),धरती,earth,Nature,🌍,,assets/words/earth.png,easy
+237,Nagpuri,फूल (Phool),फूल,Flower,Nature,🌸,,assets/words/flower.png,easy
+238,Nagpuri,माटी (Maati),मिट्टी,Mud / Soil,Nature,🪴,,assets/words/mud_/_soil.png,easy
+239,Nagpuri,दिन (Din),दिन,day,Time,📅,,assets/words/day.png,easy
+240,Nagpuri,रात (Raat),रात,night,Time,🌙,,assets/words/night.png,easy
+241,Nagpuri,काइल (Kaail),कल (आने वाला),tomorrow,Time,⏭️,,assets/words/tomorrow.png,easy
+242,Nagpuri,आज (Aaj),आज,today,Time,📆,,assets/words/today.png,easy
+243,Nagpuri,काइल (Kaail),कल (बीता हुआ),yesterday,Time,⏮️,,assets/words/yesterday.png,easy
+244,Nagpuri,बिहान (Bihan),सुबह / सवेरा,morning,Time,🌅,,assets/words/morning.png,easy
+245,Nagpuri,साँझ (Sanjh),शाम / सांझ,evening,Time,🌇,,assets/words/evening.png,easy
+246,Nagpuri,मरद / मनई (Marad),आदमी / पुरुष,man,Family,👨,,assets/words/man.png,easy
+247,Nagpuri,जनाना (Janana),महिला / औरत,woman,Family,👩,,assets/words/woman.png,easy
+248,Nagpuri,छौआ (Chhaua),बच्चा,child,Family,🧒,,assets/words/child.png,easy
+249,Nagpuri,छौड़ा (Chhaura),लड़का,boy,Family,👦,,assets/words/boy.png,easy
+250,Nagpuri,छौड़ी (Chhauri),लड़की,girl,Family,👧,,assets/words/girl.png,easy
+251,Nagpuri,बाप (Baap),पिता / बाबा,father,Family,👨,,assets/words/father.png,easy
+252,Nagpuri,माय (Maay),माता / माँ,mother,Family,👩,,assets/words/mother.png,easy
+253,Nagpuri,भाई (Bhai),भाई,brother,Family,👦,,assets/words/brother.png,easy
+254,Nagpuri,बहिनी (Bahini),बहन,sister,Family,👧,,assets/words/sister.png,easy
+255,Nagpuri,बेटा (Beta),बेटा,son,Family,👶,,assets/words/son.png,easy
+256,Nagpuri,बेटी (Beti),बेटी,daughter,Family,👧,,assets/words/daughter.png,easy
+257,Nagpuri,मरद (Marad),पति,husband,Family,🤵,,assets/words/husband.png,easy
+258,Nagpuri,जनाना / कनिया (Janana),पत्नी,wife,Family,👰,,assets/words/wife.png,easy
+259,Nagpuri,संगी (Sangi),दोस्त / संगी,friend,Family,🤝,,assets/words/friend.png,easy
+260,Nagpuri,संगी (Sangi),दोस्त / संगी,Friend,Family,🤝,,assets/words/friend.png,easy
+261,Nagpuri,आजी / नानी (Aaji / Nani),दादी / नानी,Grandmother,Family,👵,,assets/words/grandmother.png,easy
+262,Nagpuri,आजा / नाना (Aaja / Nana),दादा / नाना,Grandfather,Family,👴,,assets/words/grandfather.png,easy
+263,Nagpuri,कुकुर (Kukur),कुत्ता,Dog,Animals,🐶,,assets/words/dog.png,easy
+264,Nagpuri,बिलाई (Bilai),बिल्ली,Cat,Animals,🐱,,assets/words/cat.png,easy
+265,Nagpuri,गाय (Gai),गाय,Cow,Animals,🐮,,assets/words/cow.png,easy
+266,Nagpuri,छेगरी (Chhegri),बकरी,Goat,Animals,🐐,,assets/words/goat.png,easy
+267,Nagpuri,चिरई (Chirai),चिड़िया,Bird,Animals,🐦,,assets/words/bird.png,easy
+268,Nagpuri,माछरी (Machhri),मछली,Fish,Animals,🐟,,assets/words/fish.png,easy
+269,Nagpuri,बाघ (Bagh),बाघ,Tiger,Animals,🐯,,assets/words/tiger.png,medium
+270,Nagpuri,हाथी (Hathi),हाथी,Elephant,Animals,🐘,,assets/words/elephant.png,easy
+271,Nagpuri,बानर (Banar),बंदर,Monkey,Animals,🐒,,assets/words/monkey.png,easy
+272,Nagpuri,साँप (Saap),साँप,Snake,Animals,🐍,,assets/words/snake.png,easy
+273,Nagpuri,मूँड़ (Mund),सिर / माथा,Head,Body Parts,🗣️,,assets/words/head.png,easy
+274,Nagpuri,आँख (Aankh),आँख,Eye,Body Parts,👁️,,assets/words/eye.png,easy
+275,Nagpuri,कान (Kaan),कान,Ear,Body Parts,👂,,assets/words/ear.png,easy
+276,Nagpuri,नाक (Naak),नाक,Nose,Body Parts,👃,,assets/words/nose.png,easy
+277,Nagpuri,मुँह (Mũh),मुँह,Mouth,Body Parts,👄,,assets/words/mouth.png,easy
+278,Nagpuri,हाथ (Haath),हाथ,Hand,Body Parts,✋,,assets/words/hand.png,easy
+279,Nagpuri,गोड़ (God),पैर / गोड़,Leg,Body Parts,🦵,,assets/words/leg.png,easy
+280,Nagpuri,चूल / केस (Chool),बाल,Hair,Body Parts,💇,,assets/words/hair.png,easy
+281,Nagpuri,पेट (Pet),पेट,Stomach,Body Parts,🤰,,assets/words/stomach.png,easy
+282,Nagpuri,दाँत (Daant),दाँत,Teeth,Body Parts,🦷,,assets/words/teeth.png,easy
+283,Nagpuri,ललका (Lalka),लाल,Red,Colors,🔴,,assets/words/red.png,easy
+284,Nagpuri,करिया (Kariya),काला,Black,Colors,⚫,,assets/words/black.png,easy
+285,Nagpuri,चरका / उज्जर (Charka),सफ़ेद,White,Colors,⚪,,assets/words/white.png,easy
+286,Nagpuri,हरियर (Hariyar),हरा,Green,Colors,🟢,,assets/words/green.png,easy
+287,Nagpuri,पियरा (Piyara),पीला,Yellow,Colors,🟡,,assets/words/yellow.png,easy
+288,Nagpuri,नाव (Naav),नाम,name,Society,🏷️,,assets/words/name.png,easy
+289,Nagpuri,उमिर (Umir),उम्र / आयु,age,Society,🎂,,assets/words/age.png,easy
+290,Nagpuri,काम (Kaam),काम / कार्य,work,Society,💼,,assets/words/work.png,easy
+291,Nagpuri,पइसा (Paisa),पैसा / धन,money,Society,💰,,assets/words/money.png,easy
+292,Nagpuri,हाट / बजार (Haat),बाज़ार / हाट,market,Society,🛍️,,assets/words/market.png,easy
+293,Nagpuri,किनेक (Kinek),खरीदना,buy,Society,🛒,,assets/words/buy.png,easy
+294,Nagpuri,बेचेक (Bechek),बेचना,sell,Society,🏷️,,assets/words/sell.png,easy
+295,Nagpuri,इस्कूल (School),स्कूल,School,School,🏫,,assets/words/school.png,easy
+296,Nagpuri,पोथी / किताब (Pothi),किताब / पोथी,Book,School,📖,,assets/words/book.png,easy
+297,Nagpuri,कलम (Kalam),कलम,Pen,School,🖊️,,assets/words/pen.png,easy
+298,Nagpuri,बड़ (Bad),बड़ा,big,Adjectives,🐘,,assets/words/big.png,easy
+299,Nagpuri,छोट (Chhot),छोटा,small,Adjectives,🐁,,assets/words/small.png,easy
+300,Nagpuri,बेस (Bes),अच्छा / बढ़िया,good,Adjectives,⭐,,assets/words/good.png,easy
+301,Nagpuri,खराब (Kharab),बुरा / खराब,bad,Adjectives,❌,,assets/words/bad.png,easy
+302,Nagpuri,तातल / गरम (Tatal),गर्म,hot,Adjectives,🔥,,assets/words/hot.png,easy
+303,Nagpuri,ठंढा (Thandha),ठंडा,cold,Adjectives,❄️,,assets/words/cold.png,easy
+304,Nagpuri,नवा (Nawa),नया,new,Adjectives,✨,,assets/words/new.png,easy
+305,Nagpuri,पुरान (Puran),पुराना,old,Adjectives,📜,,assets/words/old.png,easy
+306,Nagpuri,तेज / जल्दी (Tej),तेज़ / जल्दी,fast,Adjectives,⚡,,assets/words/fast.png,easy
+307,Nagpuri,धीरा (Dheera),धीमा / धीरे,slow,Adjectives,🐢,,assets/words/slow.png,easy
+308,Nagpuri,खुस (Khus),खुश / प्रसन्न,happy,Adjectives,😊,,assets/words/happy.png,easy
+309,Nagpuri,उदास (Udas),उदास,sad,Adjectives,😔,,assets/words/sad.png,easy
+310,Nagpuri,राग / गुस्सा (Raag),गुस्सा,angry,Adjectives,😠,,assets/words/angry.png,easy
+311,Nagpuri,थाकल (Thakal),थका हुआ,tired,Adjectives,😫,,assets/words/tired.png,easy
+312,Nagpuri,बेमार (Bemar),बीमार,sick,Adjectives,🤒,,assets/words/sick.png,easy
+313,Nagpuri,तगड़ा / चंगा (Changa),स्वस्थ,healthy,Adjectives,💪,,assets/words/healthy.png,easy
+314,Nagpuri,एक (Ek),एक,one,Numbers,1️⃣,,assets/words/one.png,easy
+315,Nagpuri,दुई (Dui),दो,two,Numbers,2️⃣,,assets/words/two.png,easy
+316,Nagpuri,तीन (Teen),तीन,three,Numbers,3️⃣,,assets/words/three.png,easy
+317,Nagpuri,चार (Chaar),चार,four,Numbers,4️⃣,,assets/words/four.png,easy
+318,Nagpuri,पाँच (Paanch),पाँच,five,Numbers,5️⃣,,assets/words/five.png,easy
+319,Nagpuri,का (Ka),क्या,what,Questions,❓,,assets/words/what.png,easy
+320,Nagpuri,कहाँ (Kahan),कहाँ,where,Questions,📍,,assets/words/where.png,easy
+321,Nagpuri,के / कौन (Ke),कौन,who,Questions,👤,,assets/words/who.png,easy
+322,Nagpuri,कैसन (Kaisan),कैसे,how,Questions,🤔,,assets/words/how.png,easy
+323,Nagpuri,कब (Kab),कब,when,Questions,⏰,,assets/words/when.png,easy
+324,Nagpuri,काहे (Kaahe),क्यों,why,Questions,🤷,,assets/words/why.png,easy
+325,Nagpuri,रउरे / तोहे कैसन अही? (Tohin kaisan ahi?),आप कैसे हैं? / तुम कैसे हो?,How are you?,Conversations,🤝,,assets/words/how_are_you?.png,easy
+326,Nagpuri,हम बेस / ठीक अही (Ham bes ahi),मैं ठीक हूँ।,I am fine.,Conversations,😊,,assets/words/i_am_fine..png,easy
+327,Nagpuri,तोहर नाव का हेके? (Tohar naav ka heke?),तुम्हारा नाम क्या है?,What is your name?,Conversations,🏷️,,assets/words/what_is_your_name?.png,easy
+328,Nagpuri,मोर नाव ... हेके (Mor naav ... heke),मेरा नाम ... है।,My name is...,Conversations,🧒,,assets/words/my_name_is....png,easy
+329,Nagpuri,यहाँ आऊ / आवा (Yahan aaw),यहाँ आओ,Come here,Conversations,👉,,assets/words/come_here.png,easy
+330,Nagpuri,हुवाँ जा / जावा (Huwan ja),वहाँ जाओ,Go there,Conversations,👉,,assets/words/go_there.png,easy
+331,Nagpuri,हम खेलत अही (Ham khelat ahi),मैं खेल रहा हूँ,I am playing,Conversations,⚽,,assets/words/i_am_playing.png,easy
+332,Nagpuri,ई एगो किताब हेके (Ee ego kitab heke),यह एक किताब है।,This is a book.,Conversations,📖,,assets/words/this_is_a_book..png,easy
+333,Nagpuri,मोके पानी देवा (Moke pani dewa),मुझे पानी दो।,Give me water.,Conversations,💧,,assets/words/give_me_water..png,easy
+334,Nagpuri,तोहे कहाँ जात अहिस? (Tohe kahan jaat ahis?),तुम कहाँ जा रहे हो?,Where are you going?,Conversations,🧭,,assets/words/where_are_you_going?.png,easy
+335,Nagpuri,चला पढ़ल जाय (Chala padhal jaay),चलो पढ़ाई करें।,Let's study.,Conversations,📚,,assets/words/let's_study..png,easy
+336,Nagpuri,गाछ के देखा (Gachh ke dekha),पेड़ को देखो।,Look at the tree.,Conversations,🌳,,assets/words/look_at_the_tree..png,easy
+337,Nagpuri,दूध पिउ (Doodh piu),दूध पियो।,Drink milk.,Conversations,🥛,,assets/words/drink_milk..png,easy
+338,Nagpuri,ठाढ़ होवा (Thadh howa),खड़े हो जाओ।,Stand up.,Conversations,🧍,,assets/words/stand_up..png,easy
+339,Nagpuri,बैठ जाय (Baith jaay),बैठ जाओ।,Sit down.,Conversations,🪑,,assets/words/sit_down..png,easy
+340,Nagpuri,तोहे बड़ा होसियार अहिस (Tohe bada hosiyar ahis),तुम बहुत होशियार हो।,You are very smart.,Conversations,🌟,,assets/words/you_are_very_smart..png,easy
+341,Khortha,गोड़ लागो ही / जोहार (God Lago Hi),नमस्ते,hello,Greetings,👋,,assets/words/hello.png,easy
+342,Khortha,फिन मिलब (Phin milab),अलविदा / फिर मिलेंगे,goodbye,Greetings,👋,,assets/words/goodbye.png,easy
+343,Khortha,जा रहल ही (Ja rahal heen),अलविदा,Ba?,Greetings,👋,,assets/words/ba?.png,easy
+344,Khortha,किरपा करि (Kirpa kari),कृपया,please,Greetings,🙏,,assets/words/please.png,easy
+345,Khortha,धन्यबाद (Dhanyabad),धन्यवाद / बहुत-बहुत धन्यवाद,thank you,Greetings,🙏,,assets/words/thank_you.png,easy
+346,Khortha,माफ़ करब (Maaf karab),माफ़ कीजिए,sorry,Greetings,🙇,,assets/words/sorry.png,easy
+347,Khortha,हँ (Hã),हाँ,Yes,Greetings,👍,,assets/words/yes.png,easy
+348,Khortha,ना / नय (Na / Nay),नहीं,No,Greetings,👎,,assets/words/no.png,easy
+349,Khortha,पानी (Pani),पानी,water,Daily Life,💧,,assets/words/water.png,easy
+350,Khortha,खायेक (Khayek),खाना / भोजन,food,Food,🍲,,assets/words/food.png,easy
+351,Khortha,भात (Bhat),चावल / भात,rice,Food,🍚,,assets/words/rice.png,easy
+352,Khortha,रोटी (Roti),रोटी,Bread,Food,🫓,,assets/words/bread.png,easy
+353,Khortha,रोटी (Roti),रोटी,Chapati,Food,🫓,,assets/words/chapati.png,easy
+354,Khortha,तरकारी / तियान (Tarkari),सब्ज़ी / तरकारी,Vegetable,Food,🥬,,assets/words/vegetable.png,easy
+355,Khortha,दूध (Doodh),दूध,Milk,Food,🥛,,assets/words/milk.png,easy
+356,Khortha,आम (Aam),आम,Mango,Food,🥭,,assets/words/mango.png,easy
+357,Khortha,मीठा (Meetha),मीठा,Sweet,Food,🍬,,assets/words/sweet.png,easy
+358,Khortha,भूखल (Bhukhal),भूखा,Hungry,Daily Life,😋,,assets/words/hungry.png,easy
+359,Khortha,पियासल (Piyasal),प्यासा,Thirsty,Daily Life,🥤,,assets/words/thirsty.png,easy
+360,Khortha,खायेक (Khayek),खाना,eat,Actions,🍽️,,assets/words/eat.png,easy
+361,Khortha,पीयेक (Piyek),पीना,drink,Actions,🥤,,assets/words/drink.png,easy
+362,Khortha,सूतेक (Sootek),सोना,sleep,Actions,😴,,assets/words/sleep.png,easy
+363,Khortha,जागेक (Jagek),जागना,wake up,Actions,⏰,,assets/words/wake_up.png,easy
+364,Khortha,आवेक (Aawek),आना,come,Actions,🚶,,assets/words/come.png,easy
+365,Khortha,जाएक (Jaek),जाना,go,Actions,🏃,,assets/words/go.png,easy
+366,Khortha,चलेक (Chalek),चलना,walk,Actions,🚶‍♂️,,assets/words/walk.png,easy
+367,Khortha,दौड़ेक (Daudek),दौड़ना,run,Actions,🏃‍♂️,,assets/words/run.png,easy
+368,Khortha,बैठेक (Baithek),बैठना,sit,Actions,🪑,,assets/words/sit.png,easy
+369,Khortha,ठाढ़ होवेक (Thadh howek),खड़ा होना,stand,Actions,🧍,,assets/words/stand.png,easy
+370,Khortha,देवेक (Dewek),देना,give,Actions,🤲,,assets/words/give.png,easy
+371,Khortha,लेवेक (Lewek),लेना,take,Actions,🫳,,assets/words/take.png,easy
+372,Khortha,देखेक (Dekhek),देखना,see,Actions,👀,,assets/words/see.png,easy
+373,Khortha,सुनेक (Sunek),सुनना,hear,Actions,👂,,assets/words/hear.png,easy
+374,Khortha,बोलेक (Bolek),बोलना,speak,Actions,🗣️,,assets/words/speak.png,easy
+375,Khortha,सुनेक (Sunek),सुनना,listen,Actions,🎧,,assets/words/listen.png,easy
+376,Khortha,जानेक (Janek),जानना,know,Actions,🧠,,assets/words/know.png,easy
+377,Khortha,बुझेक (Bujhek),समझना,understand,Actions,💡,,assets/words/understand.png,easy
+378,Khortha,मया / पियार (Maya / Piyar),प्यार / प्रेम,love,Actions,❤️,,assets/words/love.png,easy
+379,Khortha,मदत (Madat),मदद,help,Actions,🤝,,assets/words/help.png,easy
+380,Khortha,चाहेक (Chahek),चाहना,want,Actions,✨,,assets/words/want.png,easy
+381,Khortha,दरकार (Darkar),ज़रूरत,need,Actions,📌,,assets/words/need.png,easy
+382,Khortha,पढ़ेब (Padheb),पढ़ना,Read,Actions,📚,,assets/words/read.png,easy
+383,Khortha,लिखेक (Likhek),लिखना,Write,Actions,✍️,,assets/words/write.png,easy
+384,Khortha,खेलेक (Khelek),खेलना,Play,Actions,⚽,,assets/words/play.png,easy
+385,Khortha,कूदेक (Kudek),कूदना,Jump,Actions,🦘,,assets/words/jump.png,easy
+386,Khortha,हाँसेक (Hãsek),हँसना,Laugh,Actions,😄,,assets/words/laugh.png,easy
+387,Khortha,कांदेब (Kandeb),रोना,Cry,Actions,😢,,assets/words/cry.png,easy
+388,Khortha,बोलेक / बाजेक (Bolek),बोलना,Speak,Actions,🗣️,,assets/words/speak.png,easy
+389,Khortha,देखेब (Dekheb),देखना,Look,Actions,👁️,,assets/words/look.png,easy
+390,Khortha,घर (Ghar),घर,house,Places,🏠,,assets/words/house.png,easy
+391,Khortha,घर (Ghar),घर,home,Places,🏡,,assets/words/home.png,easy
+392,Khortha,गाँव (Gaon),गाँव,village,Places,🌾,,assets/words/village.png,easy
+393,Khortha,सहर (Sahar),शहर,city,Places,🏙️,,assets/words/city.png,easy
+394,Khortha,डहर (Dahar),सड़क / रास्ता,road,Places,🛣️,,assets/words/road.png,easy
+395,Khortha,गाछ (Gachh),पेड़,tree,Nature,🌳,,assets/words/tree.png,easy
+396,Khortha,बोन (Bon),जंगल / वन,forest,Nature,🌲,,assets/words/forest.png,easy
+397,Khortha,नदी / जोरिया (Nadi),नदी,river,Nature,🌊,,assets/words/river.png,easy
+398,Khortha,पहाड़ / डूंगरी (Pahar),पहाड़,mountain,Nature,⛰️,,assets/words/mountain.png,easy
+399,Khortha,सुरुज / बेरा (Suruj),सूरज,sun,Nature,☀️,,assets/words/sun.png,easy
+400,Khortha,चाँद / चंदा (Chanda),चाँद,moon,Nature,🌙,,assets/words/moon.png,easy
+401,Khortha,तारा (Tara),तारा,star,Nature,⭐,,assets/words/star.png,easy
+402,Khortha,अकास (Akaas),आसमान / आकाश,sky,Nature,☁️,,assets/words/sky.png,easy
+403,Khortha,बरखा (Barkha),बारिश,rain,Nature,🌧️,,assets/words/rain.png,easy
+404,Khortha,आगि (Aagi),आग,fire,Nature,🔥,,assets/words/fire.png,easy
+405,Khortha,बयार / हवा (Bayar),हवा,wind,Nature,💨,,assets/words/wind.png,easy
+406,Khortha,धरती (Dharti),धरती,earth,Nature,🌍,,assets/words/earth.png,easy
+407,Khortha,फूल (Phool),फूल,Flower,Nature,🌸,,assets/words/flower.png,easy
+408,Khortha,माटी (Maati),मिट्टी,Mud / Soil,Nature,🪴,,assets/words/mud_/_soil.png,easy
+409,Khortha,दिन (Din),दिन,day,Time,📅,,assets/words/day.png,easy
+410,Khortha,रात (Raat),रात,night,Time,🌙,,assets/words/night.png,easy
+411,Khortha,काइल (Kaail),कल (आने वाला),tomorrow,Time,⏭️,,assets/words/tomorrow.png,easy
+412,Khortha,आज (Aaj),आज,today,Time,📆,,assets/words/today.png,easy
+413,Khortha,काइल (Kaail),कल (बीता हुआ),yesterday,Time,⏮️,,assets/words/yesterday.png,easy
+414,Khortha,बिहान (Bihan),सुबह / सवेरा,morning,Time,🌅,,assets/words/morning.png,easy
+415,Khortha,साँझ (Sanjh),शाम / सांझ,evening,Time,🌇,,assets/words/evening.png,easy
+416,Khortha,मरद (Marad),आदमी / पुरुष,man,Family,👨,,assets/words/man.png,easy
+417,Khortha,जनाना (Janana),महिला / औरत,woman,Family,👩,,assets/words/woman.png,easy
+418,Khortha,गीदरा / छौआ (Gidra),बच्चा,child,Family,🧒,,assets/words/child.png,easy
+419,Khortha,छौड़ा (Chhaura),लड़का,boy,Family,👦,,assets/words/boy.png,easy
+420,Khortha,छौड़ी (Chhauri),लड़की,girl,Family,👧,,assets/words/girl.png,easy
+421,Khortha,बाप (Baap),पिता / बाबा,father,Family,👨,,assets/words/father.png,easy
+422,Khortha,माय (Maay),माता / माँ,mother,Family,👩,,assets/words/mother.png,easy
+423,Khortha,भाई (Bhai),भाई,brother,Family,👦,,assets/words/brother.png,easy
+424,Khortha,बहिनी (Bahini),बहन,sister,Family,👧,,assets/words/sister.png,easy
+425,Khortha,बेटा (Beta),बेटा,son,Family,👶,,assets/words/son.png,easy
+426,Khortha,बेटी (Beti),बेटी,daughter,Family,👧,,assets/words/daughter.png,easy
+427,Khortha,मरद (Marad),पति,husband,Family,🤵,,assets/words/husband.png,easy
+428,Khortha,बहू / कनिया (Bahu),पत्नी,wife,Family,👰,,assets/words/wife.png,easy
+429,Khortha,संगी (Sangi),दोस्त / संगी,friend,Family,🤝,,assets/words/friend.png,easy
+430,Khortha,संगी (Sangi),दोस्त / संगी,Friend,Family,🤝,,assets/words/friend.png,easy
+431,Khortha,आजी / नानी (Aaji / Nani),दादी / नानी,Grandmother,Family,👵,,assets/words/grandmother.png,easy
+432,Khortha,आजा / नाना (Aaja / Nana),दादा / नाना,Grandfather,Family,👴,,assets/words/grandfather.png,easy
+433,Khortha,कुकुर (Kukur),कुत्ता,Dog,Animals,🐶,,assets/words/dog.png,easy
+434,Khortha,बिलाई (Bilai),बिल्ली,Cat,Animals,🐱,,assets/words/cat.png,easy
+435,Khortha,गाय (Gai),गाय,Cow,Animals,🐮,,assets/words/cow.png,easy
+436,Khortha,छेगरी (Chhegri),बकरी,Goat,Animals,🐐,,assets/words/goat.png,easy
+437,Khortha,चिरई (Chirai),चिड़िया,Bird,Animals,🐦,,assets/words/bird.png,easy
+438,Khortha,माछ (Machh),मछली,Fish,Animals,🐟,,assets/words/fish.png,easy
+439,Khortha,बाघ (Bagh),बाघ,Tiger,Animals,🐯,,assets/words/tiger.png,medium
+440,Khortha,हाथी (Hathi),हाथी,Elephant,Animals,🐘,,assets/words/elephant.png,easy
+441,Khortha,बानर (Banar),बंदर,Monkey,Animals,🐒,,assets/words/monkey.png,easy
+442,Khortha,साँप (Saap),साँप,Snake,Animals,🐍,,assets/words/snake.png,easy
+443,Khortha,मूड़ा / कपार (Muda / Kapar),सिर / माथा,Head,Body Parts,🗣️,,assets/words/head.png,easy
+444,Khortha,आँख (Aankh),आँख,Eye,Body Parts,👁️,,assets/words/eye.png,easy
+445,Khortha,कान (Kaan),कान,Ear,Body Parts,👂,,assets/words/ear.png,easy
+446,Khortha,नाक (Naak),नाक,Nose,Body Parts,👃,,assets/words/nose.png,easy
+447,Khortha,मुँह (Mũh),मुँह,Mouth,Body Parts,👄,,assets/words/mouth.png,easy
+448,Khortha,हाथ (Haath),हाथ,Hand,Body Parts,✋,,assets/words/hand.png,easy
+449,Khortha,गोड़ (God),पैर / गोड़,Leg,Body Parts,🦵,,assets/words/leg.png,easy
+450,Khortha,चूल / केस (Chool),बाल,Hair,Body Parts,💇,,assets/words/hair.png,easy
+451,Khortha,पेट (Pet),पेट,Stomach,Body Parts,🤰,,assets/words/stomach.png,easy
+452,Khortha,दाँत (Daant),दाँत,Teeth,Body Parts,🦷,,assets/words/teeth.png,easy
+453,Khortha,लाल / ललका (Lalka),लाल,Red,Colors,🔴,,assets/words/red.png,easy
+454,Khortha,करिया (Kariya),काला,Black,Colors,⚫,,assets/words/black.png,easy
+455,Khortha,चरका (Charka),सफ़ेद,White,Colors,⚪,,assets/words/white.png,easy
+456,Khortha,हरियर (Hariyar),हरा,Green,Colors,🟢,,assets/words/green.png,easy
+457,Khortha,पियरा (Piyara),पीला,Yellow,Colors,🟡,,assets/words/yellow.png,easy
+458,Khortha,नाम (Naam),नाम,name,Society,🏷️,,assets/words/name.png,easy
+459,Khortha,उमिर (Umir),उम्र / आयु,age,Society,🎂,,assets/words/age.png,easy
+460,Khortha,काम (Kaam),काम / कार्य,work,Society,💼,,assets/words/work.png,easy
+461,Khortha,पइसा (Paisa),पैसा / धन,money,Society,💰,,assets/words/money.png,easy
+462,Khortha,हाट / बजार (Haat),बाज़ार / हाट,market,Society,🛍️,,assets/words/market.png,easy
+463,Khortha,किनेक (Kinek),खरीदना,buy,Society,🛒,,assets/words/buy.png,easy
+464,Khortha,बेचेक (Bechek),बेचना,sell,Society,🏷️,,assets/words/sell.png,easy
+465,Khortha,इस्कूल (School),स्कूल,School,School,🏫,,assets/words/school.png,easy
+466,Khortha,किताब / पोथी (Kitab),किताब / पोथी,Book,School,📖,,assets/words/book.png,easy
+467,Khortha,कलम (Kalam),कलम,Pen,School,🖊️,,assets/words/pen.png,easy
+468,Khortha,बड़ / डांगर (Bad),बड़ा,big,Adjectives,🐘,,assets/words/big.png,easy
+469,Khortha,छोट (Chhot),छोटा,small,Adjectives,🐁,,assets/words/small.png,easy
+470,Khortha,बेस (Bes),अच्छा / बढ़िया,good,Adjectives,⭐,,assets/words/good.png,easy
+471,Khortha,बेकार / खराब (Kharab),बुरा / खराब,bad,Adjectives,❌,,assets/words/bad.png,easy
+472,Khortha,तातल (Tatal),गर्म,hot,Adjectives,🔥,,assets/words/hot.png,easy
+473,Khortha,ठंढा / सिराय (Thandha),ठंडा,cold,Adjectives,❄️,,assets/words/cold.png,easy
+474,Khortha,नवा (Nawa),नया,new,Adjectives,✨,,assets/words/new.png,easy
+475,Khortha,पुरान (Puran),पुराना,old,Adjectives,📜,,assets/words/old.png,easy
+476,Khortha,तेज (Tej),तेज़ / जल्दी,fast,Adjectives,⚡,,assets/words/fast.png,easy
+477,Khortha,धीमे (Dheeme),धीमा / धीरे,slow,Adjectives,🐢,,assets/words/slow.png,easy
+478,Khortha,खुस (Khus),खुश / प्रसन्न,happy,Adjectives,😊,,assets/words/happy.png,easy
+479,Khortha,उदास (Udas),उदास,sad,Adjectives,😔,,assets/words/sad.png,easy
+480,Khortha,रागाइल (Ragail),गुस्सा,angry,Adjectives,😠,,assets/words/angry.png,easy
+481,Khortha,थाकल (Thakal),थका हुआ,tired,Adjectives,😫,,assets/words/tired.png,easy
+482,Khortha,बेमार (Bemar),बीमार,sick,Adjectives,🤒,,assets/words/sick.png,easy
+483,Khortha,चंगा (Changa),स्वस्थ,healthy,Adjectives,💪,,assets/words/healthy.png,easy
+484,Khortha,एक (Ek),एक,one,Numbers,1️⃣,,assets/words/one.png,easy
+485,Khortha,दुई (Dui),दो,two,Numbers,2️⃣,,assets/words/two.png,easy
+486,Khortha,तीन (Teen),तीन,three,Numbers,3️⃣,,assets/words/three.png,easy
+487,Khortha,चार (Chaar),चार,four,Numbers,4️⃣,,assets/words/four.png,easy
+488,Khortha,पाँच (Paanch),पाँच,five,Numbers,5️⃣,,assets/words/five.png,easy
+489,Khortha,की (Ki),क्या,what,Questions,❓,,assets/words/what.png,easy
+490,Khortha,कहाँ (Kahan),कहाँ,where,Questions,📍,,assets/words/where.png,easy
+491,Khortha,के (Ke),कौन,who,Questions,👤,,assets/words/who.png,easy
+492,Khortha,कैसन (Kaisan),कैसे,how,Questions,🤔,,assets/words/how.png,easy
+493,Khortha,कखन / कब (Kakhan),कब,when,Questions,⏰,,assets/words/when.png,easy
+494,Khortha,काहे (Kaahe),क्यों,why,Questions,🤷,,assets/words/why.png,easy
+495,Khortha,तोहे कैसन हीं? (Tohe kaisan heen?),आप कैसे हैं? / तुम कैसे हो?,How are you?,Conversations,🤝,,assets/words/how_are_you?.png,easy
+496,Khortha,हम बेस / ठीक ही (Ham bes heen),मैं ठीक हूँ।,I am fine.,Conversations,😊,,assets/words/i_am_fine..png,easy
+497,Khortha,तोहर नाम की हकौ? (Tohar नाम ki hakao?),तुम्हारा नाम क्या है?,What is your name?,Conversations,🏷️,,assets/words/what_is_your_name?.png,easy
+498,Khortha,हमर नाम ... हकौ (Hamar naam ... hakao),मेरा नाम ... है।,My name is...,Conversations,🧒,,assets/words/my_name_is....png,easy
+499,Khortha,हियाँ आब (Hiyan aaw),यहाँ आओ,Come here,Conversations,👉,,assets/words/come_here.png,easy
+500,Khortha,हुवाँ जा (Huwan ja),वहाँ जाओ,Go there,Conversations,👉,,assets/words/go_there.png,easy
+501,Khortha,हम खेल रहल ही (Ham khel rahal heen),मैं खेल रहा हूँ,I am playing,Conversations,⚽,,assets/words/i_am_playing.png,easy
+502,Khortha,ई एगो किताब हकौ (Ee ego kitab hakao),यह एक किताब है।,This is a book.,Conversations,📖,,assets/words/this_is_a_book..png,easy
+503,Khortha,हमरा पानी दे (Hamra pani de),मुझे पानी दो।,Give me water.,Conversations,💧,,assets/words/give_me_water..png,easy
+504,Khortha,तोहें कहाँ जा रहल हें? (Tohen kahan ja rahal heen?),तुम कहाँ जा रहे हो?,Where are you going?,Conversations,🧭,,assets/words/where_are_you_going?.png,easy
+505,Khortha,चला पढ़े लागियै (Chala padhe lagiyai),चलो पढ़ाई करें।,Let's study.,Conversations,📚,,assets/words/let's_study..png,easy
+506,Khortha,गाछ टा के देख (Gachh ta ke dekh),पेड़ को देखो।,Look at the tree.,Conversations,🌳,,assets/words/look_at_the_tree..png,easy
+507,Khortha,दूध पी (Doodh pee),दूध पियो।,Drink milk.,Conversations,🥛,,assets/words/drink_milk..png,easy
+508,Khortha,ठाढ़ हो (Thadh ho),खड़े हो जाओ।,Stand up.,Conversations,🧍,,assets/words/stand_up..png,easy
+509,Khortha,बैस जा (Bais ja),बैठ जाओ।,Sit down.,Conversations,🪑,,assets/words/sit_down..png,easy
+510,Khortha,तोहें बेस हुसियार हें (Tohen bes husiyar heen),तुम बहुत होशियार हो।,You are very smart.,Conversations,🌟,,assets/words/you_are_very_smart..png,easy

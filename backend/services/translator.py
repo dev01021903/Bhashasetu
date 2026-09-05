@@ -5,6 +5,8 @@ greedy phrase chunking, token-based matching, name transliteration, and multi-sc
 """
 
 import re
+import os
+import csv
 from typing import Dict, List, Any, Optional, Tuple
 from backend.data.languages import LANGUAGES
 from backend.data.dictionary import VOCABULARY, CATEGORIES
@@ -183,6 +185,97 @@ class BhashaSetuTranslator:
                                 self.word_index[w] = []
                             if item not in self.word_index[w]:
                                 self.word_index[w].append(item)
+
+        # 3. Index CSV dataset from tribal_words_wide.csv
+        self._load_csv_dataset()
+
+    def _load_csv_dataset(self):
+        """Loads and indexes the tribal words CSV dataset into phrase and word indexes."""
+        base_dir = os.path.dirname(os.path.abspath(__file__))
+        csv_candidates = [
+            os.path.abspath(os.path.join(base_dir, "..", "..", "bhashasetu-backend", "data", "tribal_words_wide.csv")),
+            os.path.abspath(os.path.join(base_dir, "..", "..", "bhashasetu-backend", "data", "tribal_words.csv")),
+        ]
+        csv_path = None
+        for p in csv_candidates:
+            if os.path.exists(p):
+                csv_path = p
+                break
+        if not csv_path:
+            return
+
+        try:
+            with open(csv_path, "r", encoding="utf-8", errors="ignore") as f:
+                reader = csv.DictReader(f)
+                for idx, row in enumerate(reader):
+                    eng = (row.get("english") or row.get("english_word") or "").strip()
+                    hin = (row.get("hindi") or row.get("hindi_word") or "").strip()
+                    san = (row.get("Santali") or (row.get("local_word") if row.get("language") == "Santali" else "") or "").strip()
+                    nag = (row.get("Nagpuri") or (row.get("local_word") if row.get("language") == "Nagpuri" else "") or "").strip()
+                    kho = (row.get("Khortha") or (row.get("local_word") if row.get("language") == "Khortha" else "") or "").strip()
+                    cat = (row.get("category") or "general").strip()
+                    emoji = (row.get("emoji") or "🌟").strip()
+
+                    def parse_val(v: str):
+                        m = re.match(r'^(.*?)\s*\((.*?)\)$', v)
+                        if m:
+                            return m.group(1).strip(), m.group(2).strip()
+                        return v, v
+
+                    san_native, san_phonetic = parse_val(san)
+                    nag_dev, nag_phonetic = parse_val(nag)
+                    kho_dev, kho_phonetic = parse_val(kho)
+
+                    item = {
+                        "id": f"csv_{idx}",
+                        "hindi": hin,
+                        "english": eng,
+                        "category": cat,
+                        "emoji": emoji,
+                        "translations": {
+                            "santhali": {"native": san_native or san, "dev": san_phonetic or san, "phonetic": san_phonetic or san},
+                            "nagpuri": {"native": nag_dev or nag, "dev": nag_dev or nag, "phonetic": nag_phonetic or nag},
+                            "khortha": {"native": kho_dev or kho, "dev": kho_dev or kho, "phonetic": kho_phonetic or kho},
+                        }
+                    }
+
+                    # Index English variants
+                    if eng:
+                        for var in re.split(r'[/,()]', eng):
+                            clean_var = self._clean_text(var)
+                            if clean_var:
+                                if clean_var not in self.phrase_index:
+                                    self.phrase_index[clean_var] = item
+                                else:
+                                    for lk, lv in item["translations"].items():
+                                        if lk not in self.phrase_index[clean_var]["translations"]:
+                                            self.phrase_index[clean_var]["translations"][lk] = lv
+                                for w in clean_var.split():
+                                    if len(w) > 1:
+                                        if w not in self.word_index:
+                                            self.word_index[w] = []
+                                        if item not in self.word_index[w]:
+                                            self.word_index[w].append(item)
+
+                    # Index Hindi variants
+                    if hin:
+                        for var in re.split(r'[/,()]', hin):
+                            clean_var = self._clean_text(var)
+                            if clean_var:
+                                if clean_var not in self.phrase_index:
+                                    self.phrase_index[clean_var] = item
+                                else:
+                                    for lk, lv in item["translations"].items():
+                                        if lk not in self.phrase_index[clean_var]["translations"]:
+                                            self.phrase_index[clean_var]["translations"][lk] = lv
+                                for w in clean_var.split():
+                                    if len(w) > 1:
+                                        if w not in self.word_index:
+                                            self.word_index[w] = []
+                                        if item not in self.word_index[w]:
+                                            self.word_index[w].append(item)
+        except Exception:
+            pass
 
     CODE_MAP = {
         "sat_olck": "santhali", "sat": "santhali", "santhali": "santhali",

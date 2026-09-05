@@ -38,6 +38,8 @@ htmlcov/
 *.sqlite3
 data/media/*
 !data/media/.gitkeep
+backend/data/media/*
+!backend/data/media/.gitkeep
 data/packs/*
 !data/packs/.gitkeep
 
